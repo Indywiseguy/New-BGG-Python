@@ -4,8 +4,9 @@ __pycache__/
 *.egg-info/
 .venv/
 dist/
-data/checkpoint.json
+data/checkpoint*.json
 data/ids_*.json
+data/gencon_exhibitors.json
 data/all_ids.txt
 data/*.csv.gz
 data/bg_ranked_items*.csv
