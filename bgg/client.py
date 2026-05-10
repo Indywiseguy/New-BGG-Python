@@ -81,6 +81,11 @@ class BGGClient:
 
     @staticmethod
     def _parse_thing(item: ET.Element) -> Optional[dict]:
+        # The API call already requests type=boardgame, but guard explicitly
+        # so expansions never slip through regardless of API behaviour.
+        if item.get("type") != "boardgame":
+            return None
+
         primary = item.find(".//name[@type='primary']")
         name = primary.get("value") if primary is not None else "Unknown"
 

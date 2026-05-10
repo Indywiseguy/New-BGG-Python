@@ -8,8 +8,6 @@ from .client import BGGClient
 from .models import Game
 
 DATA_DIR = Path("data")
-CHECKPOINT_FILE = DATA_DIR / "checkpoint.json"
-RESULTS_FILE = DATA_DIR / "games_2026.csv"
 
 # BGG CSV dumps use one of these column names for the game ID
 _ID_COLUMNS = ("objectid", "id", "game_id", "gameid")
@@ -44,9 +42,9 @@ def load_ids_from_csv(csv_path: Path) -> list[int]:
     return ids
 
 
-def _load_checkpoint() -> tuple[int, list[dict]]:
-    if CHECKPOINT_FILE.exists():
-        data = json.loads(CHECKPOINT_FILE.read_text())
+def _load_checkpoint(checkpoint_file: Path) -> tuple[int, list[dict]]:
+    if checkpoint_file.exists():
+        data = json.loads(checkpoint_file.read_text())
         offset = data.get("offset", 0)
         games = data.get("games", [])
         print(
@@ -57,21 +55,21 @@ def _load_checkpoint() -> tuple[int, list[dict]]:
     return 0, []
 
 
-def _save_checkpoint(offset: int, games: list[dict]) -> None:
+def _save_checkpoint(checkpoint_file: Path, offset: int, games: list[dict]) -> None:
     DATA_DIR.mkdir(exist_ok=True)
-    CHECKPOINT_FILE.write_text(json.dumps({"offset": offset, "games": games}))
+    checkpoint_file.write_text(json.dumps({"offset": offset, "games": games}))
 
 
-def _save_results_csv(games: list[dict]) -> None:
+def _save_results_csv(results_file: Path, games: list[dict]) -> None:
     if not games:
         return
     DATA_DIR.mkdir(exist_ok=True)
-    with open(RESULTS_FILE, "w", newline="", encoding="utf-8") as fh:
+    with open(results_file, "w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(
             fh, fieldnames=["id", "name", "publisher", "year", "description"]
         )
         writer.writeheader()
-        for g in sorted(games, key=lambda x: x["name"].lower()):
+        for g in sorted(games, key=lambda x: (x["year"], x["name"].lower())):
             writer.writerow(
                 {
                     "id": g["id"],
@@ -83,13 +81,17 @@ def _save_results_csv(games: list[dict]) -> None:
             )
 
 
-def run(client: BGGClient, ids: list[int], year: int) -> list[Game]:
+def run(client: BGGClient, ids: list[int], years: set[int]) -> list[Game]:
+    years_str = "_".join(str(y) for y in sorted(years))
+    checkpoint_file = DATA_DIR / f"checkpoint_{years_str}.json"
+    results_file = DATA_DIR / f"games_{years_str}.csv"
+
     total = len(ids)
     total_batches = (total + _BATCH_SIZE - 1) // _BATCH_SIZE
-    offset, found = _load_checkpoint()
+    offset, found = _load_checkpoint(checkpoint_file)
 
     eta_min = (total - offset) * 2 / _BATCH_SIZE / 60
-    print(f"Sweeping {total:,} games ({total_batches:,} batches) — est. {eta_min:.0f} min")
+    print(f"Sweeping {total:,} IDs ({total_batches:,} batches) — est. {eta_min:.0f} min")
     print("Press Ctrl+C at any time to pause; re-run to resume.\n")
 
     try:
@@ -105,26 +107,27 @@ def run(client: BGGClient, ids: list[int], year: int) -> list[Game]:
 
             things = client.get_things(ids[i : i + _BATCH_SIZE])
             for t in things:
-                if t["year"] == year:
+                if t["year"] in years:
                     found.append(t)
                     print(
-                        f"\n  + {t['name']} ({'; '.join(t['publishers']) or 'Unknown'})",
+                        f"\n  + [{t['year']}] {t['name']} "
+                        f"({'; '.join(t['publishers']) or 'Unknown'})",
                         flush=True,
                     )
 
             if batch_num % _SAVE_EVERY == 0:
-                _save_checkpoint(i + _BATCH_SIZE, found)
-                _save_results_csv(found)
+                _save_checkpoint(checkpoint_file, i + _BATCH_SIZE, found)
+                _save_results_csv(results_file, found)
 
     except KeyboardInterrupt:
         print("\n\nPaused — saving checkpoint...", flush=True)
-        _save_checkpoint(i, found)
-        _save_results_csv(found)
+        _save_checkpoint(checkpoint_file, i, found)
+        _save_results_csv(results_file, found)
         print(f"Progress saved. Run again to resume from batch {i // _BATCH_SIZE + 1:,}.")
         sys.exit(0)
 
     # Completed
-    _save_checkpoint(total, found)
-    _save_results_csv(found)
+    _save_checkpoint(checkpoint_file, total, found)
+    _save_results_csv(results_file, found)
     print(f"\n\nDone. {len(found)} games found.")
     return [Game(**g) for g in found]
