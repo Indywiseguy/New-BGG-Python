@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+dist/
+data/checkpoint.json
+data/all_ids.txt
+data/*.csv.gz
+data/bg_ranked_items*.csv
