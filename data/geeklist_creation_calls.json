@@ -1,0 +1,376 @@
+[
+  {
+    "method": "POST",
+    "url": "https://boardgamegeek.com/login/api/v1",
+    "body": {
+      "credentials": "***REDACTED***"
+    }
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/hotness?geeksite=boardgame&objecttype=thing&showcount=50&singular=1",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/homehero?singular=1",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/ending_preorder",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347/settings",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geekmail/messages?metaonly=1&numunread=1",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/notice?metaonly=1&numunread=1",
+    "body": null
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/user/633347",
+    "body": "{\n  \"type\": \"user\",\n  \"id\": \"633347\",\n  \"userid\": 633347,\n  \"username\": \"Indywiseguy\",\n  \"href\": \"/profile/Indywiseguy\",\n  \"firstname\": \"Vinny\",\n  \"lastname\": \"Romano\",\n  \"city\": \"Indianapolis\",\n  \"state\": \"Indiana\",\n  \"country\": \"United States\",\n  \"isocountry\": \"US\",\n  \"regdate\": \"2013-01-24\",\n  \"designerid\": 0,\n  \"publisherid\": 0,\n  \"hideSupporter\": false,\n  \"adminBadges\": [],\n  \"userMicrobadges\": [\n    {\n      \"slot\": 1,\n      \"badgeid\": 50873\n    },\n    {\n      \"slot\": 2,\n      \"badgeid\": 48846\n    },\n    {\n      \"slot\": 4,\n      \"badgeid\": 885\n    }\n  ],\n  \"supportYears\": [\n    \"2016\",\n  "
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/hotness?geeksite=boardgame&objecttype=thing&showcount=50&singular=1",
+    "body": "{\n  \"items\": [\n    {\n      \"objecttype\": \"thing\",\n      \"objectid\": \"469746\",\n      \"rep_imageid\": \"9560861\",\n      \"delta\": 0,\n      \"href\": \"/boardgame/469746/rolling-deep\",\n      \"name\": \"Rolling Deep\",\n      \"id\": \"469746\",\n      \"type\": \"thing\",\n      \"imageurl\": \"https://cf.geekdo-images.com/9kGOADQkWyQnC-Hlv8MqoA__tinysquare/img/HRgPZUpTZyhrKUmjy6slaCeGGQQ=/fit-in/30x30/filters:strip_icc()/pic9560861.jpg\",\n      \"images\": {\n        \"square30\": {\n          \"src\": \"https://cf.geekdo-images.com/9kGOADQkWyQnC-Hlv8MqoA__square30/img/aH-EunZieTyCLIHh9ET8o7uJ5gA=/0x1063:2681x3744/30x30/filters"
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/blog/1?partial=essential",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/blog/12153?partial=essential",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/blog/13076?partial=essential",
+    "body": null
+  },
+  {
+    "method": "POST",
+    "url": "https://boardgamegeek.com/api/accesslog",
+    "body": {
+      "detected": false,
+      "duration": 0,
+      "consentShown": false
+    }
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/ending_preorder",
+    "body": "[\n  {\n    \"name\": \"\\u0422\\u0430\\u0439\\u043d\\u0430\\u044f \\u0434\\u043e\\u043b\\u0438\\u043d\\u0430\",\n    \"endDate\": \"2026-05-23T07:00:00+00:00\",\n    \"progress\": 211,\n    \"backersCount\": 561,\n    \"versionid\": \"653814\",\n    \"featured\": true,\n    \"orderUrl\": \"https://www.kickstarter.com/%/the-lost-island-secret-valley\",\n    \"orderType\": \"kickstarter\",\n    \"item\": {\n      \"type\": \"thing\",\n      \"id\": \"307170\",\n      \"name\": \"The Secret Valley\",\n      \"href\": \"/boardgame/307170/the-secret-valley\",\n      \"label\": \"Board Game\",\n      \"labelpl\": \"Board Games\",\n      \"hasAngularLink\": false,\n      \"descripto"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/homehero?singular=1",
+    "body": "[\n  {\n    \"title\": \"Designer Diary: VNTYPL8S\",\n    \"name\": \"Designer Diary: VNTYPL8S\",\n    \"href\": \"/blog/1/blogpost/185637/designer-diary-vntypl8s\",\n    \"hasAngularLink\": true,\n    \"promoted\": true,\n    \"images\": {\n      \"herosquare\": {\n        \"width\": \"80\",\n        \"height\": \"80\",\n        \"src@2x\": \"https://cf.geekdo-images.com/Z9H_8Ysiit2DuY326i1tNKyDeg8=/0x0/filters:strip_icc()/https%3A%2F%2Fcf.geekdo-static.com%2Fcms%2F2026%2F04%2F23153921%2FArtboard-1Plate-banner.png\",\n        \"src\": \"https://cf.geekdo-images.com/cvO0OSD-iLk2Wtfs9sdaUIXVtqI=/80x80/filters:strip_icc()/https%3A%2F%2Fcf.ge"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/user/633347/settings",
+    "body": "null"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/blog/1?partial=essential",
+    "body": "{\n  \"type\": \"blog\",\n  \"id\": \"1\",\n  \"name\": \"BoardGameGeek Blog\",\n  \"href\": \"/blog/1/boardgamegeek-blog\",\n  \"label\": \"Blog\",\n  \"labelpl\": \"Blogs\",\n  \"hasAngularLink\": true,\n  \"descriptors\": [],\n  \"breadcrumbs\": []\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geekmail/messages?metaonly=1&numunread=1",
+    "body": "{\n  \"numunread\": 0\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/blog/12153?partial=essential",
+    "body": "{\n  \"type\": \"blog\",\n  \"id\": \"12153\",\n  \"name\": \"The BoardGameGeek Podcast\",\n  \"href\": \"/blog/12153/the-boardgamegeek-podcast\",\n  \"label\": \"Blog\",\n  \"labelpl\": \"Blogs\",\n  \"hasAngularLink\": true,\n  \"descriptors\": [],\n  \"breadcrumbs\": []\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/blog/13076?partial=essential",
+    "body": "{\n  \"type\": \"blog\",\n  \"id\": \"13076\",\n  \"name\": \"Board Games Insider\",\n  \"href\": \"/blog/13076/board-games-insider\",\n  \"label\": \"Blog\",\n  \"labelpl\": \"Blogs\",\n  \"hasAngularLink\": true,\n  \"descriptors\": [],\n  \"breadcrumbs\": []\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/notice?metaonly=1&numunread=1",
+    "body": "{\n  \"count\": 0\n}"
+  },
+  {
+    "status": 201,
+    "url": "https://boardgamegeek.com/api/accesslog",
+    "body": ""
+  },
+  {
+    "method": "GET",
+    "url": "https://boardgamegeek.com/geeklist/new",
+    "body": null
+  },
+  {
+    "status": 200,
+    "url": "https://boardgamegeek.com/geeklist/new",
+    "body": "<!doctype html>\n<html lang=\"en-US\">\n  <head>\n<link rel=\"apple-touch-icon\" \thref=\"https://cf.geekdo-static.com/icons/touch-icon180.png\" />\n<link rel=\"shortcut icon\" \t\thref=\"https://cf.geekdo-static.com"
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347/settings",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geekmail/messages?metaonly=1&numunread=1",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/notice?metaonly=1&numunread=1",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/subscriptionpref?partial=autosub",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/hotness?geeksite=boardgame&objecttype=thing&showcount=50&singular=1",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/shortcuts",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/recentlyviewed",
+    "body": null
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/user/633347",
+    "body": "{\n  \"type\": \"user\",\n  \"id\": \"633347\",\n  \"userid\": 633347,\n  \"username\": \"Indywiseguy\",\n  \"href\": \"/profile/Indywiseguy\",\n  \"firstname\": \"Vinny\",\n  \"lastname\": \"Romano\",\n  \"city\": \"Indianapolis\",\n  \"state\": \"Indiana\",\n  \"country\": \"United States\",\n  \"isocountry\": \"US\",\n  \"regdate\": \"2013-01-24\",\n  \"designerid\": 0,\n  \"publisherid\": 0,\n  \"hideSupporter\": false,\n  \"adminBadges\": [],\n  \"userMicrobadges\": [\n    {\n      \"slot\": 1,\n      \"badgeid\": 50873\n    },\n    {\n      \"slot\": 2,\n      \"badgeid\": 48846\n    },\n    {\n      \"slot\": 4,\n      \"badgeid\": 885\n    }\n  ],\n  \"supportYears\": [\n    \"2016\",\n  "
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/user/633347/settings",
+    "body": "null"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geekmail/messages?metaonly=1&numunread=1",
+    "body": "{\n  \"numunread\": 0\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/notice?metaonly=1&numunread=1",
+    "body": "{\n  \"count\": 0\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/subscriptionpref?partial=autosub",
+    "body": "{\n  \"autosub\": {\n    \"firstpost\": {\n      \"thread\": true,\n      \"geeklist\": true,\n      \"listitem\": true,\n      \"blogpost\": true,\n      \"image\": true,\n      \"video\": true,\n      \"filepage\": true\n    },\n    \"reply\": {\n      \"thread\": false,\n      \"geeklist\": false,\n      \"listitem\": true,\n      \"image\": false,\n      \"filepage\": false,\n      \"video\": false,\n      \"blogpost\": false\n    }\n  }\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/hotness?geeksite=boardgame&objecttype=thing&showcount=50&singular=1",
+    "body": "{\n  \"items\": [\n    {\n      \"objecttype\": \"thing\",\n      \"objectid\": \"469746\",\n      \"rep_imageid\": \"9560861\",\n      \"delta\": 0,\n      \"href\": \"/boardgame/469746/rolling-deep\",\n      \"name\": \"Rolling Deep\",\n      \"id\": \"469746\",\n      \"type\": \"thing\",\n      \"imageurl\": \"https://cf.geekdo-images.com/9kGOADQkWyQnC-Hlv8MqoA__tinysquare/img/HRgPZUpTZyhrKUmjy6slaCeGGQQ=/fit-in/30x30/filters:strip_icc()/pic9560861.jpg\",\n      \"images\": {\n        \"square30\": {\n          \"src\": \"https://cf.geekdo-images.com/9kGOADQkWyQnC-Hlv8MqoA__square30/img/aH-EunZieTyCLIHh9ET8o7uJ5gA=/0x1063:2681x3744/30x30/filters"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/shortcuts",
+    "body": "{\n  \"shortcuts\": [\n    {\n      \"userid\": 633347,\n      \"url\": \"https://boardgamegeek.com/collection/user/Indywiseguy?sortdir=asc&rankobjecttype=subtype&rankobjectid=1&columns=title%7Cthumbnail%7Cstatus%7Cownership%7Clastmodified%7Cacquisitiondate%7Cpostdate%7Cwishlistcomment%7Crank%7Crating%7Cavgrating%7Cplays%7Cavgweight%7Cconditiontext&geekranks=Board%20Game%20Rank&excludesubtype=boardgameexpansion&own=1&objecttype=thing&ff=1&subtype=boardgame\",\n      \"label\": \"Collection - Details (No Expansions)\",\n      \"id\": 162136848,\n      \"valid\": true,\n      \"page\": 1,\n      \"index\": 0\n    },\n    {\n  "
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/recentlyviewed",
+    "body": "{\n  \"items\": [\n    {\n      \"objecttype\": \"thing\",\n      \"objectid\": 447252,\n      \"url\": \"<a  href=\\\"/boardgame/447252/moytura\\\"   >Moytura</a>\",\n      \"href\": \"/boardgame/447252/moytura\",\n      \"name\": \"Moytura\"\n    },\n    {\n      \"objecttype\": \"company\",\n      \"objectid\": 55999,\n      \"url\": \"<a  href=\\\"/boardgamepublisher/55999/diceratops-games\\\"   >Diceratops Games</a>\",\n      \"href\": \"/boardgamepublisher/55999/diceratops-games\",\n      \"name\": \"Diceratops Games\"\n    },\n    {\n      \"objecttype\": \"thing\",\n      \"objectid\": 414071,\n      \"url\": \"<a  href=\\\"/boardgame/414071/mana-mania\\\"   >Ma"
+  },
+  {
+    "method": "POST",
+    "url": "https://api.geekdo.com/api/geeklist",
+    "body": {
+      "name": "TEST GEEKLIST - PLEASE DELETE",
+      "body": "",
+      "publicAdditionsAllowed": true,
+      "commentsAllowed": true,
+      "private": true,
+      "stealth": false,
+      "trade": false,
+      "sortType": "user",
+      "domains": [
+        "boardgame"
+      ],
+      "ordinalDirection": "ascending"
+    }
+  },
+  {
+    "method": "PUT",
+    "url": "https://api.geekdo.com/api/geeklist/378123/subscriptions",
+    "body": null
+  },
+  {
+    "status": 201,
+    "url": "https://api.geekdo.com/api/geeklist",
+    "body": "{\n  \"type\": \"geeklist\",\n  \"id\": \"378123\",\n  \"href\": \"/geeklist/378123\"\n}"
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/notice?sort=oldest&groupType=geeklist&groupId=378123&partial=notices",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378123",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378123",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/notice?metaonly=1&numunread=1",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378123",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378123",
+    "body": null
+  },
+  {
+    "status": 204,
+    "url": "https://api.geekdo.com/api/geeklist/378123/subscriptions",
+    "body": ""
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378123/marks",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/userblock",
+    "body": null
+  },
+  {
+    "status": 401,
+    "url": "https://api.geekdo.com/api/geeklist/378123",
+    "body": "{\n  \"title\": \"You don't have access to this private geeklist.\",\n  \"type\": \"about:blank\"\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/notice?sort=oldest&groupType=geeklist&groupId=378123&partial=notices",
+    "body": "{\n  \"notices\": [],\n  \"essentialItems\": [],\n  \"links\": [\n    {\n      \"rel\": \"rss\",\n      \"uri\": \"/rss/subscriptions/userid/633347/f7ab94debab68565f255105c15caa795\"\n    }\n  ]\n}"
+  },
+  {
+    "status": 401,
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378123",
+    "body": "{\n  \"title\": \"You don't have access to items from this private geeklist.\",\n  \"type\": \"about:blank\"\n}"
+  },
+  {
+    "method": "PUT",
+    "url": "https://api.geekdo.com/api/viewdate?geeklist=378123",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378123/tip?totalonly=1",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378123/reaction?totalonly=1",
+    "body": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347/reaction?geeklist=378123",
+    "body": null
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/notice?metaonly=1&numunread=1",
+    "body": "{\n  \"count\": 0\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378123",
+    "body": "{\n  \"type\": \"geeklist\",\n  \"id\": \"378123\",\n  \"name\": \"TEST GEEKLIST - PLEASE DELETE\",\n  \"creator\": 633347,\n  \"href\": \"/geeklist/378123\",\n  \"postdate\": null,\n  \"editdate\": \"2026-05-11T01:34:21+00:00\",\n  \"body\": \"\",\n  \"bodyXml\": \"<?xml version=\\\"1.0\\\"?>\\n<xml/>\\n\",\n  \"private\": true,\n  \"stealth\": false,\n  \"publicAdditionsAllowed\": true,\n  \"commentsAllowed\": true,\n  \"trade\": false,\n  \"ordinalDirection\": \"ascending\",\n  \"submitted\": false,\n  \"sortType\": \"user\",\n  \"domains\": [\n    \"boardgame\"\n  ],\n  \"canonical_link\": \"https://boardgamegeek.com/geeklist/378123\",\n  \"links\": [\n    {\n      \"rel\": \"items\""
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378123",
+    "body": "{\n  \"data\": [],\n  \"pagination\": {\n    \"pageid\": 1,\n    \"perPage\": 25,\n    \"total\": 0\n  }\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378123/marks",
+    "body": "{\n  \"subscriptions\": true,\n  \"blocks\": false,\n  \"bookmarks\": false\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/viewdate?geeklist=378123",
+    "body": "{\n  \"geeklist\": {\n    \"378123\": {\n      \"viewDate\": \"2026-05-11T01:34:22+00:00\",\n      \"events\": {},\n      \"eventsAreNew\": false\n    }\n  }\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/userblock",
+    "body": "[]"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378123/tip?totalonly=1",
+    "body": "{\n  \"total\": 0\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378123/reaction?totalonly=1",
+    "body": "{\n  \"thumbs\": 0\n}"
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/user/633347/reaction?geeklist=378123",
+    "body": "{\n  \"geeklist\": {\n    \"378123\": {}\n  }\n}"
+  },
+  {
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378123/comment?perPage=2",
+    "body": null
+  },
+  {
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378123/comment?perPage=2",
+    "body": "{\n  \"selectedBy\": {\n    \"type\": \"geeklist\",\n    \"id\": \"378123\"\n  },\n  \"comments\": [],\n  \"links\": [],\n  \"locked\": false\n}"
+  }
+]

@@ -1,0 +1,207 @@
+[
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://boardgamegeek.com/api/accesslog",
+    "body": {
+      "detected": false,
+      "duration": 0,
+      "consentShown": false
+    }
+  },
+  {
+    "dir": "resp",
+    "status": 201,
+    "url": "https://boardgamegeek.com/api/accesslog",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://boardgamegeek.com/login/api/v1",
+    "body": {
+      "credentials": "***REDACTED***"
+    }
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/geeklist/new",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://boardgamegeek.com/geeklist/new",
+    "body": "<!doctype html>\n<html lang=\"en-US\">\n  <head>\n<link rel=\"apple-touch-icon\" \thref=\"https://cf.geekdo-static.com/icons/touch-icon180.png\" />\n<link rel=\"shortcut icon\" \t\thref=\"https://cf.geekdo-static.com"
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://api.geekdo.com/api/geeklist",
+    "body": {
+      "name": "TEST GEEKLIST - PLEASE DELETE",
+      "body": "",
+      "publicAdditionsAllowed": true,
+      "commentsAllowed": true,
+      "private": true,
+      "stealth": false,
+      "trade": false,
+      "sortType": "user",
+      "domains": [
+        "boardgame"
+      ],
+      "ordinalDirection": "ascending"
+    }
+  },
+  {
+    "dir": "req",
+    "method": "PUT",
+    "url": "https://api.geekdo.com/api/geeklist/378125/subscriptions",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 201,
+    "url": "https://api.geekdo.com/api/geeklist",
+    "body": "{\n  \"type\": \"geeklist\",\n  \"id\": \"378125\",\n  \"href\": \"/geeklist/378125\"\n}"
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/notice?sort=oldest&groupType=geeklist&groupId=378125&partial=notices",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 401,
+    "url": "https://api.geekdo.com/api/geeklist/378125",
+    "body": "{\n  \"title\": \"You don't have access to this private geeklist.\",\n  \"type\": \"about:blank\"\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/notice?sort=oldest&groupType=geeklist&groupId=378125&partial=notices",
+    "body": "{\n  \"notices\": [],\n  \"essentialItems\": [],\n  \"links\": [\n    {\n      \"rel\": \"rss\",\n      \"uri\": \"/rss/subscriptions/userid/633347/f7ab94debab68565f255105c15caa795\"\n    }\n  ]\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 401,
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": "{\n  \"title\": \"You don't have access to items from this private geeklist.\",\n  \"type\": \"about:blank\"\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://api.geekdo.com/api/geeklist/378125/subscriptions",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125/marks",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125/tip?totalonly=1",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125/reaction?totalonly=1",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "PUT",
+    "url": "https://api.geekdo.com/api/viewdate?geeklist=378125",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378125",
+    "body": "{\n  \"type\": \"geeklist\",\n  \"id\": \"378125\",\n  \"name\": \"TEST GEEKLIST - PLEASE DELETE\",\n  \"creator\": 633347,\n  \"href\": \"/geeklist/378125\",\n  \"postdate\": null,\n  \"editdate\": \"2026-05-11T01:43:42+00:00\",\n  \"body\": \"\",\n  \"bodyXml\": \"<?xml version=\\\"1.0\\\"?>\\n<xml/>\\n\",\n  \"private\": true,\n  \"stealth\": false,\n  \"publicAdditionsAllowed\": true,\n  \"commentsAllowed\": true,\n  \"trade\": false,\n  \"ordinalDirection\": \"ascending\",\n  \"submitted\": false,\n  \"sortType\": \"user\",\n  \"domains\": [\n    \"boardgame\"\n  ],\n  \"c"
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347/reaction?geeklist=378125",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": "{\n  \"data\": [],\n  \"pagination\": {\n    \"pageid\": 1,\n    \"perPage\": 25,\n    \"total\": 0\n  }\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378125/tip?totalonly=1",
+    "body": "{\n  \"total\": 0\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378125/marks",
+    "body": "{\n  \"subscriptions\": true,\n  \"blocks\": false,\n  \"bookmarks\": false\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378125/reaction?totalonly=1",
+    "body": "{\n  \"thumbs\": 0\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/user/633347/reaction?geeklist=378125",
+    "body": "{\n  \"geeklist\": {\n    \"378125\": {}\n  }\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/viewdate?geeklist=378125",
+    "body": "{\n  \"geeklist\": {\n    \"378125\": {\n      \"viewDate\": \"2026-05-11T01:43:43+00:00\",\n      \"events\": {},\n      \"eventsAreNew\": false\n    }\n  }\n}"
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125/comment?perPage=2",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378125/comment?perPage=2",
+    "body": "{\n  \"selectedBy\": {\n    \"type\": \"geeklist\",\n    \"id\": \"378125\"\n  },\n  \"comments\": [],\n  \"links\": [],\n  \"locked\": false\n}"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "sec-ch-ua-platform": "\"macOS\"",
+  "authorization": "GeekAuth 46170adf46cb4c04b9aed6970e9f06a5e8315523u633347",
+  "referer": "https://boardgamegeek.com/",
+  "sec-ch-ua": "\"Chromium\";v=\"147\", \"Not.A/Brand\";v=\"8\"",
+  "sec-ch-ua-mobile": "?0",
+  "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+  "accept": "application/json, text/plain, */*",
+  "content-type": "application/json"
+}

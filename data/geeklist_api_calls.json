@@ -1,0 +1,4208 @@
+[
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/login",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/styles-JACHM4QC.css",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/static/geekng_master2_69fe45ee67fa8.css",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/static/geekng_master2_69fe45ee67fa8.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LZ37DQCC.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Z7R6JCZZ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KC3LEVD4.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VO62NOZD.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Y77UHZBE.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6TQCXVRP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7XS4WCUV.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-G466UUWG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-I7TOCVCW.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YQLMF4EX.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/polyfills-PZSJNBYU.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/main-YVG5ZA6P.js",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://boardgamegeek.com/login",
+    "body": "<!doctype html>\n<html lang=\"en-US\">\n  <head>\n<link rel=\"apple-touch-icon\" \thref=\"https://cf.geekdo-static.com/icons/touch-icon180.png\" />\n<link rel=\"shortcut icon\" \t\thref=\"https://cf.geekdo-static.com/icons/favicon2.ico\" type=\"image/ico\" />\n<link rel=\"icon\" \t\t\t\t\thref=\"https://cf.geekdo-static.com/ic"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/static/geekng_master2_69fe45ee67fa8.css",
+    "body": "@charset \"UTF-8\";\n:root{--cc-bg:#fff;--cc-text:#2d4156;--cc-btn-primary-bg:#2d4156;--cc-btn-primary-text:var(--cc-bg);--cc-btn-primary-hover-bg:#1d2e38;--cc-btn-secondary-bg:#eaeff2;--cc-btn-secondary-text:var(--cc-text);--cc-btn-secondary-hover-bg:#d8e0e6;--cc-toggle-bg-off:#919ea6;--cc-toggle-bg-o"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/static/geekng_master2_69fe45ee67fa8.js",
+    "body": "(function(){var fb=function(Za){var f={current_lang:\"en\",auto_language:null,autorun:!0,cookie_name:\"cc_cookie\",cookie_expiration:182,cookie_domain:window.location.hostname,cookie_path:\"/\",cookie_same_site:\"Lax\",use_rfc_cookie:!1,autoclear_cookies:!0,revision:0,script_selector:\"data-cookiecategory\"},"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-G466UUWG.js",
+    "body": "import{d as n,e as s}from\"./chunk-OXPGLZ75.js\";import{d as a}from\"./chunk-CA673JXN.js\";import{Ga as r,S as t,s as e,y as i}from\"./chunk-WL2KFILG.js\";var d=(o,m)=>{let c=r(a);return r(n).addPreviousUrl(m.url),r(s).loginOrError(\"client\").pipe(i(()=>!0),t(()=>(c.error(o.data.onFailMessage?o.data.onFail"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/styles-JACHM4QC.css",
+    "body": "@charset \"UTF-8\";.cdk-overlay-container,.cdk-global-overlay-wrapper{pointer-events:none;top:0;left:0;height:100%;width:100%}.cdk-overlay-container{position:fixed;z-index:1000}.cdk-overlay-container:empty{display:none}.cdk-global-overlay-wrapper{display:flex;position:absolute;z-index:1000}.cdk-overla"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VO62NOZD.js",
+    "body": "import{f as a}from\"./chunk-ZJWVEMKR.js\";import{E as n,I as p}from\"./chunk-SW3RL55I.js\";import{Ba as i,Ga as o,y as s}from\"./chunk-WL2KFILG.js\";var d=(()=>{class t{constructor(){this.http=o(p),this.url=\"/search/\"}search(r){let e=this.url+r.searchType;return this.http.get(e,this.getOptions(r)).pipe(s("
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KC3LEVD4.js",
+    "body": "import{S as m,r as p}from\"./chunk-FPW2Z2IH.js\";import{Xb as s}from\"./chunk-WL2KFILG.js\";var P=(()=>{class r{transform(t,e,i,f,o=\"\"){let a=m(t,l=>!l[e]);if(!t||!i&&!a||i===\"all\")return o;let c={[e]:i},n=p(t,c);return n?n[f]:o}static{this.\\u0275fac=function(e){return new(e||r)}}static{this.\\u0275pipe="
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Z7R6JCZZ.js",
+    "body": "import{a as m}from\"./chunk-WP4ZEVOZ.js\";import{d as f}from\"./chunk-OXPGLZ75.js\";import{d as a}from\"./chunk-CA673JXN.js\";import{Ga as r,S as t,s as i,y as o}from\"./chunk-WL2KFILG.js\";function d(e,c){let s=r(a);return r(f).addPreviousUrl(c.url),r(m).verifyOrError(\"client\").pipe(o(()=>!0),t(()=>(s.erro"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LZ37DQCC.js",
+    "body": "import{a as ve}from\"./chunk-I7TOCVCW.js\";import{a as me}from\"./chunk-EPMF2GAD.js\";import{a as xe}from\"./chunk-ZLWCO2GS.js\";import{a as _e}from\"./chunk-DYKJZHIR.js\";import{U as ge,X as fe,ia as he}from\"./chunk-XCQO3VOR.js\";import{b as de,c as w,d as ue}from\"./chunk-DEQ2IEWG.js\";import{a as M,b as le}"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/polyfills-PZSJNBYU.js",
+    "body": "var r;(function(t){t[t.Little=0]=\"Little\",t[t.Big=1]=\"Big\"})(r||(r={}));function l(t,e){for(let i=1,n=1;i<t.length;i++,n++)if(e[n]===\"\\\\\")n++;else if(t[i]===\":\")return i;throw new Error(`Unterminated $localize metadata block in \"${e}\".`)}var o=function(t,...e){if(o.translate){let n=o.translate(t,e);"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YZNEMV6W.js",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YQLMF4EX.js",
+    "body": "import{e as r}from\"./chunk-OXPGLZ75.js\";import{Ga as n,Qc as e,Wb as o}from\"./chunk-WL2KFILG.js\";var d=(()=>{class i{constructor(){this.loginService=n(r)}onClick(){this.loginService.showLoginModal()}static{this.\\u0275fac=function(t){return new(t||i)}}static{this.\\u0275dir=o({type:i,selectors:[[\"\",\"g"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CKKEBLCH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TA2GU4S3.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OI3JTBFF.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-HJ6GQ6QU.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-EPMF2GAD.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WP4ZEVOZ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-NMXWACLK.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-GVNW6F7M.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ENGCDF72.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JSNBAHDR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DA3WHSN6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PJIGDZA6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TFHNHEA7.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AJWOH6E2.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PL2CQND6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZWXGK2Y2.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-HN7LQXNU.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-G66R2BKH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2SBNBAYH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KPDJ5LJP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6FA2D6GS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CANAA3TG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-O7LXE7PJ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CGORKIGL.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DW2U67MZ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SCVKQVIG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5OWWHC75.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OR4OFG2B.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-T4QXAJDR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZLWCO2GS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-GFDDVEUD.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DYKJZHIR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TJYEGJ22.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ECM4T5DS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XCFDISUV.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2WOTROON.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6KUNDZGS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5H6SRWOY.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OXPGLZ75.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FS7RZGA3.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YSTAL24F.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Y6I756OP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-4IDVHC5M.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6P3XUK7F.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VKTXWCUT.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XNMMATY3.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UWKANEQK.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-RECHUXGF.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FVDLKYOC.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CA673JXN.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LSFPANFB.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-755YBK7R.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5B22RTPM.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-BEEB5DBV.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XCQO3VOR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZJWVEMKR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DEQ2IEWG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-4FLACS5I.js",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-I7TOCVCW.js",
+    "body": "import{f as c}from\"./chunk-ZJWVEMKR.js\";import{I as u}from\"./chunk-SW3RL55I.js\";import{Ba as s,Ga as a,y as n}from\"./chunk-WL2KFILG.js\";import{a as p,b as e}from\"./chunk-Q7L6LLAK.js\";var d=(()=>{class t{constructor(){this.http=a(u)}getSupportBannerData(){let r=c();return this.http.get(\"api/supportbl"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-E3TV4CEH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-IQMW6Q6N.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2PHN6SDR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DUY4GCFA.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KWRJMQL4.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XYPFYZJM.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AQBZSQ54.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DCDO4J4R.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XXUJ3CN5.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FPW2Z2IH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-3QLWXE2L.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7XEVGUSW.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VXXFPN4G.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZECWSMI4.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XHAH66J6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JP7TB26W.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SW3RL55I.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WL2KFILG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Q7L6LLAK.js",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/main-YVG5ZA6P.js",
+    "body": "import{a as Tn,b as ga,c as fa}from\"./chunk-LZ37DQCC.js\";import{a as dt}from\"./chunk-Z7R6JCZZ.js\";import{a as ha}from\"./chunk-KC3LEVD4.js\";import{a as Xa}from\"./chunk-VO62NOZD.js\";import{a as Qt,b as Zt,c as la,d as pa,e as ma}from\"./chunk-Y77UHZBE.js\";import{a as ua}from\"./chunk-6TQCXVRP.js\";import"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7XS4WCUV.js",
+    "body": "import{I as s}from\"./chunk-SW3RL55I.js\";import{Ba as o,Ga as n,y as i}from\"./chunk-WL2KFILG.js\";var m=(()=>{class t{constructor(){this.http=n(s),this.url=\"/api/user\"}getUser(r){return this.http.get(this.url+\"/\"+r)}getUserByUsername(r){return this.http.get(this.url,{params:{username:r}}).pipe(i(e=>e."
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6TQCXVRP.js",
+    "body": "import{b as D,c as T}from\"./chunk-ECM4T5DS.js\";import{H as M,U as O,W as b,y as v}from\"./chunk-XCQO3VOR.js\";import{a as w}from\"./chunk-DUY4GCFA.js\";import{m as y}from\"./chunk-SW3RL55I.js\";import{Cc as d,Cd as h,Eb as o,Sc as _,Tc as x,Ub as g,Uc as u,_b as c,ad as C,mc as l,oc as p,tc as n,uc as s,v"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Y77UHZBE.js",
+    "body": "import{a as g,c as u}from\"./chunk-AQBZSQ54.js\";import{a,b as r,o as p,p as l,t as d,u as H}from\"./chunk-XXUJ3CN5.js\";import{a as t,b as s,d as m}from\"./chunk-Q7L6LLAK.js\";var f={};m(f,{loadHotness:()=>y});var y=a(\"[Hotness] Load\",r());var n={};m(n,{loadHotnessBegun:()=>M,loadHotnessFailure:()=>b,loa"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YZNEMV6W.js",
+    "body": "import{a as g}from\"./chunk-2WOTROON.js\";import{a as c}from\"./chunk-KWRJMQL4.js\";import{Ga as i,Wb as n,Zb as o,eb as r}from\"./chunk-WL2KFILG.js\";var p=(()=>{class e extends g{constructor(){super(...arguments),this.geekAccountService=i(c)}set ggIfLoggedIn(t){this.renderWhenConditionMatches(this.geekA"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CKKEBLCH.js",
+    "body": "import{d as c}from\"./chunk-CA673JXN.js\";import{a as o}from\"./chunk-KWRJMQL4.js\";import{Ga as r,ua as t}from\"./chunk-WL2KFILG.js\";var l=e=>()=>{let i=r(c);return r(o).currentUserAdblockValid$.pipe(t(n=>{!n&&e&&i.error(e,\"\",{enableHtml:!0})}))};export{l as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TA2GU4S3.js",
+    "body": "import{a as f}from\"./chunk-YSTAL24F.js\";import{g as r,j as p}from\"./chunk-ZJWVEMKR.js\";import{L as l}from\"./chunk-FPW2Z2IH.js\";import{I as d}from\"./chunk-SW3RL55I.js\";import{Ba as u,Ga as c,y as s}from\"./chunk-WL2KFILG.js\";import{a as g,b as h}from\"./chunk-Q7L6LLAK.js\";var U=(()=>{class n{constructo"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OI3JTBFF.js",
+    "body": "import{a as L}from\"./chunk-DA3WHSN6.js\";import{a as S}from\"./chunk-ZECWSMI4.js\";import{E as b,L as C}from\"./chunk-SW3RL55I.js\";import{Ba as x,Ea as h,Ga as o,Ha as f,Hd as l,Kd as U,Ld as n,Qc as B,Sa as v,Wb as I,Za as P,ab as g,bb as y,bd as A,gb as T,jc as _}from\"./chunk-WL2KFILG.js\";import{a as "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-HJ6GQ6QU.js",
+    "body": "import{a as C}from\"./chunk-EPMF2GAD.js\";import{a as x}from\"./chunk-DW2U67MZ.js\";import{c as w}from\"./chunk-BEEB5DBV.js\";import{a as D}from\"./chunk-KWRJMQL4.js\";import{C as I}from\"./chunk-XYPFYZJM.js\";import{l as j}from\"./chunk-XXUJ3CN5.js\";import{E as M,W as $,d as A,z as N}from\"./chunk-FPW2Z2IH.js\""
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-EPMF2GAD.js",
+    "body": "import{a as f}from\"./chunk-AJWOH6E2.js\";import{a as u}from\"./chunk-KWRJMQL4.js\";import{k as n,m as d}from\"./chunk-DCDO4J4R.js\";import{Ba as c,Ga as i,qa as a,s,ua as l,y as o}from\"./chunk-WL2KFILG.js\";var I=(()=>{class r{constructor(){this.accountService=i(u),this.storage=i(f),this.logInfoKey=\"adblo"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WP4ZEVOZ.js",
+    "body": "import{a as b}from\"./chunk-CGORKIGL.js\";import{b as V,e as M}from\"./chunk-OXPGLZ75.js\";import{d as y,g as S}from\"./chunk-VKTXWCUT.js\";import{d as C}from\"./chunk-CA673JXN.js\";import{a as E}from\"./chunk-KWRJMQL4.js\";import{Ba as g,Ga as o,L as m,M as f,Qc as u,S as p,Ub as v,fd as s,ra as r,s as n,ua "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-NMXWACLK.js",
+    "body": "import{a as r}from\"./chunk-PL2CQND6.js\";import{Ba as e}from\"./chunk-WL2KFILG.js\";var c=(()=>{class t extends r{constructor(){super(sessionStorage)}static{this.\\u0275fac=function(o){return new(o||t)}}static{this.\\u0275prov=e({token:t,factory:t.\\u0275fac,providedIn:\"root\"})}}return t})();export{c as a"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-GVNW6F7M.js",
+    "body": "import{a}from\"./chunk-UWKANEQK.js\";import{Ba as o,Ga as n}from\"./chunk-WL2KFILG.js\";var w=(()=>{class e{constructor(){this.window=n(a);let t=this.window;this.gtag=t.gtag}pageView(t){this.gtag(\"set\",{page_path:t,page_location:\"https://\"+this.window.location.hostname+t}),this.gtag(\"event\",\"page_view\")"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ENGCDF72.js",
+    "body": "var n={searchType:\"boardgame\",name:\"Board Games\",singularName:\"Game\",searchable:!0},a={searchType:\"article\",name:\"Forums\",searchable:!1},r={searchType:\"geeklist\",name:\"GeekLists\",searchable:!1},s={searchType:\"tag\",name:\"Tags\",searchable:!1},l={searchType:\"wiki\",name:\"Wiki\",searchable:!1},e={searchTy"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JSNBAHDR.js",
+    "body": "import{a as e}from\"./chunk-6KUNDZGS.js\";import{a as n}from\"./chunk-Y6I756OP.js\";import{Ga as o,ha as c,ua as a}from\"./chunk-WL2KFILG.js\";function g(i){let t=i.data.accessTypes,r=o(n);return o(e).checkAccess(t).pipe(c(),a(s=>{!s&&i.data.showLoginOnFail&&(r.href=\"/geekadmin.php?action=adminlogin\")}))}"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DA3WHSN6.js",
+    "body": "import{Ba as a,Ca as u,Ea as p,Ga as s,Qc as h,Sa as l,Va as f,Vb as y,Wa as m,Wb as _}from\"./chunk-WL2KFILG.js\";var r=class{_document;_textarea;constructor(n,t){this._document=t;let e=this._textarea=this._document.createElement(\"textarea\"),i=e.style;i.position=\"fixed\",i.top=i.opacity=\"0\",i.left=\"-9"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PJIGDZA6.js",
+    "body": "import{a,b as c}from\"./chunk-ZWXGK2Y2.js\";import{o,p as l}from\"./chunk-XXUJ3CN5.js\";import{a as f,b as u}from\"./chunk-Q7L6LLAK.js\";var e=\"[GeekMail Notification] Load\",r=\"[GeekMail Notification] Load Success\",A=\"[GeekMail Notification] Load Failure\",d=class{constructor(){this.type=e,this.payload=nul"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TFHNHEA7.js",
+    "body": "import{Xb as p}from\"./chunk-WL2KFILG.js\";var f=(()=>{class n{transform(r,t){if(!r||r<1e3)return String(r);let M=[\"K\",\"M\",\"G\",\"T\",\"P\",\"H\"],a=Math.floor(Math.log(r)/Math.log(1e3)),e=r/Math.pow(1e3,a);t=t||2;let o=Math.floor(Math.log(e)/Math.log(10))+1;t=Math.max(o,t);let c=Math.round(e*Math.pow(10,t-o"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AJWOH6E2.js",
+    "body": "import{a as e}from\"./chunk-PL2CQND6.js\";import{Ba as r}from\"./chunk-WL2KFILG.js\";var n=(()=>{class t extends e{constructor(){super(localStorage)}static{this.\\u0275fac=function(o){return new(o||t)}}static{this.\\u0275prov=r({token:t,factory:t.\\u0275fac,providedIn:\"root\"})}}return t})();export{n as a};"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PL2CQND6.js",
+    "body": "import{i as s,s as a}from\"./chunk-WL2KFILG.js\";var l=class{constructor(e){this.observableValues={},this.storage=e,this.storageAvailable=this.testStorageAvailable()}testStorageAvailable(){let e=\"value\";try{return this.storage.setItem(e,e),this.storage.removeItem(e),!0}catch{return!1}}setItem(e,t){thi"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZWXGK2Y2.js",
+    "body": "var e=\"[Subscription Notification] Load\",a=\"[Subscription Notification] Load Success\",u=\"[Subscription Notification] Load Failure\",x=\"[Subscription Notification] Load Next\",S=\"[Subscription Notification] Load Next Success\",l=\"[Subscription Notification] Load Next failure\",o=class{constructor(){this."
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-HN7LQXNU.js",
+    "body": "import{a as o}from\"./chunk-G66R2BKH.js\";import{L as s,M as c}from\"./chunk-SW3RL55I.js\";import{Ba as r,Ga as i}from\"./chunk-WL2KFILG.js\";var h=(()=>{class t{constructor(){this.titleService=i(c),this.metaService=i(s),this.geekTitleService=i(o)}setTitle(e){this.titleService.setTitle(this.geekTitleServi"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-G66R2BKH.js",
+    "body": "import{a as s}from\"./chunk-2SBNBAYH.js\";import{c as o}from\"./chunk-BEEB5DBV.js\";import{Ba as i,Ga as r}from\"./chunk-WL2KFILG.js\";var p=(()=>{class t{constructor(){this.domainNames=s,this.geeksite=r(o)}makeTitle(e){return this.makeTitleCustom(e+\" | {DOMAIN}\")}makeTitleCustom(e){return e.replace(\"{DOM"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2SBNBAYH.js",
+    "body": "var e={boardgame:\"BoardGameGeek\",rpg:\"RPGGeek\",videogame:\"VideoGameGeek\",puzzle:\"PuzzleGeek\"},a={boardgame:\"https://boardgamegeek.com\",rpg:\"https://rpggeek.com\",videogame:\"https://videogamegeek.com\",puzzle:\"https://boardgamegeek.com\"},g={boardgame:\"#bggplay\",rpg:\"#rpggplay\",videogame:\"#vggplay\",puzz"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KPDJ5LJP.js",
+    "body": "import{l as f,v as l}from\"./chunk-XXUJ3CN5.js\";import{c as u,m as d}from\"./chunk-JP7TB26W.js\";import{I as p}from\"./chunk-SW3RL55I.js\";import{Ba as i,Ga as o,M as c,S as n,s,y as a}from\"./chunk-WL2KFILG.js\";var m=(()=>{class t{constructor(){this.http=o(p)}getBlockStatus(r){return this.http.get(`/api/"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6FA2D6GS.js",
+    "body": "import{a as g}from\"./chunk-755YBK7R.js\";import{k as f,m as p}from\"./chunk-5B22RTPM.js\";import{Ba as s,Ca as a,Ga as e,Va as o,Vb as l,Wa as r,Wb as d,cd as c,gb as h}from\"./chunk-WL2KFILG.js\";var m=(()=>{class t{constructor(){this._ngbConfig=e(g),this.horizontal=!1}get animation(){return this._anima"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CANAA3TG.js",
+    "body": "import{l as p}from\"./chunk-ZJWVEMKR.js\";import{E as s,I as c}from\"./chunk-SW3RL55I.js\";import{Ba as n,Ea as i,Ga as a,S as e}from\"./chunk-WL2KFILG.js\";var h=new i(\"gg.window.canhover\",{factory:()=>!window.matchMedia(\"(hover: none), (pointer: course)\").matches});var v=(()=>{class t{constructor(){this"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-O7LXE7PJ.js",
+    "body": "import{a as qe,b as je,c as Je}from\"./chunk-T4QXAJDR.js\";import{G as tt,M as rt,ga as nt}from\"./chunk-XCQO3VOR.js\";import{G as Ye,c as De,f as Be,g as Ve,j as Qe,l as Le,m as Fe,v as He,w as $e,y as ze}from\"./chunk-IQMW6Q6N.js\";import{ja as at}from\"./chunk-2PHN6SDR.js\";import{a as et}from\"./chunk-DU"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CGORKIGL.js",
+    "body": "import{Eb as l,Rc as r,Ub as d,Va as a,fd as m,hd as s,xc as o,yc as n}from\"./chunk-WL2KFILG.js\";var v=(()=>{class e{constructor(){this.headerClose=new a}static{this.\\u0275fac=function(t){return new(t||e)}}static{this.\\u0275cmp=d({type:e,selectors:[[\"gg-modal-header\"]],inputs:{modalTitle:\"modalTitle"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DW2U67MZ.js",
+    "body": "import{a as r}from\"./chunk-UWKANEQK.js\";import{a as c}from\"./chunk-KWRJMQL4.js\";import{Ba as i,Ga as n,r as e}from\"./chunk-WL2KFILG.js\";var d=(()=>{class t{constructor(){this.accountService=n(c);let o=n(r);this.cookieconsent=o.geekCookieConsent}run(){this.accountService.currentAccount$.subscribe(o=>"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SCVKQVIG.js",
+    "body": "var a={prefix:\"fab\",iconName:\"reddit\",icon:[512,512,[],\"f1a1\",\"M0 256C0 114.6 114.6 0 256 0S512 114.6 512 256s-114.6 256-256 256L37.1 512c-13.7 0-20.5-16.5-10.9-26.2L75 437C28.7 390.7 0 326.7 0 256zM349.6 153.6c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7c-20.6 0-37.8 14.6-41.8 34c-34.5 3.7-61.4 "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5OWWHC75.js",
+    "body": "import{B as h}from\"./chunk-FPW2Z2IH.js\";import{E as m}from\"./chunk-SW3RL55I.js\";import{Ba as d}from\"./chunk-WL2KFILG.js\";import{a as p}from\"./chunk-Q7L6LLAK.js\";var l=[{name:\"recaptcha\",src:\"https://www.recaptcha.net/recaptcha/enterprise.js?render=explicit\"},{name:\"stripe\",src:\"https://js.stripe.com"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OR4OFG2B.js",
+    "body": "import{A,q as y}from\"./chunk-XYPFYZJM.js\";import{o as a,p as x}from\"./chunk-XXUJ3CN5.js\";import{e as m,z as u}from\"./chunk-FPW2Z2IH.js\";import{a as o,b as r}from\"./chunk-Q7L6LLAK.js\";var Y=\"[Image] Load\",g=\"[Image] Load Success\",n=\"[Image] Load Begun\",l=\"[Image] Load Failure\",Z=\"[Image] Load Galleri"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-T4QXAJDR.js",
+    "body": "import{a as pt,b as p,f as ct,g as ut,i as R,n as dt,p as _t,q as ft,s as mt}from\"./chunk-5B22RTPM.js\";import{a as gt}from\"./chunk-IQMW6Q6N.js\";import{m as lt}from\"./chunk-SW3RL55I.js\";import{Aa as $,Ba as B,Ca as A,Cd as rt,Dc as et,Eb as c,Ec as it,Fc as nt,G as S,Ga as r,Gc as x,Jb as L,Na as f,O"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-GFDDVEUD.js",
+    "body": "import{Ab as m,Fc as C,Gc as M,Hd as x,Ld as i,Na as r,Oa as g,Rc as y,Sc as a,Ub as d,Za as l,ab as c,bd as b,cd as v,ed as w,jc as h,mc as p,oc as u,xc as f,yc as _}from\"./chunk-WL2KFILG.js\";function D(n,z){if(n&1){let t=C();f(0,\"img\",1),y(\"load\",function(){r(t);let o=a();return g(o.transitioning."
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DYKJZHIR.js",
+    "body": "import{a as x}from\"./chunk-TJYEGJ22.js\";import{Ab as c,Hd as _,Ld as n,Sc as m,Ub as d,ed as f,jc as u,mc as p,oc as v,tc as o,wc as l}from\"./chunk-WL2KFILG.js\";function z(i,g){if(i&1&&l(0,\"img\",2),i&2){let e,t=g,s=m();f(\"img-fluid \"+s.classes()),o(\"src\",t.src,c)(\"srcset\",t.srcset)(\"width\",t.width)("
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZLWCO2GS.js",
+    "body": "import{c as w}from\"./chunk-BEEB5DBV.js\";import{a as I,b as y,n as T}from\"./chunk-JP7TB26W.js\";import{m as D}from\"./chunk-SW3RL55I.js\";import{Ab as M,Cc as p,Cd as N,Eb as l,Ga as k,Hd as g,Ld as i,Sc as s,Tc as O,Ub as x,Uc as P,_b as b,ad as _,ed as C,fd as L,gd as v,jc as c,mc as d,oc as f,tc as a"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TJYEGJ22.js",
+    "body": "import{g}from\"./chunk-SW3RL55I.js\";import{Eb as s,Ub as i,bd as p,fd as m,hd as d,jc as r,tc as o,uc as c,vc as l}from\"./chunk-WL2KFILG.js\";var v=(()=>{class n{constructor(){this.alphabetcolors=[\"#4376c1\",\"#d04545\",\"#af6137\",\"#986e32\",\"#7b7a28\",\"#6b7e37\",\"#49842c\",\"#49842c\",\"#2c855f\",\"#2c8278\",\"#2f8"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ECM4T5DS.js",
+    "body": "import{a as N}from\"./chunk-755YBK7R.js\";import{a as j,d as P,l,n as S,p as F,q as L,r as W}from\"./chunk-5B22RTPM.js\";import{Ba as p,Ca as h,Ga as n,Gc as y,Jb as _,Qc as E,Ra as d,Sa as g,Sd as I,Tc as D,Ub as m,Uc as R,Va as r,Vb as w,Wa as c,Wb as b,cd as M,db as u,ed as O,gb as f,h as a,xc as v,y"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/api/accounts/current",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/js/prebid_ads_helper.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/images/logos/navbar-logo-bgg-b2.svg",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XCFDISUV.js",
+    "body": "import{a as n}from\"./chunk-2WOTROON.js\";import{a as d}from\"./chunk-6KUNDZGS.js\";import{b as c}from\"./chunk-XHAH66J6.js\";import{Ga as h,Ld as e,Wb as I,Zb as a,eb as o,ra as f,z as g}from\"./chunk-WL2KFILG.js\";var D=(()=>{class s extends n{constructor(){super(...arguments),this.checkAccessService=h(d)"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2WOTROON.js",
+    "body": "import{Ga as e,Lb as c,Qb as h,Sd as a,Wb as o,d as n}from\"./chunk-WL2KFILG.js\";var p=(()=>{class t{constructor(){this.#e=new n,this.#t=!1,this.viewContainer=e(h),this.template=e(c),this.cd=e(a)}#e;#t;renderWhenConditionMatches(s,i){this.#e.add(s.subscribe(f=>{let r=i===f;r&&!this.#t?(this.#t=!0,thi"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6KUNDZGS.js",
+    "body": "import{a as I}from\"./chunk-KWRJMQL4.js\";import{W as $,X as j,k as S}from\"./chunk-XYPFYZJM.js\";import{l as g}from\"./chunk-XXUJ3CN5.js\";import{L as v,e as m,r as k}from\"./chunk-FPW2Z2IH.js\";import{$ as h,Ba as d,Ga as a,ha as p,ra as f,s as l,ta as A,y as u}from\"./chunk-WL2KFILG.js\";var W=(()=>{class "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5H6SRWOY.js",
+    "body": "import{a as m}from\"./chunk-KWRJMQL4.js\";import{A as o,Ba as u,Ga as h,ra as a,s as g,xa as p,y as c}from\"./chunk-WL2KFILG.js\";import{a as n,b as s}from\"./chunk-Q7L6LLAK.js\";var L=(()=>{class i{constructor(){this.geekAccountService=h(m),this.combineLoggedIn=e=>e.pipe(o(t=>this.geekAccountService.logg"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OXPGLZ75.js",
+    "body": "import{a as we}from\"./chunk-Y6I756OP.js\";import{d as ee,e as te,g as oe}from\"./chunk-VKTXWCUT.js\";import{a as ge}from\"./chunk-UWKANEQK.js\";import{f as w,i as he}from\"./chunk-ZJWVEMKR.js\";import{H as de,c as se,f as ae,g as le,h as ce,k as U,m as ue,t as me,u as pe}from\"./chunk-IQMW6Q6N.js\";import{a "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FS7RZGA3.js",
+    "body": "import{T as n,s as e,xa as o}from\"./chunk-WL2KFILG.js\";function y(p){return n(t=>{let r=p(t),a=Array.isArray(r)?r:[r];return e(t).pipe(o(...a))})}export{y as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YSTAL24F.js",
+    "body": "function o(e){return e!=null}function c(e,t){return t.includes(e)}function i(e,t){return Object.prototype.hasOwnProperty.call(e,t)}function s(e){if(\"onscrollend\"in window)addEventListener(\"scrollend\",e,{once:!0});else{let t,r=()=>{t&&clearTimeout(t),t=setTimeout(()=>{e(),removeEventListener(\"scroll\""
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Y6I756OP.js",
+    "body": "import{Ea as o}from\"./chunk-WL2KFILG.js\";var i=new o(\"gg.window.location\",{factory:()=>window.location});export{i as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-4IDVHC5M.js",
+    "body": "import{a as e}from\"./chunk-UWKANEQK.js\";import{Ba as n,Ga as c,Sa as r}from\"./chunk-WL2KFILG.js\";var h=(()=>{class t{constructor(){this.window=c(e),this.document=c(r)}focusWithoutScrollingById(i){let o=this.document.getElementById(i);this.focusWithoutScrolling(o)}focusWithoutScrolling(i){let o=this."
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6P3XUK7F.js",
+    "body": "import{a as R,j,n as S,o as L,p as V}from\"./chunk-5B22RTPM.js\";import{Aa as C,Ba as v,Ca as E,G as c,Ga as r,Gc as g,Jb as O,Kb as T,Qc as w,Ra as H,Sa as k,Sd as K,Va as M,Vb as P,Vc as m,W as _,Wa as N,Wb as a,Xc as h,Yc as u,Zb as F,cd as l,db as B,eb as A,gb as p,h as D,jc as f,sd as I}from\"./ch"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UWKANEQK.js",
+    "body": "import{Ea as o}from\"./chunk-WL2KFILG.js\";var w=new o(\"gg.window\",{factory:()=>window});export{w as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VKTXWCUT.js",
+    "body": "import{b as dt,d as j,g as pt}from\"./chunk-XNMMATY3.js\";import{a as ct}from\"./chunk-RECHUXGF.js\";import{b as Kt}from\"./chunk-FVDLKYOC.js\";import{c as Gt,d as lt,e as ht,g as $t,h as Ut,k as tt,l as et}from\"./chunk-3QLWXE2L.js\";import{c as M,d as Qt}from\"./chunk-7XEVGUSW.js\";import{b as q,c as J}from"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XNMMATY3.js",
+    "body": "import{a as u,b as xe,c as f}from\"./chunk-FVDLKYOC.js\";import{a as m,b as Re,c as De,d as N}from\"./chunk-7XEVGUSW.js\";import{a as y}from\"./chunk-ZECWSMI4.js\";import{$ as V,Aa as Y,Ba as M,Ca as F,Ea as D,Eb as ie,Ga as l,Kb as re,Lb as ne,M as z,Mb as L,Nb as oe,Q as S,Qb as se,Ra as Q,Sa as K,Sd as"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-RECHUXGF.js",
+    "body": "function e(){return typeof __karma__<\"u\"&&!!__karma__||typeof jasmine<\"u\"&&!!jasmine||typeof jest<\"u\"&&!!jest||typeof Mocha<\"u\"&&!!Mocha}export{e as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FVDLKYOC.js",
+    "body": "var o=(function(e){return e[e.NORMAL=0]=\"NORMAL\",e[e.NEGATED=1]=\"NEGATED\",e[e.INVERTED=2]=\"INVERTED\",e})(o||{}),l,t;function i(){if(t==null){if(typeof document!=\"object\"||!document||typeof Element!=\"function\"||!Element)return t=!1,t;if(document.documentElement?.style&&\"scrollBehavior\"in document.doc"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CA673JXN.js",
+    "body": "import{N as ht}from\"./chunk-SW3RL55I.js\";import{Ba as T,Dc as V,Ea as it,Eb as a,Ec as Z,Fc as z,Ga as r,Gc as G,Ha as nt,Hd as y,Id as dt,Na as R,Oa as N,Qc as lt,Ra as P,Rc as U,Sa as k,Sc as l,Ub as j,Wa as B,Za as H,Zb as rt,Zd as ut,bd as I,eb as ot,ed as g,fd as f,gb as st,gc as L,h as _,hd as"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LSFPANFB.js",
+    "body": "import{a as H,j as k,l as v,q as I,r as O}from\"./chunk-XXUJ3CN5.js\";import{A as M,Ba as E,Ca as p,Ea as f,Fa as o,Ga as h,K as R,M as l,S as A,Vb as g,W as x,X as P,Xa as G,_ as $,ba as N,f as D,fa as m,h as w,ia as U,y as d}from\"./chunk-WL2KFILG.js\";import{a}from\"./chunk-Q7L6LLAK.js\";var nt={dispat"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-755YBK7R.js",
+    "body": "import{Ba as e}from\"./chunk-WL2KFILG.js\";var i=(()=>{class t{constructor(){this.animation=!0}static{this.\\u0275fac=function(o){return new(o||t)}}static{this.\\u0275prov=e({token:t,factory:t.\\u0275fac,providedIn:\"root\"})}}return t})();export{i as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-BEEB5DBV.js",
+    "body": "import{e as r}from\"./chunk-FPW2Z2IH.js\";import{Ea as t}from\"./chunk-WL2KFILG.js\";var i=[\"boardgame\",\"rpg\",\"videogame\",\"puzzle\"],n=[\"puzzle\"];var m=new t(\"gg.geeksite\",{factory:()=>{let o=RegExp(\"domain_override=[^;]+\").exec(document.cookie),e=decodeURIComponent(o?o.toString().replace(/^[^=]+./,\"\"):\""
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5B22RTPM.js",
+    "body": "import{A as Me,Ba as re,Ea as We,G as Pt,Ga as Y,I as Le,Kb as Ie,Lb as Ve,M as Vt,N as te,Qb as He,Ra as $e,Sa as Ht,Wa as ke,Z as je,aa as Be,f as De,gc as _e,h as $t,p as kt,s as Qt,sa as at,ua as ee,xa as Ne,y as It}from\"./chunk-WL2KFILG.js\";var R=\"top\",B=\"bottom\",D=\"right\",T=\"left\",_t=\"auto\",J="
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XCQO3VOR.js",
+    "body": "var t={prefix:\"fas\",iconName:\"trash-can\",icon:[448,512,[61460,\"trash-alt\"],\"f2ed\",\"M135.2 17.7C140.6 6.8 151.7 0 163.8 0L284.2 0c12.1 0 23.2 6.8 28.6 17.7L320 32l96 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 96C14.3 96 0 81.7 0 64S14.3 32 32 32l96 0 7.2-14.3zM32 128l384 0 0 320c0 35.3-28.7 64-64 64L96"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZJWVEMKR.js",
+    "body": "import{L as z,N as O,m as S}from\"./chunk-XYPFYZJM.js\";import{l as C}from\"./chunk-XXUJ3CN5.js\";import{N as b,V as N,e as c,r as F}from\"./chunk-FPW2Z2IH.js\";import{C as s,D as H,E as j}from\"./chunk-SW3RL55I.js\";import{A as T,Ba as f,Ea as E,Ga as a,M as w,S as l,W as P,ra as y,s as I,t as m,ua as R,y "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DEQ2IEWG.js",
+    "body": "import{d as i,i as u,j as t}from\"./chunk-DCDO4J4R.js\";function d(o,r,n){return u(n?.in||o,+t(o)+r)}function m(o,r,n){return d(o,r*i,n)}function x(o){return r=>{let e=(o?Math[o]:Math.trunc)(r);return e===0?0:e}}function h(o,r){return+t(o)-+t(r)}export{d as a,m as b,x as c,h as d};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-4FLACS5I.js",
+    "body": "import{i as a,j as f}from\"./chunk-DCDO4J4R.js\";function i(r,t,e){let o=f(r,e?.in);return isNaN(t)?a(e?.in||r,NaN):(t&&o.setDate(o.getDate()+t),o)}function p(r,t,e){return i(r,-t,e)}export{i as a,p as b};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-E3TV4CEH.js",
+    "body": "import{b as m,i as f,j as o}from\"./chunk-DCDO4J4R.js\";function c(r,...t){let e=f.bind(null,r||t.find(n=>typeof n==\"object\"));return t.map(e)}function a(r,t){let e=o(r,t?.in);return e.setHours(0,0,0,0),e}function i(r){let t=o(r),e=new Date(Date.UTC(t.getFullYear(),t.getMonth(),t.getDate(),t.getHours("
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-IQMW6Q6N.js",
+    "body": "import{a as me}from\"./chunk-SW3RL55I.js\";import{Aa as d,Ba as K,Ca as J,Ea as A,F as xe,Ga as E,Hd as x,Kb as ke,Nb as N,Ob as s,Qc as C,Ra as Pe,Sd as ge,Ta as Re,Va as D,Vb as Q,Wb as l,Wd as pe,Za as w,Zb as u,bb as y,cc as je,cd as fe,db as I,eb as g,gb as S,gc as Ge,h as Se,jc as O,r as Ne,sd a"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/api/accounts/regions",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2PHN6SDR.js",
+    "body": "var c={prefix:\"far\",iconName:\"message\",icon:[512,512,[\"comment-alt\"],\"f27a\",\"M160 368c26.5 0 48 21.5 48 48l0 16 72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6L448 368c8.8 0 16-7.2 16-16l0-288c0-8.8-7.2-16-16-16L64 48c-8.8 0-16 7.2-16 16l0 288c0 8.8 7.2 16 16 16l96 0zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-B6VVQNEV.js",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KWRJMQL4.js",
+    "body": "import{K as h,M as m,P as O,S as $,T as A,U as g}from\"./chunk-XYPFYZJM.js\";import{k as p,m as d}from\"./chunk-DCDO4J4R.js\";import{l as u}from\"./chunk-XXUJ3CN5.js\";import{Ba as l,Ga as f,M as c,W as r,k as t,na as o,ra as n,y as a}from\"./chunk-WL2KFILG.js\";var R=(()=>{class s{constructor(){this.store="
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DUY4GCFA.js",
+    "body": "import{N as ct}from\"./chunk-SW3RL55I.js\";import{Ba as ve,Ga as $,Gc as st,Hd as ye,Ld as ee,Qd as S,Sa as nt,Tc as lt,Ub as ge,Uc as ft,Wb as it,ab as at,ed as ut,jc as ot,zb as rt}from\"./chunk-WL2KFILG.js\";import{a as et,b as tt}from\"./chunk-Q7L6LLAK.js\";function Ce(e,n){(n==null||n>e.length)&&(n=e"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AQBZSQ54.js",
+    "body": "import{a as o,b as n}from\"./chunk-Q7L6LLAK.js\";var E={loadState:\"UNLOADED\"};function u(e){return\"loadState\"in e?e:o(o({},e),E)}function L(){function e(a){return a.loadState===\"LOADED\"||a.loadState===\"LOADING\"||a.loadState===\"REQUESTED_MULTIPLE\"?a:n(o({},a),{loadState:a.loadState===\"REQUESTED\"?\"REQUE"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XYPFYZJM.js",
+    "body": "import{a as Mt,b as N,c as _}from\"./chunk-AQBZSQ54.js\";import{k as Xt,m as Zt}from\"./chunk-DCDO4J4R.js\";import{a as d,b as f,f as Gt,l as Ht,m as Vt,n as Wt,o as h,p as P,t as E,u as b,v as te}from\"./chunk-XXUJ3CN5.js\";import{C as It,L as $t,N as z,Q as xt,X as ot,a as Qt,d as et,e as v,o as Jt,z as"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DCDO4J4R.js",
+    "body": "var h=Math.pow(10,8)*24*60*60*1e3,j=-h,q=6048e5,v=864e5,D=6e4,x=36e5,E=1e3,J=525600,L=43200,A=1440;var Y=3600;var T=Y*24,B=T*7,U=T*365.2425,w=U/12,G=w*3,I=Symbol.for(\"constructDateFrom\");function l(e,t){return typeof e==\"function\"?e(t):e&&typeof e==\"object\"&&I in e?e[I](t):e instanceof Date?new e.co"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XXUJ3CN5.js",
+    "body": "import{c as pe}from\"./chunk-XHAH66J6.js\";import{$ as oe,Ba as E,Ca as b,Ea as s,Fa as a,Ga as l,Hd as le,Ia as M,Ra as A,Rd as k,Vb as T,Wa as ue,ab as ae,bb as de,cb as D,eb as fe,f as j,h as ee,i as I,ka as ie,ma as se,n as te,q as ne,xa as ce,y as re}from\"./chunk-WL2KFILG.js\";import{a as h,b as m"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FPW2Z2IH.js",
+    "body": "function ln(r,t){for(var e=-1,o=t.length,f=r.length;++e<o;)r[f+e]=t[e];return r}var wr=ln;var dn=typeof global==\"object\"&&global&&global.Object===Object&&global,st=dn;var cn=typeof self==\"object\"&&self&&self.Object===Object&&self,xn=st||cn||Function(\"return this\")(),h=xn;var gn=h.Symbol,R=gn;var Te="
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7XEVGUSW.js",
+    "body": "import{Ba as o,Ca as a,Ea as s,Ga as r,Sa as u,Va as l,Vb as g,Za as c,gb as d}from\"./chunk-WL2KFILG.js\";function b(e,n=0){return m(e)?Number(e):arguments.length===2?n:0}function m(e){return!isNaN(parseFloat(e))&&!isNaN(Number(e))}function E(e){return e instanceof d?e.nativeElement:e}var h=new s(\"cd"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-3QLWXE2L.js",
+    "body": "import{b as C}from\"./chunk-7XEVGUSW.js\";import{a as oe,b as ie,c as p,d as se}from\"./chunk-VXXFPN4G.js\";import{a as d}from\"./chunk-ZECWSMI4.js\";import{$ as G,Ba as a,C as V,Ca as T,Ea as A,Ga as r,Kb as Y,La as Q,Mb as J,Ra as y,Sa as m,Ub as ee,V as K,Vb as I,W as Z,Wa as l,Wb as M,Wd as k,Zd as ne"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VXXFPN4G.js",
+    "body": "var n;function d(){if(n==null){let e=typeof document<\"u\"?document.head:null;n=!!(e&&(e.createShadowRoot||e.attachShadow))}return n}function r(e){if(d()){let t=e.getRootNode?e.getRootNode():null;if(typeof ShadowRoot<\"u\"&&ShadowRoot&&t instanceof ShadowRoot)return t}return null}function a(){let e=type"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZECWSMI4.js",
+    "body": "import{w as o}from\"./chunk-SW3RL55I.js\";import{Ba as i,Ga as r,kb as s}from\"./chunk-WL2KFILG.js\";var e;try{e=typeof Intl<\"u\"&&Intl.v8BreakIterator}catch{e=!1}var c=(()=>{class t{_platformId=r(s);isBrowser=this._platformId?o(this._platformId):typeof document==\"object\"&&!!document;EDGE=this.isBrowser&"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XHAH66J6.js",
+    "body": "import{Ga as a,Hd as D,Ra as m,Ta as u,Za as l,ab as y,bb as b,f,j as g,sa as p,ya as d}from\"./chunk-WL2KFILG.js\";function E(n){n||(n=a(u));let e=new f(t=>{if(n.destroyed){t.next();return}return n.onDestroy(t.next.bind(t))});return t=>t.pipe(p(e))}function U(n,e){let t=e?.injector??a(m),o=new g(1),c"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JP7TB26W.js",
+    "body": "import{M as pn,b as hn,c as Le,d as dn,e as ve,f as fn,y as Ht}from\"./chunk-SW3RL55I.js\";import{A as x,B as Ne,Ba as C,C as Or,Ca as Lr,Cb as Br,D as Ke,Da as xr,Dd as sn,Ea as I,Fa as Z,Ga as l,Ha as jr,Hd as an,Ib as Hr,Jd as cn,Kb as zt,La as V,Ld as un,M as K,Ma as A,Nb as Ft,Ob as k,Pb as Vr,Qb"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SW3RL55I.js",
+    "body": "import{$a as ct,Ba as h,Ca as he,Ea as b,Fa as l,Fb as q,Fd as Q,Ga as w,Gb as hn,Gd as yn,Ha as st,Hb as Pe,Ic as O,Jc as Dn,Ka as qt,Kc as _,La as at,Lb as Le,M as Xt,Ma as Qt,Mb as pn,Nb as Ne,Ob as C,Qb as pe,Sa as F,Sd as ht,T as Kt,Td as En,Ud as pt,Vb as ge,Vd as wn,Wa as Me,Wb as Y,Xa as ut,"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Q7L6LLAK.js",
+    "body": "var g=Object.defineProperty,j=Object.defineProperties;var k=Object.getOwnPropertyDescriptors;var e=Object.getOwnPropertySymbols;var h=Object.prototype.hasOwnProperty,i=Object.prototype.propertyIsEnumerable;var f=(a,b,c)=>b in a?g(a,b,{enumerable:!0,configurable:!0,writable:!0,value:c}):a[b]=c,l=(a,b"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WL2KFILG.js",
+    "body": "import{a as J,b as X}from\"./chunk-Q7L6LLAK.js\";function b(e){return typeof e==\"function\"}function gt(e){let n=e(r=>{Error.call(r),r.stack=new Error().stack});return n.prototype=Object.create(Error.prototype),n.prototype.constructor=n,n}var po=gt(e=>function(n){e(this),this.message=n?`${n.length} err"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 404,
+    "url": "https://boardgamegeek.com/api/accounts/current",
+    "body": "null"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/images/logos/navbar-logo-bgg-b2.svg",
+    "body": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"80\" height=\"38\" viewBox=\"0 0 80 38\">\n  <g fill=\"none\" fill-rule=\"evenodd\">\n    <path fill=\"#FFF\" d=\"M41.6414127,20.8453307 C41.6414127,20.7138507 41.5623149,20.5562773 41.377073,20.5562773 L37.2504649,20.5562773 L37.2504649,24.470024 L41.377073,24.47002"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://boardgamegeek.com/js/prebid_ads_helper.js",
+    "body": "var e=document.createElement('div');\ne.id='ahwfpkno123rtb78';\ne.style.display='none';\ndocument.body.appendChild(e);"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WRPUJ7DR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778462877563&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&_eu=AAAIAAAC&are=1&cid=305549759.1778462878&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938466~115938469~118128922~118463261~118719171&sid=1778462877&sct=1&seg=0&dl=https%3A%2F%2Fboardgamegeek.com%2Flogin&dt=BoardGameGeek&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=732",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-B6VVQNEV.js",
+    "body": "import{c as L}from\"./chunk-WRPUJ7DR.js\";import{c as _,d as S,e as y}from\"./chunk-OXPGLZ75.js\";import{a as x}from\"./chunk-Y6I756OP.js\";import\"./chunk-VKTXWCUT.js\";import\"./chunk-XNMMATY3.js\";import\"./chunk-UWKANEQK.js\";import\"./chunk-RECHUXGF.js\";import\"./chunk-FVDLKYOC.js\";import{c as v}from\"./chunk"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://boardgamegeek.com/api/accounts/regions",
+    "body": "{\n  \"regions\": [],\n  \"userid\": null\n}"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/images/logos/bgg-primary-logo-b1.svg",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WRPUJ7DR.js",
+    "body": "var e={1:{geeksite:\"boardgame\",prefix:\"BGG\"},2:{geeksite:\"rpg\",prefix:\"RPGG\"},3:{geeksite:\"videogame\",prefix:\"VGG\"},4:{geeksite:\"puzzle\",prefix:\"PZG\"}},g=[\"boardgamegeek.com\",\"rpggeek.com\",\"videogamegeek.com\",\"puzzlegeek.com\",\"bgg.cc\",\"geekdo.com\"],o={boardgame:\"https://cf.geekdo-static.com/images/l"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/images/logos/bgg-primary-logo-b1.svg",
+    "body": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"173\" height=\"90\"><g fill=\"none\" fill-rule=\"evenodd\"><path fill=\"#FF5100\" d=\"M58.584 16.512l-8.864 2.415L58.4 0 2.119 20.715l3.077 24.813L0 50.537l15.494 38.811 32.932-12.134 11.448-26.875-4.914-4.738zM107.093 12.93a.34.34 0 0 0-.337-.337h-4.19c-.121 0-."
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cm.g.doubleclick.net/partnerpixels?gdpr=0&url=https%3A%2F%2Fboardgamegeek.com%2Flogin",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778462877563&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&_eu=AEAIAAQC&ae=a&are=1&cid=305549759.1778462878&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&_s=2&tag_exp=0~115938466~115938469~118128922~118463261~118719171&sid=1778462877&sct=1&seg=0&dl=https%3A%2F%2Fboardgamegeek.com%2Flogin&dt=BoardGameGeek&en=scroll&epn.percent_scrolled=90&_et=3&tfd=1085",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cm.g.doubleclick.net/partnerpixels?gdpr=0&url=https%3A%2F%2Fboardgamegeek.com%2Flogin",
+    "body": "<!DOCTYPE html><html><body></body></html>"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/icons/favicon2.ico",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://boardgamegeek.com/login/api/v1",
+    "body": {
+      "credentials": "***REDACTED***"
+    }
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/?rnd=0uqlr",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778462877563&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&tcfd=10000&_eu=AAAIAAQC&are=1&cid=305549759.1778462878&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&tag_exp=0~115938466~115938469~118128922~118463261~118719171&sid=1778462877&sct=1&seg=1&dl=https%3A%2F%2Fboardgamegeek.com%2Flogin&dt=BoardGameGeek&dp=%2Flogin&_s=3&tfd=4833",
+    "body": "en=page_view&_ee=1&_et=347\r\nen=user_engagement&_et=3745"
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778462877563&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&tcfd=10000&_eu=AAAIAAQC&are=1&cid=305549759.1778462878&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&tag_exp=0%7E115938466%7E115938469%7E118128922%7E118463261%7E118719171&sid=1778462877&sct=1&seg=1&dl=https%3A%2F%2Fboardgamegeek.com%2Flogin&dt=BoardGameGeek&dp=%2Flogin&_s=3&tfd=4833&gaf=1",
+    "body": "en=page_view&_ee=1&_et=347\r\nen=user_engagement&_et=3745"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/HSBgzdk6GSN_eLZUUwd4swMIFAc=/825x450/filters:strip_icc()/https%3A%2F%2Fcf.geekdo-static.com%2Fcms%2F2026%2F04%2F23153911%2FArtboard-1Plate-banner2.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/styles-JACHM4QC.css",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/static/geekng_master2_69fe45ee67fa8.css",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/static/geekng_master2_69fe45ee67fa8.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LZ37DQCC.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Z7R6JCZZ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KC3LEVD4.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VO62NOZD.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Y77UHZBE.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6TQCXVRP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7XS4WCUV.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-G466UUWG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-I7TOCVCW.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YQLMF4EX.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/polyfills-PZSJNBYU.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/main-YVG5ZA6P.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YZNEMV6W.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CKKEBLCH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TA2GU4S3.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OI3JTBFF.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-HJ6GQ6QU.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-EPMF2GAD.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WP4ZEVOZ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-NMXWACLK.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-GVNW6F7M.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ENGCDF72.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JSNBAHDR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DA3WHSN6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PJIGDZA6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TFHNHEA7.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AJWOH6E2.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PL2CQND6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZWXGK2Y2.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-HN7LQXNU.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-G66R2BKH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2SBNBAYH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KPDJ5LJP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6FA2D6GS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CANAA3TG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-O7LXE7PJ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CGORKIGL.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DW2U67MZ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SCVKQVIG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5OWWHC75.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OR4OFG2B.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-T4QXAJDR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZLWCO2GS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-GFDDVEUD.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DYKJZHIR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TJYEGJ22.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ECM4T5DS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XCFDISUV.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2WOTROON.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6KUNDZGS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5H6SRWOY.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OXPGLZ75.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FS7RZGA3.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YSTAL24F.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Y6I756OP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-4IDVHC5M.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6P3XUK7F.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VKTXWCUT.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XNMMATY3.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UWKANEQK.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-RECHUXGF.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FVDLKYOC.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CA673JXN.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LSFPANFB.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-755YBK7R.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5B22RTPM.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-BEEB5DBV.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XCQO3VOR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZJWVEMKR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DEQ2IEWG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-4FLACS5I.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-E3TV4CEH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-IQMW6Q6N.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2PHN6SDR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DUY4GCFA.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KWRJMQL4.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XYPFYZJM.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AQBZSQ54.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DCDO4J4R.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XXUJ3CN5.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FPW2Z2IH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-3QLWXE2L.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7XEVGUSW.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VXXFPN4G.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZECWSMI4.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XHAH66J6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JP7TB26W.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SW3RL55I.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WL2KFILG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Q7L6LLAK.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/api/accounts/current",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/js/prebid_ads_helper.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/images/logos/navbar-logo-bgg-b2.svg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZTGPRRYQ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-IW3YRRS7.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VOFIQYFH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6ACEN366.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-QBBOGNEK.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-32FJ23Y6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WWHHFO5I.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JQLZ2RYD.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FDCU63MA.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PT3RXFGB.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Q2XI3ZXC.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-GAU3ZA2S.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OK7D6L4T.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZG5QERGQ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WSWQGFHP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-V44J6V4H.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UE4GECVZ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-K3CXC4SQ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-3AZ6XXF5.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AANCEB57.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-3OOMNYDA.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-RT6WUYO5.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SH6D3TYP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VF5F7CDM.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UY3FBRIG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-MJNVZGNF.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JPHBDNCA.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XJ3SXA67.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/hotness?geeksite=boardgame&objecttype=thing&showcount=50&singular=1",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/homehero?singular=1",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/ending_preorder",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/images/logos/bgg-primary-logo-reverse.svg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347/settings",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/api/accounts/regions",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geekmail/messages?metaonly=1&numunread=1",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/notice?metaonly=1&numunread=1",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/avatars/DK6fqB_j1U3_acmP7YgwMV38m8g=/fit-in/64x64/filters:quality(85):strip_icc()/avatar_id134565.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://boardgamegeek.com/api/accesslog",
+    "body": {
+      "detected": false,
+      "duration": 0,
+      "consentShown": false
+    }
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778462882079&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&_eu=AAAIAAQC&are=1&cid=305549759.1778462878&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938466~115938468~118463262&sid=1778462877&sct=1&seg=1&dl=https%3A%2F%2Fboardgamegeek.com%2F%3Frnd%3D0uqlr&dr=https%3A%2F%2Fboardgamegeek.com%2Flogin&dt=BoardGameGeek%20%7C%20Gaming%20Unplugged%20Since%202000&en=page_view&tfd=608",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/blog/1?partial=essential",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/blog/12153?partial=essential",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/blog/13076?partial=essential",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cm.g.doubleclick.net/partnerpixels?gdpr=0&url=https%3A%2F%2Fboardgamegeek.com%2F%3Frnd%3D0uqlr",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://securepubads.g.doubleclick.net/gampad/ads?pvsid=6723221426984932&correlator=2738315934289752&eid=31098254&output=ldjh&gdfp_req=1&vrg=202605010101&ptt=17&impl=fifs&gdpr=0&iu_parts=1005854%2Cca-pub-7206761047394129%2Cboardgame_home_hero&enc_prev_ius=%2F0%2F1%2F2&prev_iu_szs=1200x125&ifi=1&dids=dfp-leaderboard-lg_2&sfv=1-0-45&eri=1&sc=1&cookie_enabled=1&abxe=1&dt=1778462882589&lmt=1778462882&adxs=-9&adys=-9&biw=1280&bih=720&scr_x=0&scr_y=0&btvi=-1&ucis=1&oid=2&u_his=3&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&u_tz=-240&dmc=16&bc=31&nvt=1&uach=WyJtYWNPUyIsIjI2LjIuMCIsIng4NiIsIiIsIjE0Ny4wLjc3MjcuMTUiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxNDcuMC43NzI3LjE1Il0sWyJOb3QuQS9CcmFuZCIsIjguMC4wLjAiXV0sMF0.&uas=1&url=https%3A%2F%2Fboardgamegeek.com%2F%3Frnd%3D0uqlr&ref=https%3A%2F%2Fboardgamegeek.com%2Flogin&vis=1&psz=0x-1&msz=0x-1&fws=2&ohw=0&dlt=1778462882068&idt=213&adks=845353759&frm=20&eoidce=1&pgls=CAo.",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778462882079&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&_eu=AEAIAAQC&ae=a&are=1&cid=305549759.1778462878&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&_s=2&tag_exp=0~115938466~115938468~118463262&sid=1778462877&sct=1&seg=1&dl=https%3A%2F%2Fboardgamegeek.com%2F%3Frnd%3D0uqlr&dr=https%3A%2F%2Fboardgamegeek.com%2Flogin&dt=BoardGameGeek%20%7C%20Gaming%20Unplugged%20Since%202000&en=scroll&epn.percent_scrolled=90&_et=1&tfd=754",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/zs1dsUC9JkSq9EY7dPUBmw__mediacard/img/n3Sml2B5Z0ZIhqcToiJ2UI3ERZ4=/288x162/filters:strip_icc()/pic9534110.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/s7VopyT-UieNmkL8rIzwzA__mediacard/img/T5pMyMsoyToov8WklBGFftkBNIE=/0x548:1371x1319/288x162/filters:strip_icc()/pic9504647.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/a6l8LRmuKXwduLfa1DafVg__mediacard/img/plgd7ACYO4ZG3a1mQoXyztUOZ7E=/0x259:2480x1891/fit-in/288x162/filters:fill(blur):strip_icc()/pic9519392.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/kTHQFpzug4cf0cD7D9jU1Q__mediacard/img/gZvQL4Iyo6Gx87LsfG5LyAhL7Rg=/0x0:1892x1064/288x162/filters:strip_icc()/pic9361421.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/SvQ_EQBUtgCRcBZA6gfu4A__mediacard/img/rvhXhZC3zz-SNQrdOwXLzF_0Xg4=/0x22:634x379/288x162/filters:strip_icc()/pic9338663.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/kqp2epa4OqdYO8Aec68q0A__mediacard/img/oblnAa1jTt-uJezmEQZ1ZyVt0xE=/0x197:877x690/288x162/filters:strip_icc()/pic9500989.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/OtLbtJ5WKiKbJNTsHkksww__mediacard/img/HFBhcE6UEhBCYDvRvg0YGtBNEAY=/0x315:724x722/288x162/filters:strip_icc()/pic9264600.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/ivfUag0MA50u_eCIYhnDCQ__mediacard/img/SvrZiYmOd1wyMsW6R8r6HVXWUCI=/0x0:1318x741/288x162/filters:strip_icc()/pic9447459.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/x3vRSWDAnZlzCxhsEgcNW2gGvFM=/80x80/filters:strip_icc()/https%3A%2F%2Fcf.geekdo-static.com%2Fcms%2F2026%2F05%2F08193056%2FTop-10-Peoples-Choice_-Most-Owned-Games-Icon.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/tZ2OjlNPTaZEcrdfnWHtAu5MXhw=/80x80/filters:strip_icc()/https%3A%2F%2Fcf.geekdo-static.com%2Fcms%2F2026%2F01%2F30144736%2FBGG-Podcast-Icon.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/8VYpzbrjIUZXRe0cMDJNJCr1e3Q=/80x80/filters:strip_icc()/https%3A%2F%2Fcf.geekdo-static.com%2Fcms%2F2024%2F10%2F17132006%2FGameNight-Flip-7-Hero-Thumbnail.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/qDtyZhp8QTvIYS0oTZLjCboYBZw=/80x80/filters:strip_icc()/https%3A%2F%2Fcf.geekdo-static.com%2Fcms%2F2024%2F01%2F10102506%2F160x160-BGI-logo.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/9kGOADQkWyQnC-Hlv8MqoA__mediacard/img/4fp4nak-7Pl9RzPtsnAwuv7WquQ=/0x1845:2681x3353/288x162/filters:strip_icc()/pic9560861.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/y1OVwSAaHP-pFpYEJ9r5Zg__mediacard/img/buAca6W1bkIAjiz_aDYX84HO40U=/0x0:2000x1125/288x162/filters:strip_icc()/pic8061460.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/o9Dlpi-ysRRcAF6DN7GkCg__mediacard/img/F6HO2KAdvkzU7S2GArHrXfJRHKo=/0x287:3780x3514/fit-in/288x162/filters:fill(blur):strip_icc()/pic8206061.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/VVGxF9xIfe1VIJz6BB7BWg__mediacard/img/_b7wfKl2QZsWv3f6JUVlOIx_rtU=/0x0:851x479/288x162/filters:strip_icc()/pic8638426.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/lxzo9PekKd4TRyBUlLH7Yw__mediacard/img/AcXDJ1lmHqHvFanbRdliH-3nClc=/0x0:3044x1712/288x162/filters:strip_icc()/pic8703614.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/Bo6QYIQWzRRcn7KyO3AIPg__mediacard/img/bBlLFC8WiEgbHVM-VJNd5DMBprM=/0x0:1200x675/288x162/filters:strip_icc()/pic8512516.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/scw36iBIad7l-rGzxPGcGg__mediacard/img/461B7yLGlq8_QoS5053m6d0B6_M=/0x0:2000x1125/288x162/filters:strip_icc()/pic8662670.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/_BUXOVRDU9g_eRwgpR5ZZw__mediacard/img/rsvSCxLnfeoBhhnZ321q7qTNKFY=/0x0:2000x1125/288x162/filters:strip_icc()/pic8160466.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/icons/favicon2.ico",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://www.google.com/recaptcha/api2/aframe",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/geeklist/new",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778462882079&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&tcfd=10000&_eu=AAAIAAQC&are=1&cid=305549759.1778462878&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&tag_exp=0~115938466~115938468~118463262&sid=1778462877&sct=1&seg=1&dl=https%3A%2F%2Fboardgamegeek.com%2F%3Frnd%3D0uqlr&dr=https%3A%2F%2Fboardgamegeek.com%2Flogin&dt=BoardGameGeek%20%7C%20Gaming%20Unplugged%20Since%202000&dp=%2F%3Frnd%3D0uqlr&_s=3&tfd=3902",
+    "body": "en=page_view&_ee=1&_et=142\r\nen=user_engagement&_et=3146"
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778462882079&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&tcfd=10000&_eu=AAAIAAQC&are=1&cid=305549759.1778462878&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&tag_exp=0%7E115938466%7E115938468%7E118463262&sid=1778462877&sct=1&seg=1&dl=https%3A%2F%2Fboardgamegeek.com%2F%3Frnd%3D0uqlr&dr=https%3A%2F%2Fboardgamegeek.com%2Flogin&dt=BoardGameGeek+%7C+Gaming+Unplugged+Since+2000&dp=%2F%3Frnd%3D0uqlr&_s=3&tfd=3902&gaf=1",
+    "body": "en=page_view&_ee=1&_et=142\r\nen=user_engagement&_et=3146"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/styles-JACHM4QC.css",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/static/geekng_master2_69fe45ee67fa8.css",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/static/geekng_master2_69fe45ee67fa8.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LZ37DQCC.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Z7R6JCZZ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KC3LEVD4.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VO62NOZD.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Y77UHZBE.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6TQCXVRP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7XS4WCUV.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-G466UUWG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-I7TOCVCW.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YQLMF4EX.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/polyfills-PZSJNBYU.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/main-YVG5ZA6P.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YZNEMV6W.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CKKEBLCH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TA2GU4S3.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OI3JTBFF.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-HJ6GQ6QU.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-EPMF2GAD.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WP4ZEVOZ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-NMXWACLK.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-GVNW6F7M.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ENGCDF72.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JSNBAHDR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DA3WHSN6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PJIGDZA6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TFHNHEA7.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AJWOH6E2.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PL2CQND6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZWXGK2Y2.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-HN7LQXNU.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-G66R2BKH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2SBNBAYH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KPDJ5LJP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6FA2D6GS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CANAA3TG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-O7LXE7PJ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CGORKIGL.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DW2U67MZ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SCVKQVIG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5OWWHC75.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OR4OFG2B.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-T4QXAJDR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZLWCO2GS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-GFDDVEUD.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DYKJZHIR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TJYEGJ22.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ECM4T5DS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XCFDISUV.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2WOTROON.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6KUNDZGS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5H6SRWOY.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OXPGLZ75.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FS7RZGA3.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YSTAL24F.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Y6I756OP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-4IDVHC5M.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6P3XUK7F.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VKTXWCUT.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XNMMATY3.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UWKANEQK.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-RECHUXGF.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FVDLKYOC.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CA673JXN.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LSFPANFB.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-755YBK7R.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5B22RTPM.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-BEEB5DBV.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XCQO3VOR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZJWVEMKR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DEQ2IEWG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-4FLACS5I.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-E3TV4CEH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-IQMW6Q6N.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2PHN6SDR.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DUY4GCFA.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KWRJMQL4.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XYPFYZJM.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AQBZSQ54.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DCDO4J4R.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XXUJ3CN5.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FPW2Z2IH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-3QLWXE2L.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7XEVGUSW.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VXXFPN4G.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZECWSMI4.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XHAH66J6.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JP7TB26W.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SW3RL55I.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WL2KFILG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Q7L6LLAK.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/api/accounts/current",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/js/prebid_ads_helper.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/images/logos/navbar-logo-bgg-b2.svg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LBQKLF2N.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2GGUZ66A.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZKTTO4X7.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-IKYDZASU.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DFPN3FWK.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YJGED7LS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SLHO656E.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZSNH47PH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UHQO2N3V.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-RCRJLWVY.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6R4EBPHW.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZE2KSIT2.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-USVHWXZS.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZYYN4MSV.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7KGGMZAZ.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-3AZ6XXF5.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UTJXGE3R.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2FPXVSUD.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AANCEB57.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UOHGPIQ4.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-73R3JYXH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-3OOMNYDA.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-RT6WUYO5.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SH6D3TYP.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-D7TZBWIB.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-MWJFIBU5.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6PBFD4ES.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-REBH2NAA.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VF5F7CDM.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5JIACXZC.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-IQWWMX47.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AWSVMRHX.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OWHJCLL2.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LVMXAA2B.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TAYGHI5U.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UY3FBRIG.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FKAPMNSW.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-N3OIZTIV.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-MJNVZGNF.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JPHBDNCA.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UD37EVWH.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PM26HI5P.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XJ3SXA67.js",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347/settings",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778462885783&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&_eu=AAAIAAQC&are=1&cid=305549759.1778462878&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115616986~115938465~115938468~118463262&sid=1778462877&sct=1&seg=1&dl=https%3A%2F%2Fboardgamegeek.com%2Fgeeklist%2Fnew&dt=BoardGameGeek&en=page_view&tfd=252",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geekmail/messages?metaonly=1&numunread=1",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/notice?metaonly=1&numunread=1",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/avatars/DK6fqB_j1U3_acmP7YgwMV38m8g=/fit-in/64x64/filters:quality(85):strip_icc()/avatar_id134565.jpg",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://boardgamegeek.com/geeklist/new",
+    "body": "<!doctype html>\n<html lang=\"en-US\">\n  <head>\n<link rel=\"apple-touch-icon\" \thref=\"https://cf.geekdo-static.com/icons/touch-icon180.png\" />\n<link rel=\"shortcut icon\" \t\thref=\"https://cf.geekdo-static.com/icons/favicon2.ico\" type=\"image/ico\" />\n<link rel=\"icon\" \t\t\t\t\thref=\"https://cf.geekdo-static.com/ic"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/notice?metaonly=1&numunread=1",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/styles-JACHM4QC.css",
+    "body": "@charset \"UTF-8\";.cdk-overlay-container,.cdk-global-overlay-wrapper{pointer-events:none;top:0;left:0;height:100%;width:100%}.cdk-overlay-container{position:fixed;z-index:1000}.cdk-overlay-container:empty{display:none}.cdk-global-overlay-wrapper{display:flex;position:absolute;z-index:1000}.cdk-overla"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/static/geekng_master2_69fe45ee67fa8.css",
+    "body": "@charset \"UTF-8\";\n:root{--cc-bg:#fff;--cc-text:#2d4156;--cc-btn-primary-bg:#2d4156;--cc-btn-primary-text:var(--cc-bg);--cc-btn-primary-hover-bg:#1d2e38;--cc-btn-secondary-bg:#eaeff2;--cc-btn-secondary-text:var(--cc-text);--cc-btn-secondary-hover-bg:#d8e0e6;--cc-toggle-bg-off:#919ea6;--cc-toggle-bg-o"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/static/geekng_master2_69fe45ee67fa8.js",
+    "body": "(function(){var fb=function(Za){var f={current_lang:\"en\",auto_language:null,autorun:!0,cookie_name:\"cc_cookie\",cookie_expiration:182,cookie_domain:window.location.hostname,cookie_path:\"/\",cookie_same_site:\"Lax\",use_rfc_cookie:!1,autoclear_cookies:!0,revision:0,script_selector:\"data-cookiecategory\"},"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LZ37DQCC.js",
+    "body": "import{a as ve}from\"./chunk-I7TOCVCW.js\";import{a as me}from\"./chunk-EPMF2GAD.js\";import{a as xe}from\"./chunk-ZLWCO2GS.js\";import{a as _e}from\"./chunk-DYKJZHIR.js\";import{U as ge,X as fe,ia as he}from\"./chunk-XCQO3VOR.js\";import{b as de,c as w,d as ue}from\"./chunk-DEQ2IEWG.js\";import{a as M,b as le}"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/subscriptionpref?partial=autosub",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Z7R6JCZZ.js",
+    "body": "import{a as m}from\"./chunk-WP4ZEVOZ.js\";import{d as f}from\"./chunk-OXPGLZ75.js\";import{d as a}from\"./chunk-CA673JXN.js\";import{Ga as r,S as t,s as i,y as o}from\"./chunk-WL2KFILG.js\";function d(e,c){let s=r(a);return r(f).addPreviousUrl(c.url),r(m).verifyOrError(\"client\").pipe(o(()=>!0),t(()=>(s.erro"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/images/logos/bgg-primary-logo-reverse.svg",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KC3LEVD4.js",
+    "body": "import{S as m,r as p}from\"./chunk-FPW2Z2IH.js\";import{Xb as s}from\"./chunk-WL2KFILG.js\";var P=(()=>{class r{transform(t,e,i,f,o=\"\"){let a=m(t,l=>!l[e]);if(!t||!i&&!a||i===\"all\")return o;let c={[e]:i},n=p(t,c);return n?n[f]:o}static{this.\\u0275fac=function(e){return new(e||r)}}static{this.\\u0275pipe="
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VO62NOZD.js",
+    "body": "import{f as a}from\"./chunk-ZJWVEMKR.js\";import{E as n,I as p}from\"./chunk-SW3RL55I.js\";import{Ba as i,Ga as o,y as s}from\"./chunk-WL2KFILG.js\";var d=(()=>{class t{constructor(){this.http=o(p),this.url=\"/search/\"}search(r){let e=this.url+r.searchType;return this.http.get(e,this.getOptions(r)).pipe(s("
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Y77UHZBE.js",
+    "body": "import{a as g,c as u}from\"./chunk-AQBZSQ54.js\";import{a,b as r,o as p,p as l,t as d,u as H}from\"./chunk-XXUJ3CN5.js\";import{a as t,b as s,d as m}from\"./chunk-Q7L6LLAK.js\";var f={};m(f,{loadHotness:()=>y});var y=a(\"[Hotness] Load\",r());var n={};m(n,{loadHotnessBegun:()=>M,loadHotnessFailure:()=>b,loa"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6TQCXVRP.js",
+    "body": "import{b as D,c as T}from\"./chunk-ECM4T5DS.js\";import{H as M,U as O,W as b,y as v}from\"./chunk-XCQO3VOR.js\";import{a as w}from\"./chunk-DUY4GCFA.js\";import{m as y}from\"./chunk-SW3RL55I.js\";import{Cc as d,Cd as h,Eb as o,Sc as _,Tc as x,Ub as g,Uc as u,_b as c,ad as C,mc as l,oc as p,tc as n,uc as s,v"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7XS4WCUV.js",
+    "body": "import{I as s}from\"./chunk-SW3RL55I.js\";import{Ba as o,Ga as n,y as i}from\"./chunk-WL2KFILG.js\";var m=(()=>{class t{constructor(){this.http=n(s),this.url=\"/api/user\"}getUser(r){return this.http.get(this.url+\"/\"+r)}getUserByUsername(r){return this.http.get(this.url,{params:{username:r}}).pipe(i(e=>e."
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-G466UUWG.js",
+    "body": "import{d as n,e as s}from\"./chunk-OXPGLZ75.js\";import{d as a}from\"./chunk-CA673JXN.js\";import{Ga as r,S as t,s as e,y as i}from\"./chunk-WL2KFILG.js\";var d=(o,m)=>{let c=r(a);return r(n).addPreviousUrl(m.url),r(s).loginOrError(\"client\").pipe(i(()=>!0),t(()=>(c.error(o.data.onFailMessage?o.data.onFail"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-I7TOCVCW.js",
+    "body": "import{f as c}from\"./chunk-ZJWVEMKR.js\";import{I as u}from\"./chunk-SW3RL55I.js\";import{Ba as s,Ga as a,y as n}from\"./chunk-WL2KFILG.js\";import{a as p,b as e}from\"./chunk-Q7L6LLAK.js\";var d=(()=>{class t{constructor(){this.http=a(u)}getSupportBannerData(){let r=c();return this.http.get(\"api/supportbl"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YQLMF4EX.js",
+    "body": "import{e as r}from\"./chunk-OXPGLZ75.js\";import{Ga as n,Qc as e,Wb as o}from\"./chunk-WL2KFILG.js\";var d=(()=>{class i{constructor(){this.loginService=n(r)}onClick(){this.loginService.showLoginModal()}static{this.\\u0275fac=function(t){return new(t||i)}}static{this.\\u0275dir=o({type:i,selectors:[[\"\",\"g"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/polyfills-PZSJNBYU.js",
+    "body": "var r;(function(t){t[t.Little=0]=\"Little\",t[t.Big=1]=\"Big\"})(r||(r={}));function l(t,e){for(let i=1,n=1;i<t.length;i++,n++)if(e[n]===\"\\\\\")n++;else if(t[i]===\":\")return i;throw new Error(`Unterminated $localize metadata block in \"${e}\".`)}var o=function(t,...e){if(o.translate){let n=o.translate(t,e);"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/main-YVG5ZA6P.js",
+    "body": "import{a as Tn,b as ga,c as fa}from\"./chunk-LZ37DQCC.js\";import{a as dt}from\"./chunk-Z7R6JCZZ.js\";import{a as ha}from\"./chunk-KC3LEVD4.js\";import{a as Xa}from\"./chunk-VO62NOZD.js\";import{a as Qt,b as Zt,c as la,d as pa,e as ma}from\"./chunk-Y77UHZBE.js\";import{a as ua}from\"./chunk-6TQCXVRP.js\";import"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YZNEMV6W.js",
+    "body": "import{a as g}from\"./chunk-2WOTROON.js\";import{a as c}from\"./chunk-KWRJMQL4.js\";import{Ga as i,Wb as n,Zb as o,eb as r}from\"./chunk-WL2KFILG.js\";var p=(()=>{class e extends g{constructor(){super(...arguments),this.geekAccountService=i(c)}set ggIfLoggedIn(t){this.renderWhenConditionMatches(this.geekA"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CKKEBLCH.js",
+    "body": "import{d as c}from\"./chunk-CA673JXN.js\";import{a as o}from\"./chunk-KWRJMQL4.js\";import{Ga as r,ua as t}from\"./chunk-WL2KFILG.js\";var l=e=>()=>{let i=r(c);return r(o).currentUserAdblockValid$.pipe(t(n=>{!n&&e&&i.error(e,\"\",{enableHtml:!0})}))};export{l as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TA2GU4S3.js",
+    "body": "import{a as f}from\"./chunk-YSTAL24F.js\";import{g as r,j as p}from\"./chunk-ZJWVEMKR.js\";import{L as l}from\"./chunk-FPW2Z2IH.js\";import{I as d}from\"./chunk-SW3RL55I.js\";import{Ba as u,Ga as c,y as s}from\"./chunk-WL2KFILG.js\";import{a as g,b as h}from\"./chunk-Q7L6LLAK.js\";var U=(()=>{class n{constructo"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OI3JTBFF.js",
+    "body": "import{a as L}from\"./chunk-DA3WHSN6.js\";import{a as S}from\"./chunk-ZECWSMI4.js\";import{E as b,L as C}from\"./chunk-SW3RL55I.js\";import{Ba as x,Ea as h,Ga as o,Ha as f,Hd as l,Kd as U,Ld as n,Qc as B,Sa as v,Wb as I,Za as P,ab as g,bb as y,bd as A,gb as T,jc as _}from\"./chunk-WL2KFILG.js\";import{a as "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-HJ6GQ6QU.js",
+    "body": "import{a as C}from\"./chunk-EPMF2GAD.js\";import{a as x}from\"./chunk-DW2U67MZ.js\";import{c as w}from\"./chunk-BEEB5DBV.js\";import{a as D}from\"./chunk-KWRJMQL4.js\";import{C as I}from\"./chunk-XYPFYZJM.js\";import{l as j}from\"./chunk-XXUJ3CN5.js\";import{E as M,W as $,d as A,z as N}from\"./chunk-FPW2Z2IH.js\""
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-EPMF2GAD.js",
+    "body": "import{a as f}from\"./chunk-AJWOH6E2.js\";import{a as u}from\"./chunk-KWRJMQL4.js\";import{k as n,m as d}from\"./chunk-DCDO4J4R.js\";import{Ba as c,Ga as i,qa as a,s,ua as l,y as o}from\"./chunk-WL2KFILG.js\";var I=(()=>{class r{constructor(){this.accountService=i(u),this.storage=i(f),this.logInfoKey=\"adblo"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WP4ZEVOZ.js",
+    "body": "import{a as b}from\"./chunk-CGORKIGL.js\";import{b as V,e as M}from\"./chunk-OXPGLZ75.js\";import{d as y,g as S}from\"./chunk-VKTXWCUT.js\";import{d as C}from\"./chunk-CA673JXN.js\";import{a as E}from\"./chunk-KWRJMQL4.js\";import{Ba as g,Ga as o,L as m,M as f,Qc as u,S as p,Ub as v,fd as s,ra as r,s as n,ua "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-NMXWACLK.js",
+    "body": "import{a as r}from\"./chunk-PL2CQND6.js\";import{Ba as e}from\"./chunk-WL2KFILG.js\";var c=(()=>{class t extends r{constructor(){super(sessionStorage)}static{this.\\u0275fac=function(o){return new(o||t)}}static{this.\\u0275prov=e({token:t,factory:t.\\u0275fac,providedIn:\"root\"})}}return t})();export{c as a"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-GVNW6F7M.js",
+    "body": "import{a}from\"./chunk-UWKANEQK.js\";import{Ba as o,Ga as n}from\"./chunk-WL2KFILG.js\";var w=(()=>{class e{constructor(){this.window=n(a);let t=this.window;this.gtag=t.gtag}pageView(t){this.gtag(\"set\",{page_path:t,page_location:\"https://\"+this.window.location.hostname+t}),this.gtag(\"event\",\"page_view\")"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ENGCDF72.js",
+    "body": "var n={searchType:\"boardgame\",name:\"Board Games\",singularName:\"Game\",searchable:!0},a={searchType:\"article\",name:\"Forums\",searchable:!1},r={searchType:\"geeklist\",name:\"GeekLists\",searchable:!1},s={searchType:\"tag\",name:\"Tags\",searchable:!1},l={searchType:\"wiki\",name:\"Wiki\",searchable:!1},e={searchTy"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JSNBAHDR.js",
+    "body": "import{a as e}from\"./chunk-6KUNDZGS.js\";import{a as n}from\"./chunk-Y6I756OP.js\";import{Ga as o,ha as c,ua as a}from\"./chunk-WL2KFILG.js\";function g(i){let t=i.data.accessTypes,r=o(n);return o(e).checkAccess(t).pipe(c(),a(s=>{!s&&i.data.showLoginOnFail&&(r.href=\"/geekadmin.php?action=adminlogin\")}))}"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DA3WHSN6.js",
+    "body": "import{Ba as a,Ca as u,Ea as p,Ga as s,Qc as h,Sa as l,Va as f,Vb as y,Wa as m,Wb as _}from\"./chunk-WL2KFILG.js\";var r=class{_document;_textarea;constructor(n,t){this._document=t;let e=this._textarea=this._document.createElement(\"textarea\"),i=e.style;i.position=\"fixed\",i.top=i.opacity=\"0\",i.left=\"-9"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PJIGDZA6.js",
+    "body": "import{a,b as c}from\"./chunk-ZWXGK2Y2.js\";import{o,p as l}from\"./chunk-XXUJ3CN5.js\";import{a as f,b as u}from\"./chunk-Q7L6LLAK.js\";var e=\"[GeekMail Notification] Load\",r=\"[GeekMail Notification] Load Success\",A=\"[GeekMail Notification] Load Failure\",d=class{constructor(){this.type=e,this.payload=nul"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TFHNHEA7.js",
+    "body": "import{Xb as p}from\"./chunk-WL2KFILG.js\";var f=(()=>{class n{transform(r,t){if(!r||r<1e3)return String(r);let M=[\"K\",\"M\",\"G\",\"T\",\"P\",\"H\"],a=Math.floor(Math.log(r)/Math.log(1e3)),e=r/Math.pow(1e3,a);t=t||2;let o=Math.floor(Math.log(e)/Math.log(10))+1;t=Math.max(o,t);let c=Math.round(e*Math.pow(10,t-o"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AJWOH6E2.js",
+    "body": "import{a as e}from\"./chunk-PL2CQND6.js\";import{Ba as r}from\"./chunk-WL2KFILG.js\";var n=(()=>{class t extends e{constructor(){super(localStorage)}static{this.\\u0275fac=function(o){return new(o||t)}}static{this.\\u0275prov=r({token:t,factory:t.\\u0275fac,providedIn:\"root\"})}}return t})();export{n as a};"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PL2CQND6.js",
+    "body": "import{i as s,s as a}from\"./chunk-WL2KFILG.js\";var l=class{constructor(e){this.observableValues={},this.storage=e,this.storageAvailable=this.testStorageAvailable()}testStorageAvailable(){let e=\"value\";try{return this.storage.setItem(e,e),this.storage.removeItem(e),!0}catch{return!1}}setItem(e,t){thi"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZWXGK2Y2.js",
+    "body": "var e=\"[Subscription Notification] Load\",a=\"[Subscription Notification] Load Success\",u=\"[Subscription Notification] Load Failure\",x=\"[Subscription Notification] Load Next\",S=\"[Subscription Notification] Load Next Success\",l=\"[Subscription Notification] Load Next failure\",o=class{constructor(){this."
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-HN7LQXNU.js",
+    "body": "import{a as o}from\"./chunk-G66R2BKH.js\";import{L as s,M as c}from\"./chunk-SW3RL55I.js\";import{Ba as r,Ga as i}from\"./chunk-WL2KFILG.js\";var h=(()=>{class t{constructor(){this.titleService=i(c),this.metaService=i(s),this.geekTitleService=i(o)}setTitle(e){this.titleService.setTitle(this.geekTitleServi"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-G66R2BKH.js",
+    "body": "import{a as s}from\"./chunk-2SBNBAYH.js\";import{c as o}from\"./chunk-BEEB5DBV.js\";import{Ba as i,Ga as r}from\"./chunk-WL2KFILG.js\";var p=(()=>{class t{constructor(){this.domainNames=s,this.geeksite=r(o)}makeTitle(e){return this.makeTitleCustom(e+\" | {DOMAIN}\")}makeTitleCustom(e){return e.replace(\"{DOM"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2SBNBAYH.js",
+    "body": "var e={boardgame:\"BoardGameGeek\",rpg:\"RPGGeek\",videogame:\"VideoGameGeek\",puzzle:\"PuzzleGeek\"},a={boardgame:\"https://boardgamegeek.com\",rpg:\"https://rpggeek.com\",videogame:\"https://videogamegeek.com\",puzzle:\"https://boardgamegeek.com\"},g={boardgame:\"#bggplay\",rpg:\"#rpggplay\",videogame:\"#vggplay\",puzz"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KPDJ5LJP.js",
+    "body": "import{l as f,v as l}from\"./chunk-XXUJ3CN5.js\";import{c as u,m as d}from\"./chunk-JP7TB26W.js\";import{I as p}from\"./chunk-SW3RL55I.js\";import{Ba as i,Ga as o,M as c,S as n,s,y as a}from\"./chunk-WL2KFILG.js\";var m=(()=>{class t{constructor(){this.http=o(p)}getBlockStatus(r){return this.http.get(`/api/"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6FA2D6GS.js",
+    "body": "import{a as g}from\"./chunk-755YBK7R.js\";import{k as f,m as p}from\"./chunk-5B22RTPM.js\";import{Ba as s,Ca as a,Ga as e,Va as o,Vb as l,Wa as r,Wb as d,cd as c,gb as h}from\"./chunk-WL2KFILG.js\";var m=(()=>{class t{constructor(){this._ngbConfig=e(g),this.horizontal=!1}get animation(){return this._anima"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CANAA3TG.js",
+    "body": "import{l as p}from\"./chunk-ZJWVEMKR.js\";import{E as s,I as c}from\"./chunk-SW3RL55I.js\";import{Ba as n,Ea as i,Ga as a,S as e}from\"./chunk-WL2KFILG.js\";var h=new i(\"gg.window.canhover\",{factory:()=>!window.matchMedia(\"(hover: none), (pointer: course)\").matches});var v=(()=>{class t{constructor(){this"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-O7LXE7PJ.js",
+    "body": "import{a as qe,b as je,c as Je}from\"./chunk-T4QXAJDR.js\";import{G as tt,M as rt,ga as nt}from\"./chunk-XCQO3VOR.js\";import{G as Ye,c as De,f as Be,g as Ve,j as Qe,l as Le,m as Fe,v as He,w as $e,y as ze}from\"./chunk-IQMW6Q6N.js\";import{ja as at}from\"./chunk-2PHN6SDR.js\";import{a as et}from\"./chunk-DU"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CGORKIGL.js",
+    "body": "import{Eb as l,Rc as r,Ub as d,Va as a,fd as m,hd as s,xc as o,yc as n}from\"./chunk-WL2KFILG.js\";var v=(()=>{class e{constructor(){this.headerClose=new a}static{this.\\u0275fac=function(t){return new(t||e)}}static{this.\\u0275cmp=d({type:e,selectors:[[\"gg-modal-header\"]],inputs:{modalTitle:\"modalTitle"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DW2U67MZ.js",
+    "body": "import{a as r}from\"./chunk-UWKANEQK.js\";import{a as c}from\"./chunk-KWRJMQL4.js\";import{Ba as i,Ga as n,r as e}from\"./chunk-WL2KFILG.js\";var d=(()=>{class t{constructor(){this.accountService=n(c);let o=n(r);this.cookieconsent=o.geekCookieConsent}run(){this.accountService.currentAccount$.subscribe(o=>"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SCVKQVIG.js",
+    "body": "var a={prefix:\"fab\",iconName:\"reddit\",icon:[512,512,[],\"f1a1\",\"M0 256C0 114.6 114.6 0 256 0S512 114.6 512 256s-114.6 256-256 256L37.1 512c-13.7 0-20.5-16.5-10.9-26.2L75 437C28.7 390.7 0 326.7 0 256zM349.6 153.6c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7c-20.6 0-37.8 14.6-41.8 34c-34.5 3.7-61.4 "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://boardgamegeek.com/api/accounts/current",
+    "body": "{\n  \"user\": 633347,\n  \"username\": \"Indywiseguy\",\n  \"email\": \"Indywiseguy@gmail.com\",\n  \"authToken\": \"f0149ce8c820223be83910be0ca482de00afa9e2u633347\",\n  \"adblock\": {\n    \"blockleaderboard\": true,\n    \"blockskyscraper\": true,\n    \"blocktextad\": true,\n    \"blocksupportdrive\": true,\n    \"blockrectangle\": true,\n    \"blockitembanner\": true,\n    \"blockamazon\": true,\n    \"blockcontestsmodule\": true,\n    \"blockamazonsearch\": true,\n    \"blockbetweenposts\": true\n  },\n  \"adblockExpiration\": \"2026-12-30T23:20:13+00:00\",\n  \"tweetplays\": false,\n  \"bskyplays\": false,\n  \"showdashboardicon\": false,\n  \"showlist"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5OWWHC75.js",
+    "body": "import{B as h}from\"./chunk-FPW2Z2IH.js\";import{E as m}from\"./chunk-SW3RL55I.js\";import{Ba as d}from\"./chunk-WL2KFILG.js\";import{a as p}from\"./chunk-Q7L6LLAK.js\";var l=[{name:\"recaptcha\",src:\"https://www.recaptcha.net/recaptcha/enterprise.js?render=explicit\"},{name:\"stripe\",src:\"https://js.stripe.com"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/user/633347",
+    "body": "{\n  \"type\": \"user\",\n  \"id\": \"633347\",\n  \"userid\": 633347,\n  \"username\": \"Indywiseguy\",\n  \"href\": \"/profile/Indywiseguy\",\n  \"firstname\": \"Vinny\",\n  \"lastname\": \"Romano\",\n  \"city\": \"Indianapolis\",\n  \"state\": \"Indiana\",\n  \"country\": \"United States\",\n  \"isocountry\": \"US\",\n  \"regdate\": \"2013-01-24\",\n  \"designerid\": 0,\n  \"publisherid\": 0,\n  \"hideSupporter\": false,\n  \"adminBadges\": [],\n  \"userMicrobadges\": [\n    {\n      \"slot\": 1,\n      \"badgeid\": 50873\n    },\n    {\n      \"slot\": 2,\n      \"badgeid\": 48846\n    },\n    {\n      \"slot\": 4,\n      \"badgeid\": 885\n    }\n  ],\n  \"supportYears\": [\n    \"2016\",\n  "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OR4OFG2B.js",
+    "body": "import{A,q as y}from\"./chunk-XYPFYZJM.js\";import{o as a,p as x}from\"./chunk-XXUJ3CN5.js\";import{e as m,z as u}from\"./chunk-FPW2Z2IH.js\";import{a as o,b as r}from\"./chunk-Q7L6LLAK.js\";var Y=\"[Image] Load\",g=\"[Image] Load Success\",n=\"[Image] Load Begun\",l=\"[Image] Load Failure\",Z=\"[Image] Load Galleri"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-T4QXAJDR.js",
+    "body": "import{a as pt,b as p,f as ct,g as ut,i as R,n as dt,p as _t,q as ft,s as mt}from\"./chunk-5B22RTPM.js\";import{a as gt}from\"./chunk-IQMW6Q6N.js\";import{m as lt}from\"./chunk-SW3RL55I.js\";import{Aa as $,Ba as B,Ca as A,Cd as rt,Dc as et,Eb as c,Ec as it,Fc as nt,G as S,Ga as r,Gc as x,Jb as L,Na as f,O"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZLWCO2GS.js",
+    "body": "import{c as w}from\"./chunk-BEEB5DBV.js\";import{a as I,b as y,n as T}from\"./chunk-JP7TB26W.js\";import{m as D}from\"./chunk-SW3RL55I.js\";import{Ab as M,Cc as p,Cd as N,Eb as l,Ga as k,Hd as g,Ld as i,Sc as s,Tc as O,Ub as x,Uc as P,_b as b,ad as _,ed as C,fd as L,gd as v,jc as c,mc as d,oc as f,tc as a"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-GFDDVEUD.js",
+    "body": "import{Ab as m,Fc as C,Gc as M,Hd as x,Ld as i,Na as r,Oa as g,Rc as y,Sc as a,Ub as d,Za as l,ab as c,bd as b,cd as v,ed as w,jc as h,mc as p,oc as u,xc as f,yc as _}from\"./chunk-WL2KFILG.js\";function D(n,z){if(n&1){let t=C();f(0,\"img\",1),y(\"load\",function(){r(t);let o=a();return g(o.transitioning."
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DYKJZHIR.js",
+    "body": "import{a as x}from\"./chunk-TJYEGJ22.js\";import{Ab as c,Hd as _,Ld as n,Sc as m,Ub as d,ed as f,jc as u,mc as p,oc as v,tc as o,wc as l}from\"./chunk-WL2KFILG.js\";function z(i,g){if(i&1&&l(0,\"img\",2),i&2){let e,t=g,s=m();f(\"img-fluid \"+s.classes()),o(\"src\",t.src,c)(\"srcset\",t.srcset)(\"width\",t.width)("
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TJYEGJ22.js",
+    "body": "import{g}from\"./chunk-SW3RL55I.js\";import{Eb as s,Ub as i,bd as p,fd as m,hd as d,jc as r,tc as o,uc as c,vc as l}from\"./chunk-WL2KFILG.js\";var v=(()=>{class n{constructor(){this.alphabetcolors=[\"#4376c1\",\"#d04545\",\"#af6137\",\"#986e32\",\"#7b7a28\",\"#6b7e37\",\"#49842c\",\"#49842c\",\"#2c855f\",\"#2c8278\",\"#2f8"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ECM4T5DS.js",
+    "body": "import{a as N}from\"./chunk-755YBK7R.js\";import{a as j,d as P,l,n as S,p as F,q as L,r as W}from\"./chunk-5B22RTPM.js\";import{Ba as p,Ca as h,Ga as n,Gc as y,Jb as _,Qc as E,Ra as d,Sa as g,Sd as I,Tc as D,Ub as m,Uc as R,Va as r,Vb as w,Wa as c,Wb as b,cd as M,db as u,ed as O,gb as f,h as a,xc as v,y"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XCFDISUV.js",
+    "body": "import{a as n}from\"./chunk-2WOTROON.js\";import{a as d}from\"./chunk-6KUNDZGS.js\";import{b as c}from\"./chunk-XHAH66J6.js\";import{Ga as h,Ld as e,Wb as I,Zb as a,eb as o,ra as f,z as g}from\"./chunk-WL2KFILG.js\";var D=(()=>{class s extends n{constructor(){super(...arguments),this.checkAccessService=h(d)"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2WOTROON.js",
+    "body": "import{Ga as e,Lb as c,Qb as h,Sd as a,Wb as o,d as n}from\"./chunk-WL2KFILG.js\";var p=(()=>{class t{constructor(){this.#e=new n,this.#t=!1,this.viewContainer=e(h),this.template=e(c),this.cd=e(a)}#e;#t;renderWhenConditionMatches(s,i){this.#e.add(s.subscribe(f=>{let r=i===f;r&&!this.#t?(this.#t=!0,thi"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6KUNDZGS.js",
+    "body": "import{a as I}from\"./chunk-KWRJMQL4.js\";import{W as $,X as j,k as S}from\"./chunk-XYPFYZJM.js\";import{l as g}from\"./chunk-XXUJ3CN5.js\";import{L as v,e as m,r as k}from\"./chunk-FPW2Z2IH.js\";import{$ as h,Ba as d,Ga as a,ha as p,ra as f,s as l,ta as A,y as u}from\"./chunk-WL2KFILG.js\";var W=(()=>{class "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5H6SRWOY.js",
+    "body": "import{a as m}from\"./chunk-KWRJMQL4.js\";import{A as o,Ba as u,Ga as h,ra as a,s as g,xa as p,y as c}from\"./chunk-WL2KFILG.js\";import{a as n,b as s}from\"./chunk-Q7L6LLAK.js\";var L=(()=>{class i{constructor(){this.geekAccountService=h(m),this.combineLoggedIn=e=>e.pipe(o(t=>this.geekAccountService.logg"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OXPGLZ75.js",
+    "body": "import{a as we}from\"./chunk-Y6I756OP.js\";import{d as ee,e as te,g as oe}from\"./chunk-VKTXWCUT.js\";import{a as ge}from\"./chunk-UWKANEQK.js\";import{f as w,i as he}from\"./chunk-ZJWVEMKR.js\";import{H as de,c as se,f as ae,g as le,h as ce,k as U,m as ue,t as me,u as pe}from\"./chunk-IQMW6Q6N.js\";import{a "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FS7RZGA3.js",
+    "body": "import{T as n,s as e,xa as o}from\"./chunk-WL2KFILG.js\";function y(p){return n(t=>{let r=p(t),a=Array.isArray(r)?r:[r];return e(t).pipe(o(...a))})}export{y as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YSTAL24F.js",
+    "body": "function o(e){return e!=null}function c(e,t){return t.includes(e)}function i(e,t){return Object.prototype.hasOwnProperty.call(e,t)}function s(e){if(\"onscrollend\"in window)addEventListener(\"scrollend\",e,{once:!0});else{let t,r=()=>{t&&clearTimeout(t),t=setTimeout(()=>{e(),removeEventListener(\"scroll\""
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Y6I756OP.js",
+    "body": "import{Ea as o}from\"./chunk-WL2KFILG.js\";var i=new o(\"gg.window.location\",{factory:()=>window.location});export{i as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-4IDVHC5M.js",
+    "body": "import{a as e}from\"./chunk-UWKANEQK.js\";import{Ba as n,Ga as c,Sa as r}from\"./chunk-WL2KFILG.js\";var h=(()=>{class t{constructor(){this.window=c(e),this.document=c(r)}focusWithoutScrollingById(i){let o=this.document.getElementById(i);this.focusWithoutScrolling(o)}focusWithoutScrolling(i){let o=this."
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6P3XUK7F.js",
+    "body": "import{a as R,j,n as S,o as L,p as V}from\"./chunk-5B22RTPM.js\";import{Aa as C,Ba as v,Ca as E,G as c,Ga as r,Gc as g,Jb as O,Kb as T,Qc as w,Ra as H,Sa as k,Sd as K,Va as M,Vb as P,Vc as m,W as _,Wa as N,Wb as a,Xc as h,Yc as u,Zb as F,cd as l,db as B,eb as A,gb as p,h as D,jc as f,sd as I}from\"./ch"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VKTXWCUT.js",
+    "body": "import{b as dt,d as j,g as pt}from\"./chunk-XNMMATY3.js\";import{a as ct}from\"./chunk-RECHUXGF.js\";import{b as Kt}from\"./chunk-FVDLKYOC.js\";import{c as Gt,d as lt,e as ht,g as $t,h as Ut,k as tt,l as et}from\"./chunk-3QLWXE2L.js\";import{c as M,d as Qt}from\"./chunk-7XEVGUSW.js\";import{b as q,c as J}from"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XNMMATY3.js",
+    "body": "import{a as u,b as xe,c as f}from\"./chunk-FVDLKYOC.js\";import{a as m,b as Re,c as De,d as N}from\"./chunk-7XEVGUSW.js\";import{a as y}from\"./chunk-ZECWSMI4.js\";import{$ as V,Aa as Y,Ba as M,Ca as F,Ea as D,Eb as ie,Ga as l,Kb as re,Lb as ne,M as z,Mb as L,Nb as oe,Q as S,Qb as se,Ra as Q,Sa as K,Sd as"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UWKANEQK.js",
+    "body": "import{Ea as o}from\"./chunk-WL2KFILG.js\";var w=new o(\"gg.window\",{factory:()=>window});export{w as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-RECHUXGF.js",
+    "body": "function e(){return typeof __karma__<\"u\"&&!!__karma__||typeof jasmine<\"u\"&&!!jasmine||typeof jest<\"u\"&&!!jest||typeof Mocha<\"u\"&&!!Mocha}export{e as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FVDLKYOC.js",
+    "body": "var o=(function(e){return e[e.NORMAL=0]=\"NORMAL\",e[e.NEGATED=1]=\"NEGATED\",e[e.INVERTED=2]=\"INVERTED\",e})(o||{}),l,t;function i(){if(t==null){if(typeof document!=\"object\"||!document||typeof Element!=\"function\"||!Element)return t=!1,t;if(document.documentElement?.style&&\"scrollBehavior\"in document.doc"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-CA673JXN.js",
+    "body": "import{N as ht}from\"./chunk-SW3RL55I.js\";import{Ba as T,Dc as V,Ea as it,Eb as a,Ec as Z,Fc as z,Ga as r,Gc as G,Ha as nt,Hd as y,Id as dt,Na as R,Oa as N,Qc as lt,Ra as P,Rc as U,Sa as k,Sc as l,Ub as j,Wa as B,Za as H,Zb as rt,Zd as ut,bd as I,eb as ot,ed as g,fd as f,gb as st,gc as L,h as _,hd as"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LSFPANFB.js",
+    "body": "import{a as H,j as k,l as v,q as I,r as O}from\"./chunk-XXUJ3CN5.js\";import{A as M,Ba as E,Ca as p,Ea as f,Fa as o,Ga as h,K as R,M as l,S as A,Vb as g,W as x,X as P,Xa as G,_ as $,ba as N,f as D,fa as m,h as w,ia as U,y as d}from\"./chunk-WL2KFILG.js\";import{a}from\"./chunk-Q7L6LLAK.js\";var nt={dispat"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-755YBK7R.js",
+    "body": "import{Ba as e}from\"./chunk-WL2KFILG.js\";var i=(()=>{class t{constructor(){this.animation=!0}static{this.\\u0275fac=function(o){return new(o||t)}}static{this.\\u0275prov=e({token:t,factory:t.\\u0275fac,providedIn:\"root\"})}}return t})();export{i as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5B22RTPM.js",
+    "body": "import{A as Me,Ba as re,Ea as We,G as Pt,Ga as Y,I as Le,Kb as Ie,Lb as Ve,M as Vt,N as te,Qb as He,Ra as $e,Sa as Ht,Wa as ke,Z as je,aa as Be,f as De,gc as _e,h as $t,p as kt,s as Qt,sa as at,ua as ee,xa as Ne,y as It}from\"./chunk-WL2KFILG.js\";var R=\"top\",B=\"bottom\",D=\"right\",T=\"left\",_t=\"auto\",J="
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-BEEB5DBV.js",
+    "body": "import{e as r}from\"./chunk-FPW2Z2IH.js\";import{Ea as t}from\"./chunk-WL2KFILG.js\";var i=[\"boardgame\",\"rpg\",\"videogame\",\"puzzle\"],n=[\"puzzle\"];var m=new t(\"gg.geeksite\",{factory:()=>{let o=RegExp(\"domain_override=[^;]+\").exec(document.cookie),e=decodeURIComponent(o?o.toString().replace(/^[^=]+./,\"\"):\""
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XCQO3VOR.js",
+    "body": "var t={prefix:\"fas\",iconName:\"trash-can\",icon:[448,512,[61460,\"trash-alt\"],\"f2ed\",\"M135.2 17.7C140.6 6.8 151.7 0 163.8 0L284.2 0c12.1 0 23.2 6.8 28.6 17.7L320 32l96 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 96C14.3 96 0 81.7 0 64S14.3 32 32 32l96 0 7.2-14.3zM32 128l384 0 0 320c0 35.3-28.7 64-64 64L96"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZJWVEMKR.js",
+    "body": "import{L as z,N as O,m as S}from\"./chunk-XYPFYZJM.js\";import{l as C}from\"./chunk-XXUJ3CN5.js\";import{N as b,V as N,e as c,r as F}from\"./chunk-FPW2Z2IH.js\";import{C as s,D as H,E as j}from\"./chunk-SW3RL55I.js\";import{A as T,Ba as f,Ea as E,Ga as a,M as w,S as l,W as P,ra as y,s as I,t as m,ua as R,y "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DEQ2IEWG.js",
+    "body": "import{d as i,i as u,j as t}from\"./chunk-DCDO4J4R.js\";function d(o,r,n){return u(n?.in||o,+t(o)+r)}function m(o,r,n){return d(o,r*i,n)}function x(o){return r=>{let e=(o?Math[o]:Math.trunc)(r);return e===0?0:e}}function h(o,r){return+t(o)-+t(r)}export{d as a,m as b,x as c,h as d};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-4FLACS5I.js",
+    "body": "import{i as a,j as f}from\"./chunk-DCDO4J4R.js\";function i(r,t,e){let o=f(r,e?.in);return isNaN(t)?a(e?.in||r,NaN):(t&&o.setDate(o.getDate()+t),o)}function p(r,t,e){return i(r,-t,e)}export{i as a,p as b};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-E3TV4CEH.js",
+    "body": "import{b as m,i as f,j as o}from\"./chunk-DCDO4J4R.js\";function c(r,...t){let e=f.bind(null,r||t.find(n=>typeof n==\"object\"));return t.map(e)}function a(r,t){let e=o(r,t?.in);return e.setHours(0,0,0,0),e}function i(r){let t=o(r),e=new Date(Date.UTC(t.getFullYear(),t.getMonth(),t.getDate(),t.getHours("
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-IQMW6Q6N.js",
+    "body": "import{a as me}from\"./chunk-SW3RL55I.js\";import{Aa as d,Ba as K,Ca as J,Ea as A,F as xe,Ga as E,Hd as x,Kb as ke,Nb as N,Ob as s,Qc as C,Ra as Pe,Sd as ge,Ta as Re,Va as D,Vb as Q,Wb as l,Wd as pe,Za as w,Zb as u,bb as y,cc as je,cd as fe,db as I,eb as g,gb as S,gc as Ge,h as Se,jc as O,r as Ne,sd a"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2PHN6SDR.js",
+    "body": "var c={prefix:\"far\",iconName:\"message\",icon:[512,512,[\"comment-alt\"],\"f27a\",\"M160 368c26.5 0 48 21.5 48 48l0 16 72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6L448 368c8.8 0 16-7.2 16-16l0-288c0-8.8-7.2-16-16-16L64 48c-8.8 0-16 7.2-16 16l0 288c0 8.8 7.2 16 16 16l96 0zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11"
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778462885783&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&_eu=AEAIAAQC&ae=a&are=1&cid=305549759.1778462878&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&_s=2&tag_exp=0~115616986~115938465~115938468~118463262&sid=1778462877&sct=1&seg=1&dl=https%3A%2F%2Fboardgamegeek.com%2Fgeeklist%2Fnew&dt=BoardGameGeek&en=scroll&epn.percent_scrolled=90&_et=1&tfd=655",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DUY4GCFA.js",
+    "body": "import{N as ct}from\"./chunk-SW3RL55I.js\";import{Ba as ve,Ga as $,Gc as st,Hd as ye,Ld as ee,Qd as S,Sa as nt,Tc as lt,Ub as ge,Uc as ft,Wb as it,ab as at,ed as ut,jc as ot,zb as rt}from\"./chunk-WL2KFILG.js\";import{a as et,b as tt}from\"./chunk-Q7L6LLAK.js\";function Ce(e,n){(n==null||n>e.length)&&(n=e"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-KWRJMQL4.js",
+    "body": "import{K as h,M as m,P as O,S as $,T as A,U as g}from\"./chunk-XYPFYZJM.js\";import{k as p,m as d}from\"./chunk-DCDO4J4R.js\";import{l as u}from\"./chunk-XXUJ3CN5.js\";import{Ba as l,Ga as f,M as c,W as r,k as t,na as o,ra as n,y as a}from\"./chunk-WL2KFILG.js\";var R=(()=>{class s{constructor(){this.store="
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XYPFYZJM.js",
+    "body": "import{a as Mt,b as N,c as _}from\"./chunk-AQBZSQ54.js\";import{k as Xt,m as Zt}from\"./chunk-DCDO4J4R.js\";import{a as d,b as f,f as Gt,l as Ht,m as Vt,n as Wt,o as h,p as P,t as E,u as b,v as te}from\"./chunk-XXUJ3CN5.js\";import{C as It,L as $t,N as z,Q as xt,X as ot,a as Qt,d as et,e as v,o as Jt,z as"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AQBZSQ54.js",
+    "body": "import{a as o,b as n}from\"./chunk-Q7L6LLAK.js\";var E={loadState:\"UNLOADED\"};function u(e){return\"loadState\"in e?e:o(o({},e),E)}function L(){function e(a){return a.loadState===\"LOADED\"||a.loadState===\"LOADING\"||a.loadState===\"REQUESTED_MULTIPLE\"?a:n(o({},a),{loadState:a.loadState===\"REQUESTED\"?\"REQUE"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DCDO4J4R.js",
+    "body": "var h=Math.pow(10,8)*24*60*60*1e3,j=-h,q=6048e5,v=864e5,D=6e4,x=36e5,E=1e3,J=525600,L=43200,A=1440;var Y=3600;var T=Y*24,B=T*7,U=T*365.2425,w=U/12,G=w*3,I=Symbol.for(\"constructDateFrom\");function l(e,t){return typeof e==\"function\"?e(t):e&&typeof e==\"object\"&&I in e?e[I](t):e instanceof Date?new e.co"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XXUJ3CN5.js",
+    "body": "import{c as pe}from\"./chunk-XHAH66J6.js\";import{$ as oe,Ba as E,Ca as b,Ea as s,Fa as a,Ga as l,Hd as le,Ia as M,Ra as A,Rd as k,Vb as T,Wa as ue,ab as ae,bb as de,cb as D,eb as fe,f as j,h as ee,i as I,ka as ie,ma as se,n as te,q as ne,xa as ce,y as re}from\"./chunk-WL2KFILG.js\";import{a as h,b as m"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FPW2Z2IH.js",
+    "body": "function ln(r,t){for(var e=-1,o=t.length,f=r.length;++e<o;)r[f+e]=t[e];return r}var wr=ln;var dn=typeof global==\"object\"&&global&&global.Object===Object&&global,st=dn;var cn=typeof self==\"object\"&&self&&self.Object===Object&&self,xn=st||cn||Function(\"return this\")(),h=xn;var gn=h.Symbol,R=gn;var Te="
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-3QLWXE2L.js",
+    "body": "import{b as C}from\"./chunk-7XEVGUSW.js\";import{a as oe,b as ie,c as p,d as se}from\"./chunk-VXXFPN4G.js\";import{a as d}from\"./chunk-ZECWSMI4.js\";import{$ as G,Ba as a,C as V,Ca as T,Ea as A,Ga as r,Kb as Y,La as Q,Mb as J,Ra as y,Sa as m,Ub as ee,V as K,Vb as I,W as Z,Wa as l,Wb as M,Wd as k,Zd as ne"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7XEVGUSW.js",
+    "body": "import{Ba as o,Ca as a,Ea as s,Ga as r,Sa as u,Va as l,Vb as g,Za as c,gb as d}from\"./chunk-WL2KFILG.js\";function b(e,n=0){return m(e)?Number(e):arguments.length===2?n:0}function m(e){return!isNaN(parseFloat(e))&&!isNaN(Number(e))}function E(e){return e instanceof d?e.nativeElement:e}var h=new s(\"cd"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VXXFPN4G.js",
+    "body": "var n;function d(){if(n==null){let e=typeof document<\"u\"?document.head:null;n=!!(e&&(e.createShadowRoot||e.attachShadow))}return n}function r(e){if(d()){let t=e.getRootNode?e.getRootNode():null;if(typeof ShadowRoot<\"u\"&&ShadowRoot&&t instanceof ShadowRoot)return t}return null}function a(){let e=type"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZECWSMI4.js",
+    "body": "import{w as o}from\"./chunk-SW3RL55I.js\";import{Ba as i,Ga as r,kb as s}from\"./chunk-WL2KFILG.js\";var e;try{e=typeof Intl<\"u\"&&Intl.v8BreakIterator}catch{e=!1}var c=(()=>{class t{_platformId=r(s);isBrowser=this._platformId?o(this._platformId):typeof document==\"object\"&&!!document;EDGE=this.isBrowser&"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/hotness?geeksite=boardgame&objecttype=thing&showcount=50&singular=1",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XHAH66J6.js",
+    "body": "import{Ga as a,Hd as D,Ra as m,Ta as u,Za as l,ab as y,bb as b,f,j as g,sa as p,ya as d}from\"./chunk-WL2KFILG.js\";function E(n){n||(n=a(u));let e=new f(t=>{if(n.destroyed){t.next();return}return n.onDestroy(t.next.bind(t))});return t=>t.pipe(p(e))}function U(n,e){let t=e?.injector??a(m),o=new g(1),c"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/shortcuts",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/recentlyviewed",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JP7TB26W.js",
+    "body": "import{M as pn,b as hn,c as Le,d as dn,e as ve,f as fn,y as Ht}from\"./chunk-SW3RL55I.js\";import{A as x,B as Ne,Ba as C,C as Or,Ca as Lr,Cb as Br,D as Ke,Da as xr,Dd as sn,Ea as I,Fa as Z,Ga as l,Ha as jr,Hd as an,Ib as Hr,Jd as cn,Kb as zt,La as V,Ld as un,M as K,Ma as A,Nb as Ft,Ob as k,Pb as Vr,Qb"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SW3RL55I.js",
+    "body": "import{$a as ct,Ba as h,Ca as he,Ea as b,Fa as l,Fb as q,Fd as Q,Ga as w,Gb as hn,Gd as yn,Ha as st,Hb as Pe,Ic as O,Jc as Dn,Ka as qt,Kc as _,La as at,Lb as Le,M as Xt,Ma as Qt,Mb as pn,Nb as Ne,Ob as C,Qb as pe,Sa as F,Sd as ht,T as Kt,Td as En,Ud as pt,Vb as ge,Vd as wn,Wa as Me,Wb as Y,Xa as ut,"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/user/633347/settings",
+    "body": "null"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geekmail/messages?metaonly=1&numunread=1",
+    "body": "{\n  \"numunread\": 0\n}"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-WL2KFILG.js",
+    "body": "import{a as J,b as X}from\"./chunk-Q7L6LLAK.js\";function b(e){return typeof e==\"function\"}function gt(e){let n=e(r=>{Error.call(r),r.stack=new Error().stack});return n.prototype=Object.create(Error.prototype),n.prototype.constructor=n,n}var po=gt(e=>function(n){e(this),this.message=n?`${n.length} err"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-Q7L6LLAK.js",
+    "body": "var g=Object.defineProperty,j=Object.defineProperties;var k=Object.getOwnPropertyDescriptors;var e=Object.getOwnPropertySymbols;var h=Object.prototype.hasOwnProperty,i=Object.prototype.propertyIsEnumerable;var f=(a,b,c)=>b in a?g(a,b,{enumerable:!0,configurable:!0,writable:!0,value:c}):a[b]=c,l=(a,b"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/images/logos/navbar-logo-bgg-b2.svg",
+    "body": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"80\" height=\"38\" viewBox=\"0 0 80 38\">\n  <g fill=\"none\" fill-rule=\"evenodd\">\n    <path fill=\"#FFF\" d=\"M41.6414127,20.8453307 C41.6414127,20.7138507 41.5623149,20.5562773 41.377073,20.5562773 L37.2504649,20.5562773 L37.2504649,24.470024 L41.377073,24.47002"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LBQKLF2N.js",
+    "body": "import{a as P}from\"./chunk-2GGUZ66A.js\";import\"./chunk-ZKTTO4X7.js\";import\"./chunk-IKYDZASU.js\";import{a as L}from\"./chunk-DFPN3FWK.js\";import\"./chunk-YJGED7LS.js\";import\"./chunk-SLHO656E.js\";import\"./chunk-ZSNH47PH.js\";import\"./chunk-UHQO2N3V.js\";import\"./chunk-RCRJLWVY.js\";import\"./chunk-6R4EBPHW."
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://boardgamegeek.com/js/prebid_ads_helper.js",
+    "body": "var e=document.createElement('div');\ne.id='ahwfpkno123rtb78';\ne.style.display='none';\ndocument.body.appendChild(e);"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-3AZ6XXF5.js",
+    "body": "import{a as p}from\"./chunk-DW2U67MZ.js\";import{a as T}from\"./chunk-5OWWHC75.js\";import{b as x}from\"./chunk-UY3FBRIG.js\";import{a}from\"./chunk-UWKANEQK.js\";import{N as j,n as D}from\"./chunk-SW3RL55I.js\";import{Ba as m,Bb as f,Eb as w,Ga as r,M as d,Qc as I,Sc as R,Ub as b,db as y,ea as c,i as u,mc as"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AANCEB57.js",
+    "body": "import{S as q,k as E}from\"./chunk-OR4OFG2B.js\";import{a as L}from\"./chunk-GFDDVEUD.js\";import{a as O}from\"./chunk-YSTAL24F.js\";import{l as S}from\"./chunk-XXUJ3CN5.js\";import{b as U}from\"./chunk-XHAH66J6.js\";import{n as G}from\"./chunk-JP7TB26W.js\";import{g as M,m as T,n as z}from\"./chunk-SW3RL55I.js\""
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-3OOMNYDA.js",
+    "body": "import{a as j}from\"./chunk-RT6WUYO5.js\";import{a as $}from\"./chunk-ZLWCO2GS.js\";import{b as W}from\"./chunk-UY3FBRIG.js\";import{B as F}from\"./chunk-FPW2Z2IH.js\";import{m as E,n as N}from\"./chunk-SW3RL55I.js\";import{Cc as _,Cd as B,Eb as p,Fc as D,M as x,Na as k,Oa as L,Qc as v,Sc as a,Tc as T,Ub as M"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-RT6WUYO5.js",
+    "body": "import{a as d}from\"./chunk-SH6D3TYP.js\";import{B as m}from\"./chunk-FPW2Z2IH.js\";import{Ga as p,M as s,Ub as c,d as n,j as o,ra as r,s as a}from\"./chunk-WL2KFILG.js\";var v=(()=>{class i{constructor(){this.essentialItemsService=p(d),this.loadImmediately=!0,this.#t=!1,this.#e=new n,this.apiId$=new o(1)"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SH6D3TYP.js",
+    "body": "import{F as p,G as d,H as I,s as f}from\"./chunk-XYPFYZJM.js\";import{l as c}from\"./chunk-XXUJ3CN5.js\";import{Ba as m,Ga as l,M as a,ea as n,y as s}from\"./chunk-WL2KFILG.js\";var M=(()=>{class r{constructor(){this.store=l(c)}getLoadingState(t){return this.store.select(d(t))}getItem(t,e=!0){let o=this.s"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-VF5F7CDM.js",
+    "body": "import{a as x}from\"./chunk-755YBK7R.js\";import{f,h as ee,k as D}from\"./chunk-5B22RTPM.js\";import{a as w}from\"./chunk-XHAH66J6.js\";import{m as Y}from\"./chunk-SW3RL55I.js\";import{$ as H,Ba as O,Ca as E,Eb as L,Ga as s,Gc as b,Lb as Q,Qc as y,Sa as A,Sc as m,Sd as I,Ta as F,Ub as V,Va as d,Vb as K,Vc a"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UY3FBRIG.js",
+    "body": "import{Ga as o,Kd as c,Ld as h,Wa as r,Wb as p,gb as s}from\"./chunk-WL2KFILG.js\";var l=Symbol(\"InViewportMetadata\"),b=(()=>{class t{constructor(){this.el=o(s),this.zone=o(r),this.inViewportOptions=h({}),this.inViewportAction=c(),this.observer=null}ngAfterViewInit(){this.zone.runOutsideAngular(()=>{l"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-MJNVZGNF.js",
+    "body": "import{b as E,c as R,d as U}from\"./chunk-DEQ2IEWG.js\";import{a as C,b as O}from\"./chunk-4FLACS5I.js\";import{a as F,d as z,l as N}from\"./chunk-JPHBDNCA.js\";import{a as Y,b as y,c as L}from\"./chunk-E3TV4CEH.js\";import{c as A,f as H,g as M,h as I,i as S,j as l,k as j,m as P}from\"./chunk-DCDO4J4R.js\";im"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-JPHBDNCA.js",
+    "body": "import{d as E}from\"./chunk-E3TV4CEH.js\";import{a as P,i as h,j as c}from\"./chunk-DCDO4J4R.js\";import{a as T,b as F}from\"./chunk-Q7L6LLAK.js\";var et={lessThanXSeconds:{one:\"less than a second\",other:\"less than {{count}} seconds\"},xSeconds:{one:\"1 second\",other:\"{{count}} seconds\"},halfAMinute:\"half a"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-XJ3SXA67.js",
+    "body": "import{Ab as e,Eb as r,Gc as c,Ub as i,ed as g,fd as h,gd as m,xc as a,yc as s}from\"./chunk-WL2KFILG.js\";var C=(()=>{class t{static{this.\\u0275fac=function(n){return new(n||t)}}static{this.\\u0275cmp=i({type:t,selectors:[[\"gg-username-link-dumb\"]],inputs:{user:\"user\",classes:\"classes\"},decls:2,vars:4"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZKTTO4X7.js",
+    "body": "import{Qc as r,Wb as n}from\"./chunk-WL2KFILG.js\";var d=(()=>{class e{onKeydown(i){i.key===\"Enter\"&&i.preventDefault()}static{this.\\u0275fac=function(t){return new(t||e)}}static{this.\\u0275dir=n({type:e,selectors:[[\"\",\"ggOneLineTextarea\",\"\"]],hostBindings:function(t,o){t&1&&r(\"keydown\",function(s){re"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2GGUZ66A.js",
+    "body": "import{a as ce}from\"./chunk-ZKTTO4X7.js\";import{a as pe,b as ue,c as ge}from\"./chunk-IKYDZASU.js\";import{a as de,b as me}from\"./chunk-YJGED7LS.js\";import{a as se}from\"./chunk-SLHO656E.js\";import{a as le}from\"./chunk-RCRJLWVY.js\";import{k as ae}from\"./chunk-6R4EBPHW.js\";import{a as oe,b as re}from\"./"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-IKYDZASU.js",
+    "body": "var e=[{label:\"Manual \\u2013 Counting Up\",sort:\"user\",ordinalDirection:\"ascending\"},{label:\"Manual \\u2013 Counting Down\",sort:\"user\",ordinalDirection:\"descending\"},{label:\"Alphabetical\",sort:\"name\",ordinalDirection:\"ascending\"},{label:\"Overall Rank\",sort:\"rank\",ordinalDirection:\"ascending\"},{label:\""
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-DFPN3FWK.js",
+    "body": "import{g as a,j as i}from\"./chunk-ZJWVEMKR.js\";import{B as n,I as p}from\"./chunk-SW3RL55I.js\";import{Ba as o,Ga as s}from\"./chunk-WL2KFILG.js\";var d=(()=>{class e{constructor(){this.http=s(p)}getGeeklist(t){return this.http.get(\"/api/geeklist/\"+t)}deleteGeeklist(t){let r=a();return this.http.request"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-YJGED7LS.js",
+    "body": "import{c as C}from\"./chunk-ZSNH47PH.js\";import{a as v}from\"./chunk-UHQO2N3V.js\";import{b as d}from\"./chunk-PM26HI5P.js\";import{n as c}from\"./chunk-SW3RL55I.js\";import{Tc as l,Ub as r,Uc as g,Zb as s,eb as o,tc as a,uc as u,vc as f,wc as y,xd as p,yd as m}from\"./chunk-WL2KFILG.js\";var F=(()=>{class e"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-SLHO656E.js",
+    "body": "import{a as O,b as F}from\"./chunk-REBH2NAA.js\";import{a as U}from\"./chunk-ZLWCO2GS.js\";import{W as j}from\"./chunk-XCQO3VOR.js\";import{f as v}from\"./chunk-MJNVZGNF.js\";import{a as R}from\"./chunk-DUY4GCFA.js\";import{m as N}from\"./chunk-DCDO4J4R.js\";import{m as L,n as B}from\"./chunk-SW3RL55I.js\";import"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZSNH47PH.js",
+    "body": "import{c as j}from\"./chunk-UOHGPIQ4.js\";import{a as V}from\"./chunk-3OOMNYDA.js\";import{f as z}from\"./chunk-5JIACXZC.js\";import{a as F}from\"./chunk-AWSVMRHX.js\";import{c as T}from\"./chunk-BEEB5DBV.js\";import{$ as O,B as P,I as A,X as E}from\"./chunk-XCQO3VOR.js\";import{a as I}from\"./chunk-DUY4GCFA.js\""
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UHQO2N3V.js",
+    "body": "import{a as p}from\"./chunk-DYKJZHIR.js\";import{Ab as i,Eb as r,Ub as s,ed as m,tc as a,uc as o,vc as u,wc as l}from\"./chunk-WL2KFILG.js\";var g=(()=>{class t{getClasses(){return\"c-avatar-\"+this.size}static{this.\\u0275fac=function(n){return new(n||t)}}static{this.\\u0275cmp=s({type:t,selectors:[[\"gg-av"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-RCRJLWVY.js",
+    "body": "import{a as h}from\"./chunk-73R3JYXH.js\";import{a as s}from\"./chunk-UWKANEQK.js\";import{y as l}from\"./chunk-SW3RL55I.js\";import{Ba as c,Ga as i,Sa as n}from\"./chunk-WL2KFILG.js\";var f=(()=>{class e{constructor(){this.document=i(n),this.window=i(s),this.viewportScroller=i(l),this.waitForLoadService=i("
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZE2KSIT2.js",
+    "body": "import{$c as a,Md as d,Od as p,Tc as u,Ub as s,Uc as l,Wb as c,Zc as g,_c as v,gb as r,xc as h,yc as m}from\"./chunk-WL2KFILG.js\";var o=(()=>{class i{static{this.\\u0275fac=function(t){return new(t||i)}}static{this.\\u0275dir=c({type:i,selectors:[[\"\",\"ggAutosizeTextarea\",\"\"]]})}}return i})();var x=[\"gr"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6R4EBPHW.js",
+    "body": "import{a as Yo,b as Wo}from\"./chunk-ZE2KSIT2.js\";import{a as Ho}from\"./chunk-USVHWXZS.js\";import{d as ki,e as et,f as ji}from\"./chunk-UTJXGE3R.js\";import{b as Go}from\"./chunk-AANCEB57.js\";import{a as Bo}from\"./chunk-SH6D3TYP.js\";import{a as Vo}from\"./chunk-D7TZBWIB.js\";import{a as Pn}from\"./chunk-RE"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-ZYYN4MSV.js",
+    "body": "import{a as M}from\"./chunk-DYKJZHIR.js\";import{a as T}from\"./chunk-N3OIZTIV.js\";import{b as w}from\"./chunk-PM26HI5P.js\";import{n as v}from\"./chunk-SW3RL55I.js\";import{Ab as x,Cd as F,Eb as o,Sc as g,Tc as U,Ub as s,Uc as D,Zb as p,_b as c,cd as E,eb as u,fd as d,hd as C,id as I,mc as y,oc as h,tc as"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-7KGGMZAZ.js",
+    "body": "import{a as C}from\"./chunk-3AZ6XXF5.js\";import{N as v}from\"./chunk-SW3RL55I.js\";import{Bb as l,Eb as n,Ga as s,Gc as g,Sc as p,Ub as d,mc as a,oc as r,tc as m,wc as c,xc as u,yc as f,zc as y}from\"./chunk-WL2KFILG.js\";var h=(()=>{class e{constructor(){this.sanitizer=s(v)}ngOnInit(){let t=`https://pla"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-USVHWXZS.js",
+    "body": "import{a as Ve,b as zt}from\"./chunk-ZYYN4MSV.js\";import{a as Ue}from\"./chunk-7KGGMZAZ.js\";import{a as ze}from\"./chunk-3AZ6XXF5.js\";import{a as Rt,b as Vt,c as x,g as De,h as Ae}from\"./chunk-UTJXGE3R.js\";import{a as z}from\"./chunk-2FPXVSUD.js\";import{a as Ee,b as Ie}from\"./chunk-AANCEB57.js\";import{c"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-2FPXVSUD.js",
+    "body": "import{Xb as i}from\"./chunk-WL2KFILG.js\";var n=(()=>{class r{transform(t,e=\"s\",p=\"\"){return t!==1?e:p}static{this.\\u0275fac=function(e){return new(e||r)}}static{this.\\u0275pipe=i({name:\"ggSimplePlural\",type:r,pure:!0})}}return r})();export{n as a};\n"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UOHGPIQ4.js",
+    "body": "import{a as M}from\"./chunk-REBH2NAA.js\";import{g as j}from\"./chunk-5JIACXZC.js\";import{a as N}from\"./chunk-4IDVHC5M.js\";import{$c as V,Cd as I,Fc as w,Ga as f,J as _,Ld as F,Md as E,Na as i,Oa as n,Qc as T,Sa as y,Sc as a,Tc as A,Ub as m,Uc as x,W as d,Wb as b,Zb as l,_b as S,_c as D,ad as p,eb as u"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-73R3JYXH.js",
+    "body": "import{$ as u,Ba as b,E as p,Ga as C,J as s,L as h,M as l,Sa as w,U as d,ea as o,h as r,i as a,ja as g,ma as f,na as m,pa as v,ra as E,s as c,y as i}from\"./chunk-WL2KFILG.js\";var y=(()=>{class n{constructor(){this.document=C(w),this.loadEvents=new r;let t=this.loadEvents.pipe(f((e,$)=>e=$===\"complet"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-D7TZBWIB.js",
+    "body": "import{a as c}from\"./chunk-MWJFIBU5.js\";import{n as r}from\"./chunk-SW3RL55I.js\";import{Ga as p,Ub as o,fd as a,gd as s,xd as l,y as n,yd as m}from\"./chunk-WL2KFILG.js\";var C=(()=>{class e{constructor(){this.service=p(c)}ngOnInit(){this.label$=this.service.getLabels(this.itemType).pipe(n(i=>i[this.la"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-MWJFIBU5.js",
+    "body": "import{I as p}from\"./chunk-SW3RL55I.js\";import{Ba as r,Ga as b,S as s,oa as o,s as a,y as i}from\"./chunk-WL2KFILG.js\";var h=(()=>{class e{constructor(){this.http=b(p),this.labelsObj={boardgame:{label:\"Board Game\",labelpl:\"Board Games\"},boardgameexpansion:{label:\"Board Game Expansion\",labelpl:\"Board "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-6PBFD4ES.js",
+    "body": "import{d as D,e as R,g as w}from\"./chunk-VKTXWCUT.js\";import{a as M}from\"./chunk-DUY4GCFA.js\";import{Ba as _,Eb as o,Fc as x,Ga as a,M as C,Na as b,Oa as v,Qc as c,Sc as m,Ub as h,ed as k,fd as d,gd as T,hd as I,mc as s,oc as f,tc as p,uc as r,vc as l,w as u,wc as g,zb as y}from\"./chunk-WL2KFILG.js\""
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-REBH2NAA.js",
+    "body": "import{a as V}from\"./chunk-755YBK7R.js\";import{a as $,d as q,l as d,n as U,p as z,q as G,r as J}from\"./chunk-5B22RTPM.js\";import{m as Z}from\"./chunk-SW3RL55I.js\";import{Ba as u,Ca as _,Cd as H,Eb as p,Ga as n,Gc as I,Jb as C,Lb as P,Qc as N,Ra as f,Sa as m,Sc as c,Sd as B,Tc as j,Ub as y,Uc as W,Va "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-IQWWMX47.js",
+    "body": "import{g as U,h as j}from\"./chunk-LVMXAA2B.js\";import{c as $,e as V,f as A,g as F}from\"./chunk-6P3XUK7F.js\";import{W as N,p as z}from\"./chunk-XCQO3VOR.js\";import{a as I}from\"./chunk-DUY4GCFA.js\";import{g as L,n as T}from\"./chunk-SW3RL55I.js\";import{Ab as O,Eb as e,Fc as M,Ga as y,M as v,Na as d,Oa a"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-5JIACXZC.js",
+    "body": "import{a as ne}from\"./chunk-IQWWMX47.js\";import{f as se}from\"./chunk-AWSVMRHX.js\";import{a as Kt}from\"./chunk-DYKJZHIR.js\";import{b as P,c as L}from\"./chunk-ECM4T5DS.js\";import{a as Jt}from\"./chunk-XCFDISUV.js\";import{a as ie}from\"./chunk-FS7RZGA3.js\";import{c as oe}from\"./chunk-YSTAL24F.js\";import{"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-AWSVMRHX.js",
+    "body": "import{b as V}from\"./chunk-OWHJCLL2.js\";import{a as Q}from\"./chunk-DYKJZHIR.js\";import{a as K}from\"./chunk-TJYEGJ22.js\";import{b as w,c as H}from\"./chunk-ECM4T5DS.js\";import{c as P}from\"./chunk-BEEB5DBV.js\";import{l as J}from\"./chunk-JPHBDNCA.js\";import{a as W}from\"./chunk-XJ3SXA67.js\";import{Ab as "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-OWHJCLL2.js",
+    "body": "import{b as _e}from\"./chunk-UY3FBRIG.js\";import{b as se}from\"./chunk-ECM4T5DS.js\";import{a as ue}from\"./chunk-FS7RZGA3.js\";import{a as I,b as fe,c as B,d as be}from\"./chunk-LSFPANFB.js\";import{A as me,q as pe}from\"./chunk-XYPFYZJM.js\";import{a as ge}from\"./chunk-AQBZSQ54.js\";import{l as v,o as u,p a"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-LVMXAA2B.js",
+    "body": "import{a as St}from\"./chunk-TAYGHI5U.js\";import{a as H,b as J,c as Q,d as X,e as Y,f as v,g as Z,h as B,i as U,j as tt,k as D,l as st,m as et,n as O,o as rt,p as ot,q as it,r as ct,s as at,t as nt,u as ut,v as pt}from\"./chunk-FKAPMNSW.js\";import{a as z}from\"./chunk-5H6SRWOY.js\";import{e as G}from\"./"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-TAYGHI5U.js",
+    "body": "import{h as e}from\"./chunk-ZJWVEMKR.js\";import{I as h}from\"./chunk-SW3RL55I.js\";import{Ba as u,Ga as a,S as c,s as n,y as p}from\"./chunk-WL2KFILG.js\";var y=(()=>{class o{constructor(){this.http=a(h)}getStatuses(r){let t=`/api/${r.type}/${r.id}/marks`,i=e();return this.http.get(t,i)}getStatus(r,t){le"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-FKAPMNSW.js",
+    "body": "var S=\"[Marks] Load statuses\",A=\"[Marks] Load statuses begun\",M=\"[Marks] Load statuses success\",U=\"[Marks] Load statuses Failure\",_=\"[Marks] Load status success\",d=\"[Marks] Add\",k=\"[Marks] Add success\",u=\"[Marks] Add failure\",D=\"[Marks] Remove\",T=\"[Marks] Remove success\",m=\"[Marks] Remove failure\",a"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-N3OIZTIV.js",
+    "body": "import{x as k}from\"./chunk-SW3RL55I.js\";import{$ as d,Ba as c,Fa as l,Ga as o,Lb as P,Ob as a,Qb as L,Sd as v,Wa as p,Wb as F,Xa as D,bb as j,d as g,e as C,eb as E,f as h,gc as O,j as b,kb as I,r as R,ra as V,sd as T,u as f,ua as S,z as M}from\"./chunk-WL2KFILG.js\";import{a as x,b as y}from\"./chunk-Q"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UD37EVWH.js",
+    "body": "import{b as g}from\"./chunk-PM26HI5P.js\";import{a as y}from\"./chunk-XJ3SXA67.js\";import{n as C}from\"./chunk-SW3RL55I.js\";import{Sc as u,Ub as r,Zb as a,eb as o,mc as m,oc as p,tc as c,wc as l,xd as d,yd as f}from\"./chunk-WL2KFILG.js\";function _(e,k){if(e&1&&l(0,\"gg-username-link-dumb\",0),e&2){let n=u"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-PM26HI5P.js",
+    "body": "import{a as U}from\"./chunk-KWRJMQL4.js\";import{I as d,y as h}from\"./chunk-XYPFYZJM.js\";import{l}from\"./chunk-XXUJ3CN5.js\";import{Ba as m,Ga as o,M as i,Ub as f,d as n,ea as a,j as c,ra as p,s as u}from\"./chunk-WL2KFILG.js\";var b=(()=>{class r{constructor(){this.store=o(l)}getUser(t,e=!0){if(!t)retur"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/frontend/chunk-UTJXGE3R.js",
+    "body": "import{a as Ve}from\"./chunk-73R3JYXH.js\";import{i as xe,l as Me,v as je}from\"./chunk-SW3RL55I.js\";import{$b as me,$c as Ne,Ba as p,Cd as L,Eb as B,G as te,Ga as l,Hd as Ae,Ld as A,Md as ve,Qb as U,Sc as D,Sd as Se,Tc as we,Ub as w,Uc as Y,Va as N,Wa as re,Wc as _e,Xc as Ee,Yc as be,Za as ue,_b as V,"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cf.geekdo-static.com/images/logos/bgg-primary-logo-reverse.svg",
+    "body": "<svg width=\"150\" height=\"77\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><path fill=\"#FF5100\" d=\"M50.482 14.22l-7.638 2.078L50.324 0 1.825 17.838l2.651 21.368L0 43.52 13.351 76.94l28.378-10.449 9.864-23.143-4.235-4.08z\"/><path d=\"M92.281 11.134a.292.292 0 00-.29-.29h-3.61c-"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cm.g.doubleclick.net/partnerpixels?gdpr=0&url=https%3A%2F%2Fboardgamegeek.com%2Fgeeklist%2Fnew",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/subscriptionpref?partial=autosub",
+    "body": "{\n  \"autosub\": {\n    \"firstpost\": {\n      \"thread\": true,\n      \"geeklist\": true,\n      \"listitem\": true,\n      \"blogpost\": true,\n      \"image\": true,\n      \"video\": true,\n      \"filepage\": true\n    },\n    \"reply\": {\n      \"thread\": false,\n      \"geeklist\": false,\n      \"listitem\": true,\n      \"image\": false,\n      \"filepage\": false,\n      \"video\": false,\n      \"blogpost\": false\n    }\n  }\n}"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/notice?metaonly=1&numunread=1",
+    "body": "{\n  \"count\": 0\n}"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/9kGOADQkWyQnC-Hlv8MqoA__square30/img/aH-EunZieTyCLIHh9ET8o7uJ5gA=/0x1063:2681x3744/30x30/filters:strip_icc()/pic9560861.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/y1OVwSAaHP-pFpYEJ9r5Zg__square30/img/uhPsTf9295n5N2JZ-WTeukUoobA=/30x30/filters:strip_icc()/pic8061460.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/o9Dlpi-ysRRcAF6DN7GkCg__square30/img/NAKNlVV1HI7TSBUDZ26Jvkb5uHA=/30x30/filters:strip_icc()/pic8206061.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/VVGxF9xIfe1VIJz6BB7BWg__square30/img/V33jwSctVEgGdajEULNwkOtu3Mg=/30x30/filters:strip_icc()/pic8638426.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/lxzo9PekKd4TRyBUlLH7Yw__square30/img/reeNOnacNGH7NxTE6M7jT9XmfVA=/30x30/filters:strip_icc()/pic8703614.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/Bo6QYIQWzRRcn7KyO3AIPg__square30/img/EWvvZqGLJUMn1NQekkyjXH4rASU=/30x30/filters:strip_icc()/pic8512516.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/scw36iBIad7l-rGzxPGcGg__square30/img/GeA31SNBHXBe_U9idTRcdryFFIk=/0x0:1694x1694/30x30/filters:strip_icc()/pic8662670.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/_BUXOVRDU9g_eRwgpR5ZZw__square30/img/EVpcvP8uQjauhvr44hcHFV8F0Cw=/174x0:1574x1400/30x30/filters:strip_icc()/pic8160466.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/bOs_Um4cUUOpKnypCMykJA__square30/img/a7eCp56OTFiiXth8w_Z23PcMaYo=/0x0:1804x1804/30x30/filters:strip_icc()/pic8844519.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/1uW8t9AkuqOF0xjv_sXKgw__square30/img/bjnUWDYYnAm71UCGB08UNlvECpA=/23x0:2357x1498/fit-in/30x30/filters:fill(blur):strip_icc()/pic9106864.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/_K5oRdum2OFgIu6tq4abwA__square30/img/_ELKSDrpX5LxxQDla05MlWK6HTQ=/0x0:685x685/30x30/filters:strip_icc()/pic9444567.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/SoU8p28Sk1s8MSvoM4N8pQ__square30/img/1mGzDFxoaSZxJs49I0gziaGnXHA=/0x773:3543x4316/30x30/filters:strip_icc()/pic6293412.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/CH49NXU6K7A7l2HmH4m_yA__square30/img/YdDqgtklG39ZUuGBg6B90T2eg24=/0x0:1854x1854/30x30/filters:strip_icc()/pic8942612.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/sE0K_85H5PmIBa2RWvmTwA__square30/img/4aUDeeLc8JndAms13Hc9FCW-TgQ=/30x30/filters:strip_icc()/pic9162146.jpg",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/-vOrd4bOspibyohYExLqWg__square30/img/xhmPkFcYTs6LP7Zf9xljAJiHS7U=/30x30/filters:strip_icc()/pic6940449.png",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__square30/img/9YJQGRF9hjBcLixBWju9kf6DVO4=/30x30/filters:strip_icc()/pic3490053.jpg",
+    "body": null
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/hotness?geeksite=boardgame&objecttype=thing&showcount=50&singular=1",
+    "body": "{\n  \"items\": [\n    {\n      \"objecttype\": \"thing\",\n      \"objectid\": \"469746\",\n      \"rep_imageid\": \"9560861\",\n      \"delta\": 0,\n      \"href\": \"/boardgame/469746/rolling-deep\",\n      \"name\": \"Rolling Deep\",\n      \"id\": \"469746\",\n      \"type\": \"thing\",\n      \"imageurl\": \"https://cf.geekdo-images.com/9kGOADQkWyQnC-Hlv8MqoA__tinysquare/img/HRgPZUpTZyhrKUmjy6slaCeGGQQ=/fit-in/30x30/filters:strip_icc()/pic9560861.jpg\",\n      \"images\": {\n        \"square30\": {\n          \"src\": \"https://cf.geekdo-images.com/9kGOADQkWyQnC-Hlv8MqoA__square30/img/aH-EunZieTyCLIHh9ET8o7uJ5gA=/0x1063:2681x3744/30x30/filters"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/recentlyviewed",
+    "body": "{\n  \"items\": [\n    {\n      \"objecttype\": \"thing\",\n      \"objectid\": 447252,\n      \"url\": \"<a  href=\\\"/boardgame/447252/moytura\\\"   >Moytura</a>\",\n      \"href\": \"/boardgame/447252/moytura\",\n      \"name\": \"Moytura\"\n    },\n    {\n      \"objecttype\": \"company\",\n      \"objectid\": 55999,\n      \"url\": \"<a  href=\\\"/boardgamepublisher/55999/diceratops-games\\\"   >Diceratops Games</a>\",\n      \"href\": \"/boardgamepublisher/55999/diceratops-games\",\n      \"name\": \"Diceratops Games\"\n    },\n    {\n      \"objecttype\": \"thing\",\n      \"objectid\": 414071,\n      \"url\": \"<a  href=\\\"/boardgame/414071/mana-mania\\\"   >Ma"
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/shortcuts",
+    "body": "{\n  \"shortcuts\": [\n    {\n      \"userid\": 633347,\n      \"url\": \"https://boardgamegeek.com/collection/user/Indywiseguy?sortdir=asc&rankobjecttype=subtype&rankobjectid=1&columns=title%7Cthumbnail%7Cstatus%7Cownership%7Clastmodified%7Cacquisitiondate%7Cpostdate%7Cwishlistcomment%7Crank%7Crating%7Cavgrating%7Cplays%7Cavgweight%7Cconditiontext&geekranks=Board%20Game%20Rank&excludesubtype=boardgameexpansion&own=1&objecttype=thing&ff=1&subtype=boardgame\",\n      \"label\": \"Collection - Details (No Expansions)\",\n      \"id\": 162136848,\n      \"valid\": true,\n      \"page\": 1,\n      \"index\": 0\n    },\n    {\n  "
+  },
+  {
+    "type": "RESPONSE",
+    "status": 200,
+    "url": "https://cm.g.doubleclick.net/partnerpixels?gdpr=0&url=https%3A%2F%2Fboardgamegeek.com%2Fgeeklist%2Fnew",
+    "body": "<!DOCTYPE html><html><body></body></html>"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://cf.geekdo-static.com/icons/favicon2.ico",
+    "body": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778462885783&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&_eu=AAAIAAQC&are=1&cid=305549759.1778462878&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&_s=3&tag_exp=0~115616986~115938465~115938468~118463262&sid=1778462877&sct=1&seg=1&dl=https%3A%2F%2Fboardgamegeek.com%2Fgeeklist%2Fnew&dt=BoardGameGeek&dp=%2Fgeeklist%2Fnew&en=page_view&_ee=1&_et=401&tfd=5657",
+    "body": null
+  }
+]

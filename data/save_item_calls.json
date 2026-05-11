@@ -1,0 +1,1664 @@
+[
+  {
+    "dir": "req",
+    "method": "HEAD",
+    "url": "https://www.googletagmanager.com/gtag/js",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://www.googletagmanager.com/gtag/js",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464025599,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      [
+        null,
+        null,
+        [
+          591871414367082
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464025601,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      [
+        [
+          1,
+          156,
+          "boardgamegeek.com",
+          "boardgamegeek.com",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464025607,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      [
+        null,
+        null,
+        null,
+        [
+          [
+            727,
+            1035
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXbK8iSMD4yx7yriEFUit6ej_iaIhFXaGr4asqzLFnjj2m9jmLJzdPKdTzGWR2Mz6xH_E3ZryTFbRRbSEL_lILns0cvsNlHJKGo9VMmib5KJj0f3vNnccay_nsknkmUnBPx1cA6aw==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464025830,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      [
+        [
+          1,
+          156,
+          "boardgamegeek.com",
+          "boardgamegeek.com",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXbK8iSMD4yx7yriEFUit6ej_iaIhFXaGr4asqzLFnjj2m9jmLJzdPKdTzGWR2Mz6xH_E3ZryTFbRRbSEL_lILns0cvsNlHJKGo9VMmib5KJj0f3vNnccay_nsknkmUnBPx1cA6aw==",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464026518,
+      null,
+      null,
+      [
+        [
+          1,
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464026572,
+      null,
+      null,
+      [
+        [
+          3,
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://pagead2.googlesyndication.com/pagead/ping?e=1",
+    "body": [
+      [
+        [
+          {
+            "23": [
+              1,
+              [
+                [
+                  17
+                ]
+              ],
+              "https://boardgamegeek.com/login",
+              1778464025617,
+              1045,
+              591871414367082,
+              2,
+              null,
+              null,
+              []
+            ]
+          }
+        ]
+      ],
+      [
+        4,
+        "m202605050101",
+        [
+          31098213,
+          31098317,
+          95340253,
+          95340255
+        ]
+      ],
+      []
+    ]
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464026646,
+      null,
+      null,
+      [
+        null,
+        [
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464026647,
+      null,
+      null,
+      [
+        [
+          2,
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVpXnDM8SNTAYI_WupS_JDe0e2SDfZ0Is6p7WGXqRgvnKvDDUqcTOH-DapPrrHbEPPZjq0Uoz_OYSH5BmbS5jIs9DizbS2qDX0zwAGGFrA6Xff4M0lZLfSA3NY3UgwOJjPiJ9aUeQ==",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXc4SkOVZh-rTnx5bhDpZ6Y0GnY899Z2mBxACdoCgAts_7mVmxoqqbziaqX7YiYLBV_0iqaNDFzgWtKn0MLRXKjlLnT7HkelgqbNqzsl0jQQyhLpcerEvhag3hzNF_7kft0W3zDFw==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464026700,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      [
+        [
+          1,
+          186,
+          "boardgamegeek.com",
+          "boardgamegeek.com",
+          3
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXc4SkOVZh-rTnx5bhDpZ6Y0GnY899Z2mBxACdoCgAts_7mVmxoqqbziaqX7YiYLBV_0iqaNDFzgWtKn0MLRXKjlLnT7HkelgqbNqzsl0jQQyhLpcerEvhag3hzNF_7kft0W3zDFw==",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://boardgamegeek.com/login/api/v1",
+    "body": {
+      "credentials": "***REDACTED***"
+    }
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://www.google.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778464024881&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&tcfd=10000&_eu=AAAIAAQC&are=1&cid=117525133.1778464025&frm=0&pscdl=noapi&rcb=0&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&tag_exp=0%7E115616986%7E115938465%7E115938468%7E118463262&sid=1778464025&sct=1&seg=1&dl=https%3A%2F%2Fboardgamegeek.com%2Flogin&dt=BoardGameGeek&dp=%2Flogin&_s=3&tfd=5281&gaf=1",
+    "body": "en=page_view&_ee=1&_et=384\r\nen=user_engagement&_et=4220"
+  },
+  {
+    "dir": "req",
+    "method": "HEAD",
+    "url": "https://www.googletagmanager.com/gtag/js",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://www.googletagmanager.com/gtag/js",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464030241,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      [
+        null,
+        null,
+        [
+          4081446604530512
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464030248,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      [
+        null,
+        null,
+        null,
+        [
+          [
+            668,
+            796
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWt37CSLAlfnzHCtbdcB5y1rGw8OrVJ7OI2CuHZUQr4970GXWaglIxEdSK1uNAkw3NI5JHraAfCIILViJBaVQDfQKyWqJr-wiaHK6NM1FyPkP9mWMhcWBs7eFamlW69i1dB_HQwFg==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464030514,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      [
+        [
+          1,
+          156,
+          "boardgamegeek.com",
+          "boardgamegeek.com",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://boardgamegeek.com/api/accesslog",
+    "body": {
+      "detected": false,
+      "duration": 0,
+      "consentShown": false
+    }
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWt37CSLAlfnzHCtbdcB5y1rGw8OrVJ7OI2CuHZUQr4970GXWaglIxEdSK1uNAkw3NI5JHraAfCIILViJBaVQDfQKyWqJr-wiaHK6NM1FyPkP9mWMhcWBs7eFamlW69i1dB_HQwFg==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 201,
+    "url": "https://boardgamegeek.com/api/accesslog",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://pagead2.googlesyndication.com/pagead/ping?e=1",
+    "body": [
+      [
+        [
+          {
+            "23": [
+              1,
+              [
+                [
+                  17
+                ]
+              ],
+              "https://boardgamegeek.com/?rnd=0tnxi",
+              1778464030259,
+              807,
+              4081446604530512,
+              2,
+              null,
+              null,
+              []
+            ]
+          }
+        ]
+      ],
+      [
+        4,
+        "m202605050101",
+        [
+          31098206,
+          31098317
+        ]
+      ],
+      []
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464031296,
+      null,
+      null,
+      [
+        [
+          1,
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464031381,
+      null,
+      null,
+      [
+        [
+          3,
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464031381,
+      null,
+      null,
+      [
+        null,
+        [
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464031382,
+      null,
+      null,
+      [
+        [
+          2,
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxURdRDSEIQG8Kf990NhGogEDsiso5Or2ZAL-DBR2tHnSW1ndrwLU8eq7ouCsZDbI3CMtRjWW68PEI0C5hHUZOmNeoI5s-S7MdrU1xZ9Aq_fMmsQWkekU7YIpjh1NaBz_QQzOwULeg==",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxW_YB5Be3Lz3P4Nl7VqbE7ZqMEhwxHqrp4IHt04ADYZQfADD6jzI9vqfLVkzRMtKlT3qSGM5fE1LrIsf30gdWvgOVwgeDtJC44vwGQpHfI6Qysu-0cqWZtTA-PASfpFGOeyBQ3vJw==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464031456,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      [
+        [
+          1,
+          186,
+          "boardgamegeek.com",
+          "boardgamegeek.com",
+          3
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxW_YB5Be3Lz3P4Nl7VqbE7ZqMEhwxHqrp4IHt04ADYZQfADD6jzI9vqfLVkzRMtKlT3qSGM5fE1LrIsf30gdWvgOVwgeDtJC44vwGQpHfI6Qysu-0cqWZtTA-PASfpFGOeyBQ3vJw==",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://boardgamegeek.com/geeklist/378125",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://www.google.com/g/collect?v=2&tid=G-GMNMCY4DVM&gtm=45je6562v867545067za20g&_p=1778464029869&gcs=G111&gcd=13r3r3l3l5l1&npa=0&dma=0&tcfd=10000&_eu=AAAIAAQC&are=1&cid=117525133.1778464025&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B147.0.7727.15%7CNot.A%252FBrand%3B8.0.0.0&uam=&uamb=0&uap=macOS&uapv=26.2.0&uaw=0&ul=en-us&tag_exp=0%7E115938466%7E115938469%7E118463262%7E118494634&sid=1778464025&sct=1&seg=1&dl=https%3A%2F%2Fboardgamegeek.com%2F%3Frnd%3D0tnxi&dr=https%3A%2F%2Fboardgamegeek.com%2Flogin&dt=BoardGameGeek+%7C+Gaming+Unplugged+Since+2000&dp=%2F%3Frnd%3D0tnxi&_s=3&tfd=4618&gaf=1",
+    "body": "en=page_view&_ee=1&_et=1\r\nen=user_engagement&_et=3443"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://boardgamegeek.com/geeklist/378125",
+    "body": "<!doctype html>\n<html lang=\"en-US\">\n  <head>\t<link rel=\"canonical\" href=\"https://boardgamegeek.com/geeklist/378125\" />\n\n<link rel=\"apple-touch-icon\" \thref=\"https://cf.geekdo-static.com/icons/touch-ico"
+  },
+  {
+    "dir": "req",
+    "method": "HEAD",
+    "url": "https://www.googletagmanager.com/gtag/js",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/notice?sort=oldest&groupType=geeklist&groupId=378125&partial=notices",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464034393,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      [
+        null,
+        [
+          "ID=2f9a959c14dbf78b:T=1778464030:RT=1778464030:S=ALNI_MbNDiECyV-M8zmSa6cip9M_bip06Q"
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464034394,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      [
+        null,
+        null,
+        [
+          2396586878832892
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://www.googletagmanager.com/gtag/js",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464034400,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      [
+        null,
+        null,
+        null,
+        [
+          [
+            225,
+            408
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125/marks",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 401,
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": "{\n  \"title\": \"You don't have access to items from this private geeklist.\",\n  \"type\": \"about:blank\"\n}"
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125/tip?totalonly=1",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125/reaction?totalonly=1",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxV9JdS-q8mBabucf78QBmf7Rt1e13xtJ-pEznbzSybWnQnee1WchU8YVUz63qc7-6Bf2ocutRko7O0rqxhWM6Bf2CcGLXbAIil8enYImGLi15mzp4G0mZmlBvutQwildOwdzlgVLw==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464034901,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      [
+        [
+          1,
+          156,
+          "boardgamegeek.com",
+          "boardgamegeek.com",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "PUT",
+    "url": "https://api.geekdo.com/api/viewdate?geeklist=378125",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347/reaction?geeklist=378125",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 401,
+    "url": "https://api.geekdo.com/api/geeklist/378125",
+    "body": "{\n  \"title\": \"You don't have access to this private geeklist.\",\n  \"type\": \"about:blank\"\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/notice?sort=oldest&groupType=geeklist&groupId=378125&partial=notices",
+    "body": "{\n  \"notices\": [],\n  \"essentialItems\": [],\n  \"links\": [\n    {\n      \"rel\": \"rss\",\n      \"uri\": \"/rss/subscriptions/userid/633347/f7ab94debab68565f255105c15caa795\"\n    }\n  ]\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": "{\n  \"data\": [],\n  \"pagination\": {\n    \"pageid\": 1,\n    \"perPage\": 25,\n    \"total\": 0\n  }\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378125",
+    "body": "{\n  \"type\": \"geeklist\",\n  \"id\": \"378125\",\n  \"name\": \"TEST GEEKLIST - PLEASE DELETE\",\n  \"creator\": 633347,\n  \"href\": \"/geeklist/378125\",\n  \"postdate\": null,\n  \"editdate\": \"2026-05-11T01:43:42+00:00\",\n  \"body\": \"\",\n  \"bodyXml\": \"<?xml version=\\\"1.0\\\"?>\\n<xml/>\\n\",\n  \"private\": true,\n  \"stealth\": false,\n  \"publicAdditionsAllowed\": true,\n  \"commentsAllowed\": true,\n  \"trade\": false,\n  \"ordinalDirection\": \"ascending\",\n  \"submitted\": false,\n  \"sortType\": \"user\",\n  \"domains\": [\n    \"boardgame\"\n  ],\n  \"c"
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378125/tip?totalonly=1",
+    "body": "{\n  \"total\": 0\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378125/reaction?totalonly=1",
+    "body": "{\n  \"thumbs\": 0\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxV9JdS-q8mBabucf78QBmf7Rt1e13xtJ-pEznbzSybWnQnee1WchU8YVUz63qc7-6Bf2ocutRko7O0rqxhWM6Bf2CcGLXbAIil8enYImGLi15mzp4G0mZmlBvutQwildOwdzlgVLw==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378125/marks",
+    "body": "{\n  \"subscriptions\": true,\n  \"blocks\": false,\n  \"bookmarks\": false\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/user/633347/reaction?geeklist=378125",
+    "body": "{\n  \"geeklist\": {\n    \"378125\": {}\n  }\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/viewdate?geeklist=378125",
+    "body": "{\n  \"geeklist\": {\n    \"378125\": {\n      \"viewDate\": \"2026-05-11T01:43:43+00:00\",\n      \"events\": {},\n      \"eventsAreNew\": false\n    }\n  }\n}"
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/geeklist/378125/comment?perPage=2",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/geeklist/378125/comment?perPage=2",
+    "body": "{\n  \"selectedBy\": {\n    \"type\": \"geeklist\",\n    \"id\": \"378125\"\n  },\n  \"comments\": [],\n  \"links\": [],\n  \"locked\": false\n}"
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://pagead2.googlesyndication.com/pagead/ping?e=1",
+    "body": [
+      [
+        [
+          {
+            "23": [
+              1,
+              [
+                [
+                  17
+                ]
+              ],
+              "https://boardgamegeek.com/geeklist/378125",
+              1778464034411,
+              418,
+              2396586878832892,
+              2,
+              null,
+              null,
+              []
+            ]
+          }
+        ]
+      ],
+      [
+        4,
+        "m202605050101",
+        [
+          31098317,
+          95386185
+        ]
+      ],
+      []
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464035581,
+      null,
+      null,
+      [
+        [
+          1,
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464035619,
+      null,
+      null,
+      [
+        [
+          2,
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464035629,
+      null,
+      null,
+      [
+        null,
+        [
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464035630,
+      null,
+      null,
+      [
+        [
+          3,
+          1
+        ]
+      ],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": ""
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXG47qJLt8pf7o4BfXL7NZV_OSFmPWgwTtIKve2v5wDmB5a-YHmObl-32d9hS5vtV9O4p7WjVrzydY3kzbf248u4LEvW2PIAsN-hC33U3Hiz3sxUcDYy3WyIWjbbKlgaoQza2g0nA==",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXjz9QZAukuwYWQTmOSZQGJw4_vrg8SLAkYq7QTKXIsR5mM8g5OTVbTAonptl1ffPp61F1Jxl5LGp7HHwBQCWAL_SbvtmorLlOqSyQ4O82TDhUA43WrKXLO8nF0xj2jR5tT6FT3EQ==",
+    "body": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1778464035683,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      [
+        [
+          1,
+          186,
+          "boardgamegeek.com",
+          "boardgamegeek.com",
+          3
+        ]
+      ]
+    ]
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXjz9QZAukuwYWQTmOSZQGJw4_vrg8SLAkYq7QTKXIsR5mM8g5OTVbTAonptl1ffPp61F1Jxl5LGp7HHwBQCWAL_SbvtmorLlOqSyQ4O82TDhUA43WrKXLO8nF0xj2jR5tT6FT3EQ==",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "POST",
+    "url": "https://api.geekdo.com/api/geeklist/378125/listitem",
+    "body": {
+      "item": {
+        "type": "thing",
+        "id": "174430"
+      },
+      "imageid": null,
+      "imageOverridden": false,
+      "index": 1,
+      "body": "Publisher: Cephalofair Games | Booth: Booth 2461",
+      "rollsEnabled": false
+    }
+  },
+  {
+    "dir": "req",
+    "method": "PUT",
+    "url": "https://api.geekdo.com/api/listitem/12813785/subscriptions",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 201,
+    "url": "https://api.geekdo.com/api/geeklist/378125/listitem",
+    "body": "{\n  \"listitem\": {\n    \"type\": \"listitem\",\n    \"id\": \"12813785\",\n    \"listid\": \"378125\",\n    \"item\": {\n      \"type\": \"thing\",\n      \"id\": \"174430\",\n      \"name\": \"Gloomhaven\",\n      \"href\": \"/boardgame/174430/gloomhaven\",\n      \"label\": \"Board Game\",\n      \"labelpl\": \"Board Games\",\n      \"hasAngularLink\": false,\n      \"descriptors\": [\n        {\n          \"name\": \"yearpublished\",\n          \"displayValue\": \"2017\"\n        },\n        {\n          \"name\": \"rank\",\n          \"displayValue\": \"Rank 4\"\n    "
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 401,
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": "{\n  \"title\": \"You don't have access to items from this private geeklist.\",\n  \"type\": \"about:blank\"\n}"
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/listitem/12813785/comment?metaonly=1",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/listitem?page=1&listid=378125",
+    "body": "{\n  \"data\": [\n    {\n      \"type\": \"listitem\",\n      \"id\": \"12813785\",\n      \"listid\": \"378125\",\n      \"item\": {\n        \"type\": \"thing\",\n        \"id\": \"174430\",\n        \"name\": \"Gloomhaven\",\n        \"href\": \"/boardgame/174430/gloomhaven\",\n        \"label\": \"Board Game\",\n        \"labelpl\": \"Board Games\",\n        \"hasAngularLink\": false,\n        \"descriptors\": [\n          {\n            \"name\": \"yearpublished\",\n            \"displayValue\": \"2017\"\n          },\n          {\n            \"name\": \"rank\",\n "
+  },
+  {
+    "dir": "req",
+    "method": "PUT",
+    "url": "https://api.geekdo.com/api/viewdate?listitem=12813785",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/user/633347/reaction?listitem=12813785",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 204,
+    "url": "https://api.geekdo.com/api/listitem/12813785/subscriptions",
+    "body": ""
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/listitem/12813785/tip?totalonly=1",
+    "body": null
+  },
+  {
+    "dir": "req",
+    "method": "GET",
+    "url": "https://api.geekdo.com/api/listitem/12813785/reaction?totalonly=1",
+    "body": null
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/listitem/12813785/comment?metaonly=1",
+    "body": "{\n  \"totalCount\": 0,\n  \"lastPostdate\": null,\n  \"recentCommenters\": []\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/listitem/12813785/tip?totalonly=1",
+    "body": "{\n  \"total\": 0\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/listitem/12813785/reaction?totalonly=1",
+    "body": "{\n  \"thumbs\": 0\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/user/633347/reaction?listitem=12813785",
+    "body": "{\n  \"listitem\": {\n    \"12813785\": {}\n  }\n}"
+  },
+  {
+    "dir": "resp",
+    "status": 200,
+    "url": "https://api.geekdo.com/api/viewdate?listitem=12813785",
+    "body": "{\n  \"listitem\": {\n    \"12813785\": {\n      \"viewDate\": \"2026-05-11T01:47:32+00:00\",\n      \"events\": {},\n      \"eventsAreNew\": false\n    }\n  }\n}"
+  }
+]
