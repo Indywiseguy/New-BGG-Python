@@ -48,7 +48,9 @@ def save_checkpoint(cp: dict) -> None:
 
 def load_games() -> list[dict]:
     with open(GAMES_CSV, newline="", encoding="utf-8") as fh:
-        return [r for r in csv.DictReader(fh) if r.get("at_gencon") == "Yes"]
+        rows = list(csv.DictReader(fh))
+    # Include at_gencon=Yes OR manually flagged Add to List=Yes
+    return [r for r in rows if r.get("at_gencon") == "Yes" or r.get("Add to List") == "Yes"]
 
 
 def main() -> None:
