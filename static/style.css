@@ -1,0 +1,76 @@
+body { background: #1a1a2e; color: #e0e0e0; }
+
+#game-table { margin-top: 8px; }
+
+/* Tabulator dark theme tweaks */
+.tabulator {
+  background: #16213e;
+  border: 1px solid #0f3460;
+  font-size: 13px;
+}
+.tabulator .tabulator-header { background: #0f3460; color: #e0e0e0; }
+.tabulator .tabulator-header .tabulator-col { background: #0f3460; border-right-color: #1a4a7a; }
+.tabulator .tabulator-header .tabulator-col:hover { background: #1a4a7a; }
+.tabulator-row { background: #16213e; color: #e0e0e0; border-bottom: 1px solid #0f3460; }
+.tabulator-row:nth-child(even) { background: #1a2545; }
+.tabulator-row:hover { background: #1e3a5f !important; }
+.tabulator-row.tabulator-selected { background: #0f3460 !important; }
+
+/* Group header rows */
+.tabulator-row.tabulator-group {
+  background: #0a2040 !important;
+  color: #7eb8f7;
+  font-weight: 600;
+  border-top: 2px solid #1a4a7a;
+  padding: 4px 8px;
+}
+
+/* Interest level row colours */
+.tabulator-row[data-interest="Rush the Hall"]  { border-left: 3px solid #e63946; }
+.tabulator-row[data-interest="Likely to Buy"]  { border-left: 3px solid #f4a261; }
+.tabulator-row[data-interest="Check it Out"]   { border-left: 3px solid #2a9d8f; }
+.tabulator-row[data-interest="Not Interested"] { border-left: 3px solid #555; }
+
+/* Editable cell hover */
+.tabulator-cell.tabulator-editable:hover { background: #1e3a5f !important; cursor: pointer; }
+
+/* Header filters */
+.tabulator-header-filter input,
+.tabulator-header-filter select {
+  background: #0a1628;
+  color: #ccc;
+  border: 1px solid #2a5a8a;
+  border-radius: 3px;
+  font-size: 11px;
+  padding: 1px 4px;
+}
+
+/* Drag handle */
+.tabulator-row .tabulator-row-handle { color: #555; cursor: grab; }
+.tabulator-row .tabulator-row-handle:hover { color: #aaa; }
+
+/* BGG status badges */
+.bgg-status-Own         { color: #6ee7b7; }
+.bgg-status-Want        { color: #93c5fd; }
+.bgg-status-Wish        { color: #c4b5fd; }
+.bgg-status-empty       { color: #555; }
+
+/* Hot Games checkbox */
+.tabulator-cell .tabulator-checkbox-true  { color: #f59e0b; }
+.tabulator-cell .tabulator-checkbox-false { color: #4b5563; }
+
+/* Toast */
+.toast { min-width: 200px; }
+
+/* Rank input */
+.tabulator-cell[tabulator-field="rank"] { font-weight: 600; color: #fbbf24; }
+
+/* Name link */
+.game-link { color: #7eb8f7; text-decoration: none; }
+.game-link:hover { text-decoration: underline; color: #a8d4ff; }
+
+/* Responsive: collapse description column on small screens */
+@media (max-width: 900px) {
+  .tabulator-col[tabulator-field="bgg_publisher"],
+  .tabulator-cell[tabulator-field="bgg_publisher"] { display: none; }
+}
