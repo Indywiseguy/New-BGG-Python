@@ -75,6 +75,16 @@ body { background: #1a1a2e; color: #e0e0e0; }
   .tabulator-cell[tabulator-field="bgg_wishlist_comment"] { display: none; }
 }
 
+/* Never wrap text inside a nav button — let the flex container wrap whole
+   buttons onto new rows instead of each button growing tall internally. */
+.navbar .btn { white-space: nowrap; }
+
+/* Phones: shrink the toolbar buttons so the nav takes less vertical space */
+@media (max-width: 700px) {
+  .navbar .btn, .navbar label.btn { padding: 2px 8px; font-size: 12px; }
+  #meta-info { font-size: 11px; }
+}
+
 /* Tag chips */
 .tag-chip {
   display: inline-block;

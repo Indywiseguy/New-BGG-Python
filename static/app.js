@@ -353,11 +353,18 @@ function onCellEdited(cell, table) {
 // ---------------------------------------------------------------------------
 function buildTable(games) {
   const tagPairs = collectTagPairs(games);
+  // Below ~700px (phones): the nav wraps to more than one line, so its actual
+  // height varies — measure it instead of assuming a fixed offset. Touch-drag
+  // reordering is also fiddly on a phone, so hide the drag handle there and
+  // rely on typing a Rank number instead (already fully supported).
+  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+  const navHeight = document.querySelector("nav").offsetHeight;
+
   const table = new Tabulator("#game-table", {
     data: games,
-    height: "calc(100vh - 72px)",
+    height: `calc(100vh - ${navHeight + 16}px)`,
     layout: "fitColumns",
-    movableRows: true,
+    movableRows: !isMobile,
 
     // Default sort: interest level order, then rank
     initialSort: [
@@ -368,8 +375,12 @@ function buildTable(games) {
     rowFormatter,
 
     columns: [
-      // Drag handle
-      { rowHandle: true, formatter: "handle", headerSort: false, frozen: true, width: 30, minWidth: 30 },
+      // Drag handle — omitted entirely on mobile (not just visible:false, which
+      // this Tabulator build silently ignores for rowHandle columns; same class
+      // of quirk as the cellEdited/rowMoved event-callback issue found earlier).
+      ...(isMobile ? [] : [
+        { rowHandle: true, formatter: "handle", headerSort: false, frozen: true, width: 30, minWidth: 30 },
+      ]),
 
       // Rank
       {
@@ -386,13 +397,6 @@ function buildTable(games) {
         formatter: nameFormatter,
         headerFilter: "input",
         sorter: "string",
-      },
-
-      // Year
-      {
-        title: "Year", field: "year", width: 65, minWidth: 55,
-        headerFilter: "input",
-        sorter: "number",
       },
 
       // Publisher
@@ -658,7 +662,7 @@ async function init() {
         toast(`Preview refresh failed: ${err.message}`, "danger");
       } finally {
         btnRefreshPreview.disabled = false;
-        btnRefreshPreview.textContent = "↻ Refresh Preview List";
+        btnRefreshPreview.textContent = "↻ Preview";
       }
     });
 
@@ -673,7 +677,7 @@ async function init() {
         toast(`BGG refresh failed: ${err.message}`, "danger");
       } finally {
         btnRefreshBgg.disabled = false;
-        btnRefreshBgg.textContent = "↻ Refresh My BGG Data";
+        btnRefreshBgg.textContent = "↻ My Data";
       }
     });
   }

@@ -14,20 +14,23 @@
 </head>
 <body>
 
-<nav class="navbar navbar-dark bg-dark px-3 py-2">
+<nav class="navbar navbar-dark bg-dark px-3 py-2 flex-wrap">
   <span class="navbar-brand mb-0 h5">🎲 GenCon 2026 Preview</span>
-  <div class="d-flex gap-2 align-items-center">
-    <span id="meta-info" class="text-secondary small me-2"></span>
+  <!-- w-100 forces a line break in a wrapping flex container (Bootstrap trick) so this
+       always gets its own full-width row and wraps normally, instead of being squeezed
+       to near-zero width by the buttons and wrapping one word per line. -->
+  <div id="meta-info" class="text-secondary small w-100"></div>
+  <div class="d-flex flex-wrap gap-2 align-items-center">
     <button class="btn btn-sm btn-outline-primary" id="btn-refresh-preview" title="Pull the latest game list from BGG's GenCon 2026 Preview (public, no login)">
-      ↻ Refresh Preview List
+      ↻ Preview
     </button>
     <button class="btn btn-sm btn-outline-warning" id="btn-refresh-bgg" title="Log into BGG and pull your priority/notes on this preview list plus your collection status">
-      ↻ Refresh My BGG Data
+      ↻ My Data
     </button>
     <button class="btn btn-sm btn-outline-info" id="btn-export">⬇ Export</button>
     <label class="btn btn-sm btn-outline-info mb-0" for="import-file">⬆ Import</label>
     <input type="file" id="import-file" accept=".json" class="d-none" />
-    <button class="btn btn-sm btn-outline-secondary" id="btn-clear-filters">Clear Filters</button>
+    <button class="btn btn-sm btn-outline-secondary" id="btn-clear-filters">Clear</button>
   </div>
 </nav>
 
