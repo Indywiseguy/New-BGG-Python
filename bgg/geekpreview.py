@@ -83,6 +83,36 @@ def fetch_preview_items(previewid: int) -> list[dict]:
     return items
 
 
+def fetch_booth_by_itemid(previewid: int) -> dict[str, str]:
+    """Return {itemid: booth/location}, sourced directly from BGG's own preview
+    list — publishers self-report their booth on the "parent" (company) entry
+    that groups their preview items, via geekpreviewparentitems. This is the
+    authoritative source; only fall back to fuzzy-matching Gen Con's exhibitor
+    list (bgg/gencon.py) for the publishers who haven't filled this in on BGG."""
+    result: dict[str, str] = {}
+    session = requests.Session()
+    page = 1
+    while True:
+        r = session.get(
+            f"{_GEEKDO_API}/geekpreviewparentitems",
+            params={"nosession": 1, "pageid": page, "previewid": previewid},
+            timeout=20,
+        )
+        r.raise_for_status()
+        batch = r.json()
+        if not batch:
+            break
+        for parent in batch:
+            location = (parent.get("location") or "").strip()
+            if not location:
+                continue
+            for itemid in parent.get("previewitemids") or []:
+                result[itemid] = location
+        page += 1
+        time.sleep(_PAGE_DELAY)
+    return result
+
+
 def fetch_my_priorities(previewid: int, session: requests.Session) -> tuple[str, dict[str, dict]]:
     """Return (userid, {itemid: {"priority": int|None, "notes": str}}) for the logged-in user."""
     r = session.get(f"{_BGG_API}/geekpreviewitems/userinfo", params={"previewid": previewid}, timeout=20)

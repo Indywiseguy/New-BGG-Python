@@ -30,6 +30,7 @@ from bgg.auth import get_authenticated_session
 from bgg.gencon import best_match, fetch_exhibitors
 from bgg.geekpreview import (
     PRIORITY_LABELS,
+    fetch_booth_by_itemid,
     fetch_my_priorities,
     fetch_my_reactions,
     fetch_preview_items,
@@ -146,10 +147,13 @@ def _ensure_meta_row() -> None:
 
 @app.get("/api/preview/refresh")
 def refresh_preview():
-    """Pull the latest public GeekPreview catalog (no login required) and
-    fuzzy-match publishers to Gen Con booth numbers."""
+    """Pull the latest public GeekPreview catalog (no login required). Booth
+    numbers come primarily from BGG's own preview list (publishers self-report
+    these), falling back to fuzzy-matching Gen Con's exhibitor list only for
+    the few publishers who haven't filled that in on BGG yet."""
     meta = fetch_preview_meta(PREVIEW_ID)
     items = fetch_preview_items(PREVIEW_ID)
+    booth_by_itemid = fetch_booth_by_itemid(PREVIEW_ID)
 
     exhibitors = fetch_exhibitors()
     exhibitor_names = [e["name"] for e in exhibitors]
@@ -164,8 +168,10 @@ def refresh_preview():
     added = 0
     for item in items:
         gid = item["id"]
-        name, _score = best_match(item["publisher"], exhibitor_names)
-        booth = booth_by_name.get(name, "N/A") if name else "N/A"
+        booth = booth_by_itemid.get(item["itemid"])
+        if not booth:
+            name, _score = best_match(item["publisher"], exhibitor_names)
+            booth = booth_by_name.get(name, "N/A") if name else "N/A"
 
         existing = existing_by_id.get(gid)
         record = {**(existing or _default_game_fields())}
