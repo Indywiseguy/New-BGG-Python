@@ -247,14 +247,18 @@ function rowFormatter(row) {
   el.setAttribute("data-interest", interest);
 }
 
+function availabilityFormatter(cell) {
+  const v = cell.getValue() || "";
+  if (!v) return `<span style="color:#444">—</span>`;
+  const color = v === "For Sale" ? "#2a9d8f" : "#f4a261";
+  return `<span style="color:${color};font-weight:600">${v}</span>`;
+}
+
 function priceFormatter(cell) {
   const d = cell.getRow().getData();
-  const parts = [];
-  if (d.showprice) {
-    parts.push(`${d.currency === "USD" ? "$" : (d.currency || "") + " "}${d.showprice}`);
-  }
-  if (d.availability_status) parts.push(d.availability_status);
-  return parts.length ? parts.join(" · ") : `<span style="color:#444">—</span>`;
+  if (!d.showprice) return `<span style="color:#444">—</span>`;
+  const symbol = d.currency === "USD" ? "$" : (d.currency ? d.currency + " " : "");
+  return `${symbol}${d.showprice}`;
 }
 
 function bggPriorityFormatter(cell) {
@@ -405,9 +409,26 @@ function buildTable(games) {
         sorter: "string",
       },
 
-      // Price / availability (from GeekPreview)
+      // Availability (For Sale / Demo, from GeekPreview)
       {
-        title: "Price", field: "showprice", width: 130, minWidth: 110,
+        title: "Availability", field: "availability_status", width: 110, minWidth: 95,
+        formatter: availabilityFormatter,
+        headerFilter: makeMultiSelectFilter([
+          ["For Sale", "For Sale"],
+          ["Demo",     "Demo"],
+        ]),
+        headerFilterFunc: (headerValue, rowValue) => {
+          const vals = Array.isArray(headerValue) ? headerValue : (headerValue ? [headerValue] : []);
+          if (!vals.length) return true;
+          return vals.includes(rowValue || "");
+        },
+        headerFilterEmptyCheck: v => !v || (Array.isArray(v) && !v.length),
+        sorter: "string",
+      },
+
+      // Price (from GeekPreview)
+      {
+        title: "Price", field: "showprice", width: 90, minWidth: 80,
         formatter: priceFormatter,
         headerFilter: false,
         sorter: (a, b) => (a ?? -1) - (b ?? -1),
