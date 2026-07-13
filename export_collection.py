@@ -25,7 +25,8 @@ from pathlib import Path
 
 import requests
 from dotenv import load_dotenv
-from playwright.sync_api import sync_playwright
+
+from bgg.auth import get_authenticated_session
 
 load_dotenv(Path(__file__).parent / ".env")
 
@@ -111,31 +112,17 @@ CSV_FIELDS = [
 
 def _download_native_csv() -> list[dict]:
     print("Launching browser to log in to BGG...", flush=True)
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
-        context = browser.new_context()
-        page = context.new_page()
-        try:
-            page.goto("https://boardgamegeek.com/login", wait_until="load")
-            page.wait_for_timeout(2000)
-            page.fill('input[name="username"]', BGG_USERNAME)
-            page.fill('input[name="password"]', BGG_PASSWORD)
-            page.click('button:has-text("Sign In")')
-            page.wait_for_timeout(6000)
-            if "login" in page.url:
-                raise RuntimeError("BGG login failed — check BGG_PASSWORD in .env")
-            print("Login succeeded. Downloading native CSV...", flush=True)
+    session = get_authenticated_session(BGG_USERNAME, BGG_PASSWORD)
+    print("Login succeeded. Downloading native CSV...", flush=True)
 
-            export_url = (
-                f"https://boardgamegeek.com/geekcollection.php"
-                f"?action=exportcsv&subtype=boardgame&username={BGG_USERNAME}&all=1"
-            )
-            resp = context.request.get(export_url, timeout=60000)
-            if resp.status != 200:
-                raise RuntimeError(f"CSV export returned HTTP {resp.status}")
-            csv_bytes = resp.body()
-        finally:
-            browser.close()
+    export_url = (
+        f"https://boardgamegeek.com/geekcollection.php"
+        f"?action=exportcsv&subtype=boardgame&username={BGG_USERNAME}&all=1"
+    )
+    resp = session.get(export_url, timeout=60)
+    if resp.status_code != 200:
+        raise RuntimeError(f"CSV export returned HTTP {resp.status_code}")
+    csv_bytes = resp.content
 
     text = csv_bytes.decode("utf-8-sig")
     reader = csv.DictReader(io.StringIO(text))

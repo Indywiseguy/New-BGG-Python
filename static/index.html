@@ -18,8 +18,11 @@
   <span class="navbar-brand mb-0 h5">🎲 GenCon 2026 Preview</span>
   <div class="d-flex gap-2 align-items-center">
     <span id="meta-info" class="text-secondary small me-2"></span>
-    <button class="btn btn-sm btn-outline-warning" id="btn-refresh-bgg" title="Pull latest collection status from BGG">
-      ↻ Refresh BGG Status
+    <button class="btn btn-sm btn-outline-primary" id="btn-refresh-preview" title="Pull the latest game list from BGG's GenCon 2026 Preview (public, no login)">
+      ↻ Refresh Preview List
+    </button>
+    <button class="btn btn-sm btn-outline-warning" id="btn-refresh-bgg" title="Log into BGG and pull your priority/notes on this preview list plus your collection status">
+      ↻ Refresh My BGG Data
     </button>
     <button class="btn btn-sm btn-outline-info" id="btn-export">⬇ Export</button>
     <label class="btn btn-sm btn-outline-info mb-0" for="import-file">⬆ Import</label>
@@ -35,6 +38,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/tabulator-tables@6.2.1/dist/js/tabulator.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

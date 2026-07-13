@@ -6,8 +6,68 @@
 const INTEREST_LEVELS = ["", "Rush the Hall", "Likely to Buy", "Check it Out", "Not Interested"];
 const INTEREST_ORDER  = { "Rush the Hall": 1, "Likely to Buy": 2, "Check it Out": 3, "Not Interested": 4, "": 5 };
 
+const BGG_PRIORITY_COLORS = {
+  "Must Have":      "#3b82f6",
+  "Interested":     "#06b6d4",
+  "Undecided":      "#9ca3af",
+  "Not Interested": "#4b5563",
+};
+
 // Reset functions for custom multi-select filter dropdowns (called by Clear Filters)
 const _filterResetFns = [];
+
+// ---------------------------------------------------------------------------
+// Supabase — the deployed (Netlify) and local (webapp.py) copies of this page
+// both read/write the database directly. Only the two refresh actions below
+// still go through the local FastAPI backend (they need BGG login / fuzzy
+// matching that can't run in the browser or on Netlify).
+// ---------------------------------------------------------------------------
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const GAMES_TABLE = "gencon_2026_games";
+const META_TABLE = "gencon_2026_meta";
+const USER_EDITABLE_FIELDS = ["interest_level", "hot_games_room", "rank", "tags"];
+const PERSONAL_DATA_FIELDS = ["bgg_status", "bgg_wishlist_comment", "bgg_preview_priority", "bgg_thumbsup"];
+
+async function dbGetGames() {
+  const { data, error } = await sb.from(GAMES_TABLE).select("*").order("id");
+  if (error) throw new Error(error.message);
+  return data;
+}
+
+async function dbUpdateGame(id, fields) {
+  const { error } = await sb.from(GAMES_TABLE).update(fields).eq("id", id);
+  if (error) throw new Error(error.message);
+}
+
+async function dbBulkUpdate(updates) {
+  // updates: [{ id, ...fields }]
+  const results = await Promise.all(
+    updates.map(({ id, ...fields }) => sb.from(GAMES_TABLE).update(fields).eq("id", id))
+  );
+  const failed = results.find(r => r.error);
+  if (failed) throw new Error(failed.error.message);
+}
+
+async function dbGetMeta() {
+  const [metaRes, countRes] = await Promise.all([
+    sb.from(META_TABLE).select("*").eq("id", 1).limit(1),
+    sb.from(GAMES_TABLE).select("id", { count: "exact", head: true }),
+  ]);
+  if (metaRes.error) throw new Error(metaRes.error.message);
+  if (countRes.error) throw new Error(countRes.error.message);
+  const metaRow = (metaRes.data && metaRes.data[0]) || {};
+  return {
+    preview_meta: {
+      title: metaRow.preview_title || "",
+      start_date: metaRow.preview_start_date || "",
+      end_date: metaRow.preview_end_date || "",
+      location: metaRow.preview_location || "",
+    },
+    last_preview_refresh: metaRow.last_preview_refresh || null,
+    last_bgg_refresh: metaRow.last_bgg_refresh || null,
+    total: countRes.count || 0,
+  };
+}
 
 // ---------------------------------------------------------------------------
 // Multi-select checkbox dropdown header-filter builder.
@@ -106,31 +166,11 @@ function toast(msg, variant = "success") {
 }
 
 // ---------------------------------------------------------------------------
-// API helpers
+// API helper — only used for the two local-only refresh routes now
 // ---------------------------------------------------------------------------
 async function apiGet(path) {
   const r = await fetch(path);
   if (!r.ok) throw new Error(`GET ${path} → ${r.status}`);
-  return r.json();
-}
-
-async function apiPut(path, body) {
-  const r = await fetch(path, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  if (!r.ok) throw new Error(`PUT ${path} → ${r.status}`);
-  return r.json();
-}
-
-async function apiPost(path, body) {
-  const r = await fetch(path, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  if (!r.ok) throw new Error(`POST ${path} → ${r.status}`);
   return r.json();
 }
 
@@ -161,7 +201,7 @@ function recomputeRanks(table) {
   });
 
   if (updates.length) {
-    apiPost("/api/games/bulk-update", updates).catch(err => toast(err.message, "danger"));
+    dbBulkUpdate(updates).catch(err => toast(err.message, "danger"));
   }
 }
 
@@ -205,6 +245,42 @@ function rowFormatter(row) {
   el.setAttribute("data-interest", interest);
 }
 
+function priceFormatter(cell) {
+  const d = cell.getRow().getData();
+  const parts = [];
+  if (d.showprice) {
+    parts.push(`${d.currency === "USD" ? "$" : (d.currency || "") + " "}${d.showprice}`);
+  }
+  if (d.availability_status) parts.push(d.availability_status);
+  return parts.length ? parts.join(" · ") : `<span style="color:#444">—</span>`;
+}
+
+function bggPriorityFormatter(cell) {
+  const v = cell.getValue() || "";
+  const c = BGG_PRIORITY_COLORS[v] || "#aaa";
+  return v ? `<span style="color:${c};font-weight:600">${v}</span>` : `<span style="color:#444">—</span>`;
+}
+
+function wishlistCommentFormatter(cell) {
+  const v = cell.getValue() || "";
+  if (!v) return `<span style="color:#444">—</span>`;
+  const esc = v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return `<span title="${esc}">${esc}</span>`;
+}
+
+function tagsFormatter(cell) {
+  const tags = cell.getValue() || [];
+  if (!tags.length) return `<span style="color:#444">—</span>`;
+  return tags.map(t => `<span class="tag-chip">${t}</span>`).join(" ");
+}
+
+// Distinct tags currently present across all loaded games, for the Tags header filter.
+function collectTagPairs(games) {
+  const set = new Set();
+  games.forEach(g => (g.tags || []).forEach(t => set.add(t)));
+  return [...set].sort().map(t => [t, t]);
+}
+
 // ---------------------------------------------------------------------------
 // Save a single cell edit
 // ---------------------------------------------------------------------------
@@ -213,9 +289,22 @@ function onCellEdited(cell, table) {
   const id    = cell.getRow().getData().id;
   const value = cell.getValue();
 
+  // Tags editor produces a comma-separated string — parse into an array before saving
+  if (field === "tags") {
+    const tags = String(value)
+      .split(",")
+      .map(t => t.trim())
+      .filter(Boolean);
+    cell.getRow().update({ tags });
+    dbUpdateGame(id, { tags })
+      .then(() => toast("Saved", "success"))
+      .catch(err => toast(err.message, "danger"));
+    return;
+  }
+
   // If interest level changed, persist it then recompute ranks for the new group
   if (field === "interest_level") {
-    apiPut(`/api/games/${id}`, { interest_level: value })
+    dbUpdateGame(id, { interest_level: value })
       .then(() => { toast("Saved", "success"); recomputeRanks(table); })
       .catch(err => toast(err.message, "danger"));
     return;
@@ -225,7 +314,7 @@ function onCellEdited(cell, table) {
   if (field === "rank") {
     const interestLevel = cell.getRow().getData().interest_level || "";
     if (!interestLevel) {
-      apiPut(`/api/games/${id}`, { rank: value }).catch(err => toast(err.message, "danger"));
+      dbUpdateGame(id, { rank: value }).catch(err => toast(err.message, "danger"));
       return;
     }
     const target = parseInt(value) || 1;
@@ -242,11 +331,11 @@ function onCellEdited(cell, table) {
       row.update({ rank: i + 1 });
       return { id: rid, rank: i + 1 };
     });
-    apiPost("/api/games/bulk-update", updates).catch(err => toast(err.message, "danger"));
+    dbBulkUpdate(updates).catch(err => toast(err.message, "danger"));
     return;
   }
 
-  apiPut(`/api/games/${id}`, { [field]: value })
+  dbUpdateGame(id, { [field]: value })
     .then(() => toast(`Saved`, "success"))
     .catch(err => toast(err.message, "danger"));
 }
@@ -255,6 +344,7 @@ function onCellEdited(cell, table) {
 // Build the table
 // ---------------------------------------------------------------------------
 function buildTable(games) {
+  const tagPairs = collectTagPairs(games);
   const table = new Tabulator("#game-table", {
     data: games,
     height: "calc(100vh - 72px)",
@@ -297,9 +387,9 @@ function buildTable(games) {
         sorter: "number",
       },
 
-      // GenCon Publisher
+      // Publisher
       {
-        title: "Publisher", field: "gencon_publisher", minWidth: 150,
+        title: "Publisher", field: "publisher", minWidth: 150,
         headerFilter: "input",
         sorter: "string",
       },
@@ -311,11 +401,47 @@ function buildTable(games) {
         sorter: "string",
       },
 
+      // Price / availability (from GeekPreview)
+      {
+        title: "Price", field: "showprice", width: 130, minWidth: 110,
+        formatter: priceFormatter,
+        headerFilter: false,
+        sorter: (a, b) => (a ?? -1) - (b ?? -1),
+      },
+
+      // BGG Priority (read-only — this is "my rating" as recorded on BGG's preview list)
+      {
+        title: "BGG Priority", field: "bgg_preview_priority", width: 130, minWidth: 110,
+        formatter: bggPriorityFormatter,
+        headerFilter: makeMultiSelectFilter([
+          ["Must Have",      "Must Have"],
+          ["Interested",     "Interested"],
+          ["Undecided",      "Undecided"],
+          ["Not Interested", "Not Interested"],
+        ]),
+        headerFilterFunc: (headerValue, rowValue) => {
+          const vals = Array.isArray(headerValue) ? headerValue : (headerValue ? [headerValue] : []);
+          if (!vals.length) return true;
+          return vals.includes(rowValue || "");
+        },
+        headerFilterEmptyCheck: v => !v || (Array.isArray(v) && !v.length),
+        sorter: "string",
+      },
+
+      // Wishlist Comment (read-only, from your personal BGG collection)
+      {
+        title: "Wishlist Comment", field: "bgg_wishlist_comment", minWidth: 140,
+        formatter: wishlistCommentFormatter,
+        headerFilter: "input",
+        sorter: "string",
+      },
+
       // BGG Status (from collection)
       {
         title: "BGG Status", field: "bgg_status", width: 155, minWidth: 120,
         formatter: bggStatusFormatter,
         headerFilter: makeMultiSelectFilter([
+          ["",                 "No Status"],
           ["Own",              "Own"],
           ["Preordered",       "Preordered"],
           ["Want to Buy",      "Want to Buy"],
@@ -337,7 +463,7 @@ function buildTable(games) {
 
       // Interest Level (editable dropdown — custom popup, bypasses cellEdited)
       {
-        title: "Interest Level", field: "interest_level", width: 160, minWidth: 130,
+        title: "My Interest", field: "interest_level", width: 160, minWidth: 130,
         formatter: interestFormatter,
         cellClick: (e, cell) => {
           document.querySelectorAll(".__il-popup").forEach(p => p.remove());
@@ -366,7 +492,7 @@ function buildTable(games) {
               const id = cell.getRow().getData().id;
               cell.getRow().update({ interest_level: val });
               rowFormatter(cell.getRow());
-              apiPut(`/api/games/${id}`, { interest_level: val })
+              dbUpdateGame(id, { interest_level: val })
                 .then(() => { toast("Saved", "success"); recomputeRanks(table); })
                 .catch(err => toast(err.message, "danger"));
             });
@@ -405,10 +531,26 @@ function buildTable(games) {
           const newVal = !cell.getValue();
           const id = cell.getRow().getData().id;
           cell.getRow().update({ hot_games_room: newVal });
-          apiPut(`/api/games/${id}`, { hot_games_room: newVal })
+          dbUpdateGame(id, { hot_games_room: newVal })
             .then(() => toast("Saved", "success"))
             .catch(err => toast(err.message, "danger"));
         },
+      },
+
+      // Tags (editable, free-form classifications — meaning TBD)
+      {
+        title: "Tags", field: "tags", minWidth: 150,
+        formatter: tagsFormatter,
+        editor: "input",
+        headerFilter: makeMultiSelectFilter(tagPairs),
+        headerFilterFunc: (headerValue, rowValue) => {
+          const vals = Array.isArray(headerValue) ? headerValue : (headerValue ? [headerValue] : []);
+          if (!vals.length) return true;
+          const tags = rowValue || [];
+          return vals.some(hv => tags.includes(hv));
+        },
+        headerFilterEmptyCheck: v => !v || (Array.isArray(v) && !v.length),
+        sorter: (a, b) => (a || []).length - (b || []).length,
       },
 
       // Hidden sort-key column for interest level ordering
@@ -435,10 +577,12 @@ function buildTable(games) {
 // ---------------------------------------------------------------------------
 async function loadMeta() {
   try {
-    const m = await apiGet("/api/meta");
+    const m = await dbGetMeta();
     const el = document.getElementById("meta-info");
-    const refresh = m.last_bgg_refresh ? `BGG: ${m.last_bgg_refresh}` : "BGG: not synced";
-    el.textContent = `${m.total} games · ${refresh}`;
+    const title = m.preview_meta && m.preview_meta.title ? `${m.preview_meta.title} · ` : "";
+    const previewRefresh = m.last_preview_refresh ? `List: ${m.last_preview_refresh}` : "List: not synced";
+    const bggRefresh = m.last_bgg_refresh ? `My Data: ${m.last_bgg_refresh}` : "My Data: not synced";
+    el.textContent = `${title}${m.total} games · ${previewRefresh} · ${bggRefresh}`;
   } catch (_) {}
 }
 
@@ -448,55 +592,117 @@ async function loadMeta() {
 async function init() {
   let games;
   try {
-    games = await apiGet("/api/games");
+    games = await dbGetGames();
   } catch (err) {
     document.getElementById("game-table").innerHTML =
       `<div class="alert alert-danger m-3">Failed to load games: ${err.message}</div>`;
     return;
   }
 
-  const table = buildTable(games);
+  let table = buildTable(games);
   loadMeta();
 
-  // ---- Refresh BGG button ----
-  document.getElementById("btn-refresh-bgg").addEventListener("click", async () => {
-    const btn = document.getElementById("btn-refresh-bgg");
-    btn.disabled = true;
-    btn.textContent = "Refreshing…";
-    try {
-      const res = await apiGet("/api/bgg/refresh");
-      toast(`BGG refreshed — ${res.updated} statuses updated`, "success");
-      // Reload data into table
-      const newGames = await apiGet("/api/games");
-      table.setData(newGames);
-      loadMeta();
-    } catch (err) {
-      toast(`BGG refresh failed: ${err.message}`, "danger");
-    } finally {
-      btn.disabled = false;
-      btn.textContent = "↻ Refresh BGG Status";
-    }
-  });
+  async function reloadTable() {
+    const newGames = await dbGetGames();
+    // Full rebuild (not setData) so the Tags header filter picks up any newly-used tag values
+    table.destroy();
+    table = buildTable(newGames);
+    loadMeta();
+  }
+
+  // ---- Refresh buttons: only meaningful when this page is served locally by
+  // webapp.py (they need BGG login / fuzzy matching that can't run on Netlify) ----
+  const btnRefreshPreview = document.getElementById("btn-refresh-preview");
+  const btnRefreshBgg = document.getElementById("btn-refresh-bgg");
+  const isLocal = ["localhost", "127.0.0.1"].includes(location.hostname);
+
+  if (!isLocal) {
+    [btnRefreshPreview, btnRefreshBgg].forEach(b => {
+      b.disabled = true;
+      b.title = "Run locally (./run_webapp.sh) to refresh — this deployed site is browse/edit only";
+    });
+  } else {
+    btnRefreshPreview.addEventListener("click", async () => {
+      btnRefreshPreview.disabled = true;
+      btnRefreshPreview.textContent = "Refreshing…";
+      try {
+        const res = await apiGet("/api/preview/refresh");
+        toast(`Preview list refreshed — ${res.total} games (${res.added} new)`, "success");
+        await reloadTable();
+      } catch (err) {
+        toast(`Preview refresh failed: ${err.message}`, "danger");
+      } finally {
+        btnRefreshPreview.disabled = false;
+        btnRefreshPreview.textContent = "↻ Refresh Preview List";
+      }
+    });
+
+    btnRefreshBgg.addEventListener("click", async () => {
+      btnRefreshBgg.disabled = true;
+      btnRefreshBgg.textContent = "Refreshing…";
+      try {
+        const res = await apiGet("/api/bgg/refresh");
+        toast(`BGG data refreshed — ${res.updated} games updated`, "success");
+        await reloadTable();
+      } catch (err) {
+        toast(`BGG refresh failed: ${err.message}`, "danger");
+      } finally {
+        btnRefreshBgg.disabled = false;
+        btnRefreshBgg.textContent = "↻ Refresh My BGG Data";
+      }
+    });
+  }
 
   // ---- Export button ----
-  document.getElementById("btn-export").addEventListener("click", () => {
-    window.location.href = "/api/export";
+  document.getElementById("btn-export").addEventListener("click", async () => {
+    try {
+      const [gamesNow, meta] = await Promise.all([dbGetGames(), dbGetMeta()]);
+      const payload = {
+        preview_meta: meta.preview_meta,
+        games: gamesNow,
+        last_preview_refresh: meta.last_preview_refresh,
+        last_bgg_refresh: meta.last_bgg_refresh,
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "gencon_2026_preview.json";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      toast(`Export failed: ${err.message}`, "danger");
+    }
   });
 
   // ---- Import file input ----
   document.getElementById("import-file").addEventListener("change", async e => {
     const file = e.target.files[0];
     if (!file) return;
-    const fd = new FormData();
-    fd.append("file", file);
     try {
-      const r = await fetch("/api/import", { method: "POST", body: fd });
-      const res = await r.json();
-      if (!r.ok) throw new Error(res.detail || r.status);
-      toast(`Imported — ${res.merged} games merged`, "success");
-      const newGames = await apiGet("/api/games");
-      table.setData(newGames);
-      loadMeta();
+      const text = await file.text();
+      const incoming = JSON.parse(text);
+      const incomingGames = Array.isArray(incoming) ? incoming : (incoming && incoming.games) || [];
+      if (!Array.isArray(incomingGames)) throw new Error("Expected list or {games:[...]}");
+
+      const existingIds = new Set((await dbGetGames()).map(g => g.id));
+      const allowedFields = [...USER_EDITABLE_FIELDS, ...PERSONAL_DATA_FIELDS];
+      let merged = 0;
+      for (const src of incomingGames) {
+        if (src.id == null || !existingIds.has(String(src.id))) continue;
+        const fields = {};
+        for (const f of allowedFields) {
+          if (f in src) fields[f] = (f === "hot_games_room" || f === "bgg_thumbsup") ? Boolean(src[f]) : src[f];
+        }
+        if (Object.keys(fields).length) {
+          await dbUpdateGame(src.id, fields);
+          merged++;
+        }
+      }
+      toast(`Imported — ${merged} games merged`, "success");
+      await reloadTable();
     } catch (err) {
       toast(`Import failed: ${err.message}`, "danger");
     }

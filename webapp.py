@@ -1,36 +1,61 @@
 """
-GenCon 2026 Preview — local web app.
+GenCon 2026 Preview — local refresh server.
+
+Browsing/editing lives in static/ and talks directly to Supabase (project
+"boardgames") — see static/app.js. It's deployed as a static site to Netlify.
+
+This local server only exists for the two actions that can't run in the
+cloud: pulling BGG's official GeekPreview list #92
+(https://boardgamegeek.com/geekpreview/92/gen-con-2026-preview), and logging
+into BGG (via a real, visible browser — Cloudflare blocks headless logins)
+to pull personal priority/collection data. Both write straight into the same
+Supabase tables the deployed site reads from.
 
 Run:  uvicorn webapp:app --reload --port 8000
 Open: http://localhost:8000
 """
 
-import json
 import os
 import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from typing import Any
 
 import requests
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException, UploadFile, File
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
-from playwright.sync_api import sync_playwright
+from supabase import Client, create_client
+
+from bgg.auth import get_authenticated_session
+from bgg.gencon import best_match, fetch_exhibitors
+from bgg.geekpreview import (
+    PRIORITY_LABELS,
+    fetch_my_priorities,
+    fetch_my_reactions,
+    fetch_preview_items,
+    fetch_preview_meta,
+)
 
 load_dotenv(Path(__file__).parent / ".env")
 
-# ---------------------------------------------------------------------------
-# Paths
-# ---------------------------------------------------------------------------
-DATA_FILE = Path("data/geeklist_user_data.json")
-GAMES_CSV  = Path("data/games_2025_2026_gencon.csv")
+PREVIEW_ID = 92
+GAMES_TABLE = "gencon_2026_games"
+META_TABLE = "gencon_2026_meta"
 
 app = FastAPI(title="GenCon 2026 Preview")
 
 BGG_USERNAME = "indywiseguy"
 BGG_PASSWORD = os.environ.get("BGG_PASSWORD", "")
+
+_supabase: Client | None = None
+
+
+def db() -> Client:
+    global _supabase
+    if _supabase is None:
+        _supabase = create_client(os.environ["SUPABASE_URL"], os.environ["SUPABASE_KEY"])
+    return _supabase
+
 
 # ---------------------------------------------------------------------------
 # BGG collection status helpers
@@ -50,42 +75,16 @@ def _parse_status(status_el) -> str:
     return ", ".join(label for attr, label in _STATUS_FIELDS if status_el.get(attr) == "1")
 
 
-def fetch_bgg_collection() -> dict[str, str]:
-    """Fetch BGG collection for BGG_USERNAME via authenticated session.
-
-    BGG's XML API returns 401 for private collections when called unauthenticated.
-    We log in via Playwright (headed, to pass Cloudflare), grab the session cookies,
-    then use those cookies with requests to call the XML API.
-    """
-    if not BGG_PASSWORD:
-        raise HTTPException(status_code=500, detail="BGG_PASSWORD not set in .env")
-
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
-        context = browser.new_context()
-        page = context.new_page()
-        try:
-            page.goto("https://boardgamegeek.com/login", wait_until="load")
-            page.wait_for_timeout(2000)
-            page.fill('input[name="username"]', BGG_USERNAME)
-            page.fill('input[name="password"]', BGG_PASSWORD)
-            page.click('button:has-text("Sign In")')
-            page.wait_for_timeout(6000)
-            if "login" in page.url:
-                raise HTTPException(status_code=500, detail="BGG login failed — check credentials in .env")
-            all_cookies = context.cookies()
-        finally:
-            browser.close()
-
-    session = requests.Session()
-    for c in all_cookies:
-        session.cookies.set(c["name"], c["value"])
-
+def fetch_bgg_collection(session: requests.Session) -> dict[str, dict]:
+    """Fetch BGG collection status + wishlist comments for BGG_USERNAME using an
+    already-authenticated session. Returns {objectid: {"status": str, "wishlist_comment": str}}."""
+    # No excludesubtype filter — the GenCon preview list includes plenty of items
+    # BGG classifies as "boardgameexpansion" (e.g. Root: Homeland Expansion), and
+    # excluding that subtype silently drops their collection status entirely.
     url = "https://boardgamegeek.com/xmlapi2/collection"
     params = {
         "username": BGG_USERNAME,
         "subtype": "boardgame",
-        "excludesubtype": "boardgameexpansion",
     }
     for attempt in range(8):
         r = session.get(url, params=params, timeout=30)
@@ -99,202 +98,156 @@ def fetch_bgg_collection() -> dict[str, str]:
         raise HTTPException(status_code=504, detail="BGG collection timed out")
 
     root = ET.fromstring(r.text)
-    result: dict[str, str] = {}
+    result: dict[str, dict] = {}
     for item in root.findall("item"):
         oid = item.get("objectid", "")
         status_el = item.find("status")
-        result[oid] = _parse_status(status_el) if status_el is not None else ""
+        comment_el = item.find("wishlistcomment")
+        result[oid] = {
+            "status": _parse_status(status_el) if status_el is not None else "",
+            "wishlist_comment": (comment_el.text or "").strip() if comment_el is not None else "",
+        }
     return result
 
 
 # ---------------------------------------------------------------------------
-# Data load / save / init
+# Helpers
 # ---------------------------------------------------------------------------
 
-def _load() -> dict:
-    return json.loads(DATA_FILE.read_text(encoding="utf-8"))
+def _to_int(v) -> int | None:
+    try:
+        return int(v)
+    except (TypeError, ValueError):
+        return None
 
 
-def _save(data: dict) -> None:
-    DATA_FILE.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+def _default_game_fields() -> dict:
+    return {
+        "bgg_status": "",
+        "bgg_wishlist_comment": "",
+        "bgg_preview_priority": "",
+        "bgg_thumbsup": False,
+        "interest_level": "",
+        "hot_games_room": False,
+        "rank": None,
+        "tags": [],
+    }
 
 
-def _init_from_csv() -> None:
-    """Build data/geeklist_user_data.json from the CSV if it doesn't exist."""
-    import csv as csv_mod
-
-    games: list[dict] = []
-    with open(GAMES_CSV, newline="", encoding="utf-8") as fh:
-        for row in csv_mod.DictReader(fh):
-            if row.get("at_gencon") != "Yes" and row.get("Add to List") != "Yes":
-                continue
-            games.append({
-                "id":               row["id"],
-                "name":             row["name"],
-                "year":             row["year"],
-                "bgg_publisher":    row["publisher"],
-                "gencon_publisher": row["gencon_publisher"],
-                "booth":            row["booth_number"],
-                "bgg_status":       "",
-                "interest_level":   "",
-                "hot_games_room":   False,
-                "rank":             None,
-            })
-
-    _save({"games": games, "last_bgg_refresh": None})
-    print(f"Initialised {DATA_FILE} with {len(games)} games.")
-
-
-def _merge_csv_into_existing() -> None:
-    """Add any new games from the CSV into an existing data file (preserves user data)."""
-    import csv as csv_mod
-
-    data = _load()
-    existing_ids = {g["id"] for g in data["games"]}
-    added = 0
-    with open(GAMES_CSV, newline="", encoding="utf-8") as fh:
-        for row in csv_mod.DictReader(fh):
-            if row.get("at_gencon") != "Yes" and row.get("Add to List") != "Yes":
-                continue
-            if row["id"] in existing_ids:
-                continue
-            data["games"].append({
-                "id":               row["id"],
-                "name":             row["name"],
-                "year":             row["year"],
-                "bgg_publisher":    row["publisher"],
-                "gencon_publisher": row["gencon_publisher"],
-                "booth":            row["booth_number"],
-                "bgg_status":       "",
-                "interest_level":   "",
-                "hot_games_room":   False,
-                "rank":             None,
-            })
-            added += 1
-    if added:
-        _save(data)
-        print(f"Merged {added} new games into {DATA_FILE}.")
-
-
-# ---------------------------------------------------------------------------
-# On startup: ensure data file exists
-# ---------------------------------------------------------------------------
-@app.on_event("startup")
-def startup():
-    if not DATA_FILE.exists():
-        _init_from_csv()
-    else:
-        _merge_csv_into_existing()
-    # Migrate renamed interest level: "Maybe" → "Likely to Buy"
-    data = _load()
-    if any(g.get("interest_level") == "Maybe" for g in data["games"]):
-        for g in data["games"]:
-            if g.get("interest_level") == "Maybe":
-                g["interest_level"] = "Likely to Buy"
-        _save(data)
+def _ensure_meta_row() -> None:
+    res = db().table(META_TABLE).select("id").eq("id", 1).execute()
+    if not res.data:
+        db().table(META_TABLE).insert({"id": 1}).execute()
 
 
 # ---------------------------------------------------------------------------
 # API routes
 # ---------------------------------------------------------------------------
 
-@app.get("/api/games")
-def get_games():
-    return _load()["games"]
+@app.get("/api/preview/refresh")
+def refresh_preview():
+    """Pull the latest public GeekPreview catalog (no login required) and
+    fuzzy-match publishers to Gen Con booth numbers."""
+    meta = fetch_preview_meta(PREVIEW_ID)
+    items = fetch_preview_items(PREVIEW_ID)
 
+    exhibitors = fetch_exhibitors()
+    exhibitor_names = [e["name"] for e in exhibitors]
+    booth_by_name = {e["name"]: e["booths"] for e in exhibitors}
 
-@app.put("/api/games/{game_id}")
-def update_game(game_id: str, body: dict[str, Any]):
-    data = _load()
-    for game in data["games"]:
-        if game["id"] == game_id:
-            allowed = {"interest_level", "hot_games_room", "rank"}
-            for k, v in body.items():
-                if k in allowed:
-                    game[k] = bool(v) if k == "hot_games_room" else v
-            _save(data)
-            return {"ok": True}
-    raise HTTPException(status_code=404, detail="Game not found")
+    existing_by_id = {g["id"]: g for g in db().table(GAMES_TABLE).select("*").execute().data}
 
+    # Publishers self-manage this list and occasionally submit the same game
+    # twice under different itemids — dedupe by BGG game id, last one wins
+    # (pagination order is itemid-ascending, so "last" is the most recent entry).
+    merged_by_id: dict[str, dict] = {}
+    added = 0
+    for item in items:
+        gid = item["id"]
+        name, _score = best_match(item["publisher"], exhibitor_names)
+        booth = booth_by_name.get(name, "N/A") if name else "N/A"
 
-@app.post("/api/games/bulk-update")
-def bulk_update(updates: list[dict[str, Any]]):
-    """Update rank (and optionally interest_level) for multiple games at once."""
-    data = _load()
-    update_map = {u["id"]: u for u in updates}
-    allowed = {"interest_level", "hot_games_room", "rank"}
-    for game in data["games"]:
-        if game["id"] in update_map:
-            for k, v in update_map[game["id"]].items():
-                if k in allowed:
-                    game[k] = v
-    _save(data)
-    return {"ok": True}
+        existing = existing_by_id.get(gid)
+        record = {**(existing or _default_game_fields())}
+        record.update(item)  # keeps item["itemid"] — needed to join priorities/reactions later
+        record["year"] = _to_int(item.get("year"))
+        record["min_players"] = _to_int(item.get("min_players"))
+        record["max_players"] = _to_int(item.get("max_players"))
+        record["booth"] = booth
+        record["still_in_preview"] = True
+        if gid not in merged_by_id and existing is None:
+            added += 1
+        merged_by_id[gid] = record
+
+    # Keep games that dropped off the live list (preserve tags/notes) but flag them
+    for gid, existing in existing_by_id.items():
+        if gid not in merged_by_id:
+            existing["still_in_preview"] = False
+            merged_by_id[gid] = existing
+
+    rows = list(merged_by_id.values())
+    db().table(GAMES_TABLE).upsert(rows, on_conflict="id").execute()
+
+    last_refresh = time.strftime("%Y-%m-%d %H:%M")
+    _ensure_meta_row()
+    db().table(META_TABLE).update({
+        "preview_title": meta.get("title", ""),
+        "preview_start_date": meta.get("start_date", ""),
+        "preview_end_date": meta.get("end_date", ""),
+        "preview_location": meta.get("location", ""),
+        "last_preview_refresh": last_refresh,
+    }).eq("id", 1).execute()
+
+    return {"ok": True, "total": len(rows), "added": added, "last_refresh": last_refresh}
 
 
 @app.get("/api/bgg/refresh")
 def refresh_bgg():
-    """Pull the latest BGG collection status for indywiseguy."""
-    statuses = fetch_bgg_collection()
-    data = _load()
+    """Log into BGG once and pull both GeekPreview personal data (priority/thumbs)
+    and personal collection data (status + wishlist comments)."""
+    if not BGG_PASSWORD:
+        raise HTTPException(status_code=500, detail="BGG_PASSWORD not set in .env")
+
+    session = get_authenticated_session(BGG_USERNAME, BGG_PASSWORD)
+
+    userid, priorities = fetch_my_priorities(PREVIEW_ID, session)
+    reactions = fetch_my_reactions(PREVIEW_ID, userid, list(priorities.keys()), session)
+    collection = fetch_bgg_collection(session)
+
+    games = db().table(GAMES_TABLE).select("*").execute().data
     updated = 0
-    for game in data["games"]:
-        new_status = statuses.get(game["id"], "")
-        if game.get("bgg_status") != new_status:
-            game["bgg_status"] = new_status
+    for game in games:
+        itemid = game.get("itemid", "")
+        priority_info = priorities.get(itemid, {})
+        priority_label = PRIORITY_LABELS.get(priority_info.get("priority"), "")
+        collection_info = collection.get(game["id"], {})
+
+        new_status = collection_info.get("status", "")
+        new_priority = priority_label
+        new_wishlist_comment = collection_info.get("wishlist_comment", "")
+        new_thumbsup = reactions.get(itemid, False)
+
+        if (
+            game.get("bgg_status") != new_status
+            or game.get("bgg_preview_priority") != new_priority
+            or game.get("bgg_wishlist_comment") != new_wishlist_comment
+            or game.get("bgg_thumbsup") != new_thumbsup
+        ):
             updated += 1
-    data["last_bgg_refresh"] = time.strftime("%Y-%m-%d %H:%M")
-    _save(data)
-    return {"ok": True, "updated": updated, "last_refresh": data["last_bgg_refresh"]}
+            db().table(GAMES_TABLE).update({
+                "bgg_status": new_status,
+                "bgg_preview_priority": new_priority,
+                "bgg_wishlist_comment": new_wishlist_comment,
+                "bgg_thumbsup": new_thumbsup,
+            }).eq("id", game["id"]).execute()
 
-
-@app.get("/api/meta")
-def get_meta():
-    data = _load()
-    return {"last_bgg_refresh": data.get("last_bgg_refresh"), "total": len(data["games"])}
-
-
-@app.get("/api/export")
-def export_data():
-    return FileResponse(
-        DATA_FILE,
-        media_type="application/json",
-        filename="gencon_2026_games.json",
-    )
-
-
-@app.post("/api/import")
-async def import_data(file: UploadFile = File(...)):
-    raw = await file.read()
-    try:
-        incoming = json.loads(raw)
-    except Exception:
-        raise HTTPException(status_code=400, detail="Invalid JSON")
-
-    # Merge user-editable fields only; keep metadata from CSV
-    user_fields = {"interest_level", "hot_games_room", "rank", "bgg_status"}
-    if isinstance(incoming, list):
-        incoming_map = {g["id"]: g for g in incoming if "id" in g}
-    elif isinstance(incoming, dict) and "games" in incoming:
-        incoming_map = {g["id"]: g for g in incoming["games"] if "id" in g}
-    else:
-        raise HTTPException(status_code=400, detail="Expected list or {games:[...]}")
-
-    data = _load()
-    merged = 0
-    for game in data["games"]:
-        if game["id"] in incoming_map:
-            src = incoming_map[game["id"]]
-            for f in user_fields:
-                if f in src:
-                    v = src[f]
-                    game[f] = bool(v) if f == "hot_games_room" else v
-            merged += 1
-    _save(data)
-    return {"ok": True, "merged": merged}
+    last_refresh = time.strftime("%Y-%m-%d %H:%M")
+    _ensure_meta_row()
+    db().table(META_TABLE).update({"last_bgg_refresh": last_refresh}).eq("id", 1).execute()
+    return {"ok": True, "updated": updated, "last_refresh": last_refresh}
 
 
 # ---------------------------------------------------------------------------
-# Serve static files (must be last)
+# Serve static files (must be last) — same static/ directory Netlify deploys
 # ---------------------------------------------------------------------------
 app.mount("/", StaticFiles(directory="static", html=True), name="static")
