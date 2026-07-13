@@ -69,10 +69,14 @@ body { background: #1a1a2e; color: #e0e0e0; }
 .game-link { color: #7eb8f7; text-decoration: none; }
 .game-link:hover { text-decoration: underline; color: #a8d4ff; }
 
-/* Responsive: collapse description column on small screens */
+/* Responsive: collapse description column on small screens.
+   !important is required — Tabulator's own CSS sets .tabulator-col display
+   via a 3-class selector (.tabulator .tabulator-header .tabulator-col),
+   which beats our 1-class-plus-attribute selector on specificity regardless
+   of stylesheet load order. */
 @media (max-width: 900px) {
   .tabulator-col[tabulator-field="bgg_wishlist_comment"],
-  .tabulator-cell[tabulator-field="bgg_wishlist_comment"] { display: none; }
+  .tabulator-cell[tabulator-field="bgg_wishlist_comment"] { display: none !important; }
 }
 
 /* Never wrap text inside a nav button — let the flex container wrap whole
@@ -83,6 +87,26 @@ body { background: #1a1a2e; color: #e0e0e0; }
 @media (max-width: 700px) {
   .navbar .btn, .navbar label.btn { padding: 2px 8px; font-size: 12px; }
   #meta-info { font-size: 11px; }
+}
+
+/* Phones: only Rank, Name, Publisher, Booth, My Interest by default —
+   everything else is still there, just off by default on a small screen.
+   !important needed for the same specificity reason as the rule above. */
+@media (max-width: 700px) {
+  .tabulator-col[tabulator-field="availability_status"],
+  .tabulator-cell[tabulator-field="availability_status"],
+  .tabulator-col[tabulator-field="showprice"],
+  .tabulator-cell[tabulator-field="showprice"],
+  .tabulator-col[tabulator-field="bgg_preview_priority"],
+  .tabulator-cell[tabulator-field="bgg_preview_priority"],
+  .tabulator-col[tabulator-field="bgg_status"],
+  .tabulator-cell[tabulator-field="bgg_status"],
+  .tabulator-col[tabulator-field="hot_games_room"],
+  .tabulator-cell[tabulator-field="hot_games_room"],
+  .tabulator-col[tabulator-field="tags"],
+  .tabulator-cell[tabulator-field="tags"] {
+    display: none !important;
+  }
 }
 
 /* Tag chips */
