@@ -178,21 +178,23 @@ async function apiGet(path) {
 // Rank recomputation
 // ---------------------------------------------------------------------------
 // After any row move or interest-level change, recompute ranks within each
-// interest-level group based on the current table row order.
+// interest-level group based on the current table row order. Rows with no
+// My Interest set are left alone entirely — their rank (if any) is a manual,
+// independent value and must not be wiped just because some other row moved.
 function recomputeRanks(table) {
   const rows = table.getRows();
   const groups = {};
   rows.forEach(row => {
-    const d = row.getData();
-    const grp = d.interest_level || "";
+    const grp = row.getData().interest_level || "";
+    if (!grp) return;
     if (!groups[grp]) groups[grp] = [];
     groups[grp].push(row);
   });
 
   const updates = [];
-  Object.entries(groups).forEach(([grp, grpRows]) => {
+  Object.values(groups).forEach(grpRows => {
     grpRows.forEach((row, i) => {
-      const newRank = grp ? i + 1 : null;
+      const newRank = i + 1;
       if (row.getData().rank !== newRank) {
         row.update({ rank: newRank });
         updates.push({ id: row.getData().id, rank: newRank });
@@ -314,7 +316,9 @@ function onCellEdited(cell, table) {
   if (field === "rank") {
     const interestLevel = cell.getRow().getData().interest_level || "";
     if (!interestLevel) {
-      dbUpdateGame(id, { rank: value }).catch(err => toast(err.message, "danger"));
+      dbUpdateGame(id, { rank: value })
+        .then(() => toast("Saved", "success"))
+        .catch(err => toast(err.message, "danger"));
       return;
     }
     const target = parseInt(value) || 1;
@@ -560,14 +564,14 @@ function buildTable(games) {
         sorter: "number",
       },
     ],
-
-    // -----------------------------------------------------------------------
-    // Events
-    // -----------------------------------------------------------------------
-    rowMoved: row => recomputeRanks(table),
-
-    cellEdited: cell => onCellEdited(cell, table),
   });
+
+  // NOTE: table-level event callbacks (rowMoved, cellEdited) must be wired via
+  // table.on(...) after construction, not as constructor options — this build
+  // of Tabulator silently ignores them if passed in the options object above,
+  // which meant Rank edits and drag-reordering never actually saved.
+  table.on("rowMoved", () => recomputeRanks(table));
+  table.on("cellEdited", cell => onCellEdited(cell, table));
 
   return table;
 }
