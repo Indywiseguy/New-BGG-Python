@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.indywiseguy.gencon-preview-refresh</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/indywiseguy/New-BGG-Python/.venv/bin/python</string>
+        <string>/Users/indywiseguy/New-BGG-Python/scheduled_refresh_preview.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/indywiseguy/New-BGG-Python</string>
+
+    <!-- Midnight, noon, 4pm, 8pm — machine's local timezone, which is US Eastern -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Hour</key>
+            <integer>0</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>12</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>16</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>20</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+    </array>
+
+    <key>StandardOutPath</key>
+    <string>/Users/indywiseguy/New-BGG-Python/data/scheduled_refresh.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/indywiseguy/New-BGG-Python/data/scheduled_refresh.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

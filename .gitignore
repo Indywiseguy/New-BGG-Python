@@ -10,3 +10,4 @@ data/gencon_exhibitors.json
 data/all_ids.txt
 data/*.csv.gz
 data/bg_ranked_items*.csv
+data/scheduled_refresh.log
