@@ -25,7 +25,7 @@ const _filterResetFns = [];
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const GAMES_TABLE = "gencon_2026_games";
 const META_TABLE = "gencon_2026_meta";
-const USER_EDITABLE_FIELDS = ["interest_level", "hot_games_room", "rank", "tags"];
+const USER_EDITABLE_FIELDS = ["interest_level", "hot_games_room", "rank", "notes"];
 const PERSONAL_DATA_FIELDS = ["bgg_status", "bgg_wishlist_comment", "bgg_preview_priority", "bgg_thumbsup"];
 
 async function dbGetGames() {
@@ -267,24 +267,16 @@ function bggPriorityFormatter(cell) {
   return v ? `<span style="color:${c};font-weight:600">${v}</span>` : `<span style="color:#444">—</span>`;
 }
 
-function wishlistCommentFormatter(cell) {
+function truncatedTextFormatter(cell) {
   const v = cell.getValue() || "";
   if (!v) return `<span style="color:#444">—</span>`;
   const esc = v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   return `<span title="${esc}">${esc}</span>`;
 }
 
-function tagsFormatter(cell) {
-  const tags = cell.getValue() || [];
-  if (!tags.length) return `<span style="color:#444">—</span>`;
-  return tags.map(t => `<span class="tag-chip">${t}</span>`).join(" ");
-}
-
-// Distinct tags currently present across all loaded games, for the Tags header filter.
-function collectTagPairs(games) {
-  const set = new Set();
-  games.forEach(g => (g.tags || []).forEach(t => set.add(t)));
-  return [...set].sort().map(t => [t, t]);
+function communityThumbsFormatter(cell) {
+  const v = cell.getValue();
+  return v ? `👍 ${v}` : `<span style="color:#444">—</span>`;
 }
 
 // ---------------------------------------------------------------------------
@@ -294,19 +286,6 @@ function onCellEdited(cell, table) {
   const field = cell.getField();
   const id    = cell.getRow().getData().id;
   const value = cell.getValue();
-
-  // Tags editor produces a comma-separated string — parse into an array before saving
-  if (field === "tags") {
-    const tags = String(value)
-      .split(",")
-      .map(t => t.trim())
-      .filter(Boolean);
-    cell.getRow().update({ tags });
-    dbUpdateGame(id, { tags })
-      .then(() => toast("Saved", "success"))
-      .catch(err => toast(err.message, "danger"));
-    return;
-  }
 
   // If interest level changed, persist it then recompute ranks for the new group
   if (field === "interest_level") {
@@ -352,7 +331,6 @@ function onCellEdited(cell, table) {
 // Build the table
 // ---------------------------------------------------------------------------
 function buildTable(games) {
-  const tagPairs = collectTagPairs(games);
   // Below ~700px (phones): the nav wraps to more than one line, so its actual
   // height varies — measure it instead of assuming a fixed offset. Touch-drag
   // reordering is also fiddly on a phone, so hide the drag handle there and
@@ -457,10 +435,18 @@ function buildTable(games) {
         sorter: "string",
       },
 
+      // Thumbs (read-only — total community thumbs-up on this preview list item)
+      {
+        title: "Thumbs", field: "community_thumbs", width: 90, minWidth: 80,
+        formatter: communityThumbsFormatter,
+        headerFilter: false,
+        sorter: (a, b) => (a ?? -1) - (b ?? -1),
+      },
+
       // Wishlist Comment (read-only, from your personal BGG collection)
       {
         title: "Wishlist Comment", field: "bgg_wishlist_comment", minWidth: 140,
-        formatter: wishlistCommentFormatter,
+        formatter: truncatedTextFormatter,
         headerFilter: "input",
         sorter: "string",
       },
@@ -566,20 +552,13 @@ function buildTable(games) {
         },
       },
 
-      // Tags (editable, free-form classifications — meaning TBD)
+      // Notes (editable free text)
       {
-        title: "Tags", field: "tags", minWidth: 150,
-        formatter: tagsFormatter,
-        editor: "input",
-        headerFilter: makeMultiSelectFilter(tagPairs),
-        headerFilterFunc: (headerValue, rowValue) => {
-          const vals = Array.isArray(headerValue) ? headerValue : (headerValue ? [headerValue] : []);
-          if (!vals.length) return true;
-          const tags = rowValue || [];
-          return vals.some(hv => tags.includes(hv));
-        },
-        headerFilterEmptyCheck: v => !v || (Array.isArray(v) && !v.length),
-        sorter: (a, b) => (a || []).length - (b || []).length,
+        title: "Notes", field: "notes", minWidth: 150,
+        formatter: truncatedTextFormatter,
+        editor: "textarea",
+        headerFilter: "input",
+        sorter: "string",
       },
 
       // Hidden sort-key column for interest level ordering
@@ -633,7 +612,7 @@ async function init() {
 
   async function reloadTable() {
     const newGames = await dbGetGames();
-    // Full rebuild (not setData) so the Tags header filter picks up any newly-used tag values
+    // Full rebuild (not setData) so mobile detection / nav height are re-measured
     table.destroy();
     table = buildTable(newGames);
     loadMeta();

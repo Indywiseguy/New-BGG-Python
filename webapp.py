@@ -131,7 +131,7 @@ def _default_game_fields() -> dict:
         "interest_level": "",
         "hot_games_room": False,
         "rank": None,
-        "tags": [],
+        "notes": "",
     }
 
 

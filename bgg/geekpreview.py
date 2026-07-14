@@ -42,6 +42,7 @@ def _parse_item(raw: dict) -> dict:
         if p.get("item", {}).get("primaryname", {}).get("name")
     ]
     stats = raw.get("stats") or {}
+    reactions = raw.get("reactions") or {}
 
     return {
         "itemid": raw.get("itemid", ""),
@@ -59,6 +60,7 @@ def _parse_item(raw: dict) -> dict:
         "community_musthave": stats.get("musthave", 0),
         "community_interested": stats.get("interested", 0),
         "community_undecided": stats.get("undecided", 0),
+        "community_thumbs": reactions.get("thumbs", 0),
     }
 
 

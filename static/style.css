@@ -99,25 +99,14 @@ body { background: #1a1a2e; color: #e0e0e0; }
   .tabulator-cell[tabulator-field="showprice"],
   .tabulator-col[tabulator-field="bgg_preview_priority"],
   .tabulator-cell[tabulator-field="bgg_preview_priority"],
+  .tabulator-col[tabulator-field="community_thumbs"],
+  .tabulator-cell[tabulator-field="community_thumbs"],
   .tabulator-col[tabulator-field="bgg_status"],
   .tabulator-cell[tabulator-field="bgg_status"],
   .tabulator-col[tabulator-field="hot_games_room"],
   .tabulator-cell[tabulator-field="hot_games_room"],
-  .tabulator-col[tabulator-field="tags"],
-  .tabulator-cell[tabulator-field="tags"] {
+  .tabulator-col[tabulator-field="notes"],
+  .tabulator-cell[tabulator-field="notes"] {
     display: none !important;
   }
-}
-
-/* Tag chips */
-.tag-chip {
-  display: inline-block;
-  background: #1e3a5f;
-  color: #a8d4ff;
-  border: 1px solid #2a5a8a;
-  border-radius: 10px;
-  padding: 1px 8px;
-  margin: 1px 2px 1px 0;
-  font-size: 11px;
-  white-space: nowrap;
 }
