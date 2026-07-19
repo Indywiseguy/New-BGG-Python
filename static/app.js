@@ -279,6 +279,11 @@ function communityThumbsFormatter(cell) {
   return v ? `👍 ${v}` : `<span style="color:#444">—</span>`;
 }
 
+function boothThumbsFormatter(cell) {
+  const v = cell.getValue();
+  return v != null ? v.toLocaleString() : `<span style="color:#444">—</span>`;
+}
+
 // ---------------------------------------------------------------------------
 // Save a single cell edit
 // ---------------------------------------------------------------------------
@@ -439,6 +444,14 @@ function buildTable(games) {
       {
         title: "Thumbs", field: "community_thumbs", width: 90, minWidth: 80,
         formatter: communityThumbsFormatter,
+        headerFilter: false,
+        sorter: (a, b) => (a ?? -1) - (b ?? -1),
+      },
+
+      // Booth Thumbs (manually entered — a measure of how busy a booth might be)
+      {
+        title: "Booth Thumbs", field: "booth_thumbs", width: 110, minWidth: 95,
+        formatter: boothThumbsFormatter,
         headerFilter: false,
         sorter: (a, b) => (a ?? -1) - (b ?? -1),
       },

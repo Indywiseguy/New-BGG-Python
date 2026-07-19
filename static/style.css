@@ -101,6 +101,8 @@ body { background: #1a1a2e; color: #e0e0e0; }
   .tabulator-cell[tabulator-field="bgg_preview_priority"],
   .tabulator-col[tabulator-field="community_thumbs"],
   .tabulator-cell[tabulator-field="community_thumbs"],
+  .tabulator-col[tabulator-field="booth_thumbs"],
+  .tabulator-cell[tabulator-field="booth_thumbs"],
   .tabulator-col[tabulator-field="bgg_status"],
   .tabulator-cell[tabulator-field="bgg_status"],
   .tabulator-col[tabulator-field="hot_games_room"],
