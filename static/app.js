@@ -13,9 +13,23 @@ const BGG_PRIORITY_COLORS = {
   "Not Interested": "#4b5563",
 };
 
+// Every column field that can be toggled on/off in the mobile view.
+const ALL_TOGGLEABLE_FIELDS = [
+  "rank", "name", "publisher", "booth", "availability_status", "showprice",
+  "bgg_preview_priority", "community_thumbs", "booth_thumbs",
+  "bgg_wishlist_comment", "bgg_status", "interest_level", "hot_games_room", "notes",
+];
+// Shown on phones when no quick filter is active (initial load, or after Clear).
+const DEFAULT_MOBILE_COLUMNS = ["rank", "name", "publisher", "booth", "interest_level"];
+
+// BGG Status values for "anything except Own and Preordered"
+const STATUS_NOT_OWNED_OR_PREORDERED =
+  ["", "Want to Buy", "Wishlist", "Want to Play", "For Trade", "Previously Owned"];
+
 // Quick-filter presets — each clears all filters, applies the given per-field
-// values, and sets the table sort. Add more entries here to add more buttons;
-// no other code changes needed. Values are arrays for columns using the
+// values, sets the table sort, and (on phones only) switches to the given set
+// of visible columns. Add more entries here to add more buttons; no other
+// code changes needed. filters: values are arrays for columns using the
 // custom multi-select checkbox filter (see makeMultiSelectFilter/_filterSetFns);
 // for columns using a native Tabulator header filter (e.g. Hot Games Room's
 // tickCross), give the raw value Tabulator's setHeaderFilterValue expects.
@@ -25,10 +39,10 @@ const QUICK_FILTERS = [
     filters: {
       availability_status: ["For Sale"],
       bgg_preview_priority: ["Must Have"],
-      // "All except Own and Preordered"
-      bgg_status: ["", "Want to Buy", "Wishlist", "Want to Play", "For Trade", "Previously Owned"],
+      bgg_status: STATUS_NOT_OWNED_OR_PREORDERED,
     },
     sort: [{ column: "rank", dir: "asc" }],
+    mobileColumns: ["rank", "name", "publisher", "booth", "community_thumbs", "booth_thumbs", "interest_level", "notes"],
   },
   {
     label: "BGG Hot Games",
@@ -36,6 +50,16 @@ const QUICK_FILTERS = [
       hot_games_room: true,
     },
     sort: [{ column: "rank", dir: "asc" }],
+    mobileColumns: ["rank", "name", "publisher", "availability_status", "bgg_preview_priority", "interest_level", "notes"],
+  },
+  {
+    label: "Roaming",
+    filters: {
+      bgg_preview_priority: ["Must Have", "Interested"],
+      bgg_status: STATUS_NOT_OWNED_OR_PREORDERED,
+    },
+    sort: [{ column: "booth", dir: "asc" }],
+    mobileColumns: ["name", "publisher", "booth", "availability_status", "interest_level", "notes"],
   },
 ];
 
@@ -252,6 +276,25 @@ function availabilityFormatter(cell) {
   return `<span style="color:${color};font-weight:600">${v}</span>`;
 }
 
+// Booth is free text (e.g. "Booth #1819", "1109, 809, 817, 929 (Asmodee Booth)",
+// "N/A", "Lucas Oil Stadium (Bear Left HQ)") — pull out every standalone number
+// and use the lowest as the sort value. \b\d+\b deliberately won't match a digit
+// run that's glued to letters (e.g. "25th", "3rd", "7pm"), so publisher names or
+// dates containing ordinals never get mistaken for a booth number.
+function boothSortValue(v) {
+  const nums = String(v || "").match(/\b\d+\b/g);
+  return nums && nums.length ? Math.min(...nums.map(Number)) : null;
+}
+
+function boothSorter(a, b) {
+  const av = boothSortValue(a);
+  const bv = boothSortValue(b);
+  if (av == null && bv == null) return 0;
+  if (av == null) return 1;  // text-only entries (N/A, venue names, ...) sort last
+  if (bv == null) return -1;
+  return av - bv;
+}
+
 function priceFormatter(cell) {
   const d = cell.getRow().getData();
   if (!d.showprice) return `<span style="color:#444">—</span>`;
@@ -296,6 +339,25 @@ function onCellEdited(cell, table) {
   dbUpdateGame(id, { [field]: value })
     .then(() => toast(`Saved`, "success"))
     .catch(err => toast(err.message, "danger"));
+}
+
+// ---------------------------------------------------------------------------
+// Mobile column visibility — switches per quick-filter button. Desktop
+// always shows every column; this only acts below the phone breakpoint.
+// ---------------------------------------------------------------------------
+function isMobileViewport() {
+  return window.matchMedia("(max-width: 700px)").matches;
+}
+
+function applyMobileColumns(table, visibleFields) {
+  if (!isMobileViewport()) return;
+  ALL_TOGGLEABLE_FIELDS.forEach(field => {
+    if (visibleFields.includes(field)) {
+      table.showColumn(field);
+    } else {
+      table.hideColumn(field);
+    }
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -348,7 +410,7 @@ function buildTable(games) {
       {
         title: "Booth", field: "booth", width: 100, minWidth: 80,
         headerFilter: "input",
-        sorter: "string",
+        sorter: boothSorter,
       },
 
       // Availability (For Sale / Demo, from GeekPreview)
@@ -574,7 +636,13 @@ async function init() {
     return;
   }
 
+  // hideColumn/showColumn calls made immediately after `new Tabulator(...)`
+  // returns are silently ineffective — Tabulator's initial layout pass hasn't
+  // finished yet. tableBuilt is Tabulator's own "now it's actually ready"
+  // signal; later calls (quick-filter clicks, Clear) don't need this since
+  // by then the table has long since settled.
   let table = buildTable(games);
+  table.on("tableBuilt", () => applyMobileColumns(table, DEFAULT_MOBILE_COLUMNS));
   loadMeta();
 
   async function reloadTable() {
@@ -582,6 +650,7 @@ async function init() {
     // Full rebuild (not setData) so mobile detection / nav height are re-measured
     table.destroy();
     table = buildTable(newGames);
+    table.on("tableBuilt", () => applyMobileColumns(table, DEFAULT_MOBILE_COLUMNS));
     loadMeta();
   }
 
@@ -688,6 +757,7 @@ async function init() {
   document.getElementById("btn-clear-filters").addEventListener("click", () => {
     table.clearHeaderFilter();
     _filterResetFns.forEach(fn => fn());
+    applyMobileColumns(table, DEFAULT_MOBILE_COLUMNS);
   });
 
   // ---- Quick-filter preset buttons ----
@@ -708,6 +778,7 @@ async function init() {
         }
       });
       if (qf.sort) table.setSort(qf.sort);
+      if (qf.mobileColumns) applyMobileColumns(table, qf.mobileColumns);
     });
     quickFiltersEl.appendChild(btn);
   });

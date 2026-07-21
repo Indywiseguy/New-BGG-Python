@@ -85,26 +85,8 @@ body { background: #1a1a2e; color: #e0e0e0; }
   #meta-info { font-size: 11px; }
 }
 
-/* Phones: only Rank, Name, Publisher, Booth, My Interest by default —
-   everything else is still there, just off by default on a small screen.
-   !important needed for the same specificity reason as the rule above. */
-@media (max-width: 700px) {
-  .tabulator-col[tabulator-field="availability_status"],
-  .tabulator-cell[tabulator-field="availability_status"],
-  .tabulator-col[tabulator-field="showprice"],
-  .tabulator-cell[tabulator-field="showprice"],
-  .tabulator-col[tabulator-field="bgg_preview_priority"],
-  .tabulator-cell[tabulator-field="bgg_preview_priority"],
-  .tabulator-col[tabulator-field="community_thumbs"],
-  .tabulator-cell[tabulator-field="community_thumbs"],
-  .tabulator-col[tabulator-field="booth_thumbs"],
-  .tabulator-cell[tabulator-field="booth_thumbs"],
-  .tabulator-col[tabulator-field="bgg_status"],
-  .tabulator-cell[tabulator-field="bgg_status"],
-  .tabulator-col[tabulator-field="hot_games_room"],
-  .tabulator-cell[tabulator-field="hot_games_room"],
-  .tabulator-col[tabulator-field="notes"],
-  .tabulator-cell[tabulator-field="notes"] {
-    display: none !important;
-  }
-}
+/* Phone column visibility (Rank/Name/Publisher/Booth/My Interest by default,
+   plus per-quick-filter overrides) is now driven dynamically by JS via
+   Tabulator's own hideColumn/showColumn API — see applyMobileColumns() in
+   app.js. That sidesteps the CSS-specificity fight noted above entirely,
+   and lets the visible column set change per quick-filter button. */
