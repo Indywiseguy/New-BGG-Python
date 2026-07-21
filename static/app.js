@@ -13,8 +13,37 @@ const BGG_PRIORITY_COLORS = {
   "Not Interested": "#4b5563",
 };
 
+// Quick-filter presets — each clears all filters, applies the given per-field
+// values, and sets the table sort. Add more entries here to add more buttons;
+// no other code changes needed. Values are arrays for columns using the
+// custom multi-select checkbox filter (see makeMultiSelectFilter/_filterSetFns);
+// for columns using a native Tabulator header filter (e.g. Hot Games Room's
+// tickCross), give the raw value Tabulator's setHeaderFilterValue expects.
+const QUICK_FILTERS = [
+  {
+    label: "Thurs Rush",
+    filters: {
+      availability_status: ["For Sale"],
+      bgg_preview_priority: ["Must Have"],
+      // "All except Own and Preordered"
+      bgg_status: ["", "Want to Buy", "Wishlist", "Want to Play", "For Trade", "Previously Owned"],
+    },
+    sort: [{ column: "rank", dir: "asc" }],
+  },
+  {
+    label: "BGG Hot Games",
+    filters: {
+      hot_games_room: true,
+    },
+    sort: [{ column: "rank", dir: "asc" }],
+  },
+];
+
 // Reset functions for custom multi-select filter dropdowns (called by Clear Filters)
 const _filterResetFns = [];
+// Programmatic setters for custom multi-select filter dropdowns, keyed by
+// field name (used by quick-filter preset buttons — see QUICK_FILTERS).
+const _filterSetFns = {};
 
 // ---------------------------------------------------------------------------
 // Supabase — the deployed (Netlify) and local (webapp.py) copies of this page
@@ -37,15 +66,6 @@ async function dbGetGames() {
 async function dbUpdateGame(id, fields) {
   const { error } = await sb.from(GAMES_TABLE).update(fields).eq("id", id);
   if (error) throw new Error(error.message);
-}
-
-async function dbBulkUpdate(updates) {
-  // updates: [{ id, ...fields }]
-  const results = await Promise.all(
-    updates.map(({ id, ...fields }) => sb.from(GAMES_TABLE).update(fields).eq("id", id))
-  );
-  const failed = results.find(r => r.error);
-  if (failed) throw new Error(failed.error.message);
 }
 
 async function dbGetMeta() {
@@ -75,7 +95,7 @@ async function dbGetMeta() {
 // the DOM ourselves.  The panel is appended to <body> with position:fixed so
 // it clears the table header's overflow boundary.
 // ---------------------------------------------------------------------------
-function makeMultiSelectFilter(pairs) {
+function makeMultiSelectFilter(pairs, field) {
   return (cell, onRendered, success) => {
     const selected = new Set();
     const checkboxes = [];
@@ -145,6 +165,17 @@ function makeMultiSelectFilter(pairs) {
       success("");
     });
 
+    if (field) {
+      _filterSetFns[field] = values => {
+        selected.clear();
+        values.forEach(v => selected.add(v));
+        checkboxes.forEach(cb => { cb.checked = selected.has(cb.value); });
+        const arr = [...selected];
+        btn.textContent = arr.length === 0 ? "All ▾" : `${arr.length} selected ▾`;
+        success(arr.length === 0 ? "" : arr);
+      };
+    }
+
     return wrap;
   };
 }
@@ -172,39 +203,6 @@ async function apiGet(path) {
   const r = await fetch(path);
   if (!r.ok) throw new Error(`GET ${path} → ${r.status}`);
   return r.json();
-}
-
-// ---------------------------------------------------------------------------
-// Rank recomputation
-// ---------------------------------------------------------------------------
-// After any row move or interest-level change, recompute ranks within each
-// interest-level group based on the current table row order. Rows with no
-// My Interest set are left alone entirely — their rank (if any) is a manual,
-// independent value and must not be wiped just because some other row moved.
-function recomputeRanks(table) {
-  const rows = table.getRows();
-  const groups = {};
-  rows.forEach(row => {
-    const grp = row.getData().interest_level || "";
-    if (!grp) return;
-    if (!groups[grp]) groups[grp] = [];
-    groups[grp].push(row);
-  });
-
-  const updates = [];
-  Object.values(groups).forEach(grpRows => {
-    grpRows.forEach((row, i) => {
-      const newRank = i + 1;
-      if (row.getData().rank !== newRank) {
-        row.update({ rank: newRank });
-        updates.push({ id: row.getData().id, rank: newRank });
-      }
-    });
-  });
-
-  if (updates.length) {
-    dbBulkUpdate(updates).catch(err => toast(err.message, "danger"));
-  }
 }
 
 // ---------------------------------------------------------------------------
@@ -292,41 +290,9 @@ function onCellEdited(cell, table) {
   const id    = cell.getRow().getData().id;
   const value = cell.getValue();
 
-  // If interest level changed, persist it then recompute ranks for the new group
-  if (field === "interest_level") {
-    dbUpdateGame(id, { interest_level: value })
-      .then(() => { toast("Saved", "success"); recomputeRanks(table); })
-      .catch(err => toast(err.message, "danger"));
-    return;
-  }
-
-  // If rank manually edited, resequence the whole group to keep ranks unique
-  if (field === "rank") {
-    const interestLevel = cell.getRow().getData().interest_level || "";
-    if (!interestLevel) {
-      dbUpdateGame(id, { rank: value })
-        .then(() => toast("Saved", "success"))
-        .catch(err => toast(err.message, "danger"));
-      return;
-    }
-    const target = parseInt(value) || 1;
-    const groupRows = table.getRows()
-      .filter(r => (r.getData().interest_level || "") === interestLevel)
-      .sort((a, b) => {
-        const aR = a.getData().id === id ? target : (a.getData().rank ?? 9999);
-        const bR = b.getData().id === id ? target : (b.getData().rank ?? 9999);
-        if (aR !== bR) return aR - bR;
-        return a.getData().id === id ? -1 : 1; // edited row wins ties
-      });
-    const updates = groupRows.map((row, i) => {
-      const rid = row.getData().id;
-      row.update({ rank: i + 1 });
-      return { id: rid, rank: i + 1 };
-    });
-    dbBulkUpdate(updates).catch(err => toast(err.message, "danger"));
-    return;
-  }
-
+  // Rank and every other plain field: save exactly what was entered, with no
+  // side effects on other rows. No auto-resequencing, no drag-and-drop —
+  // direct entry only, so a row's rank never changes unless you type it.
   dbUpdateGame(id, { [field]: value })
     .then(() => toast(`Saved`, "success"))
     .catch(err => toast(err.message, "danger"));
@@ -337,17 +303,13 @@ function onCellEdited(cell, table) {
 // ---------------------------------------------------------------------------
 function buildTable(games) {
   // Below ~700px (phones): the nav wraps to more than one line, so its actual
-  // height varies — measure it instead of assuming a fixed offset. Touch-drag
-  // reordering is also fiddly on a phone, so hide the drag handle there and
-  // rely on typing a Rank number instead (already fully supported).
-  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+  // height varies — measure it instead of assuming a fixed offset.
   const navHeight = document.querySelector("nav").offsetHeight;
 
   const table = new Tabulator("#game-table", {
     data: games,
     height: `calc(100vh - ${navHeight + 16}px)`,
     layout: "fitColumns",
-    movableRows: !isMobile,
 
     // Default sort: interest level order, then rank
     initialSort: [
@@ -358,13 +320,6 @@ function buildTable(games) {
     rowFormatter,
 
     columns: [
-      // Drag handle — omitted entirely on mobile (not just visible:false, which
-      // this Tabulator build silently ignores for rowHandle columns; same class
-      // of quirk as the cellEdited/rowMoved event-callback issue found earlier).
-      ...(isMobile ? [] : [
-        { rowHandle: true, formatter: "handle", headerSort: false, frozen: true, width: 30, minWidth: 30 },
-      ]),
-
       // Rank
       {
         title: "Rank", field: "rank", width: 60, minWidth: 50,
@@ -403,7 +358,7 @@ function buildTable(games) {
         headerFilter: makeMultiSelectFilter([
           ["For Sale", "For Sale"],
           ["Demo",     "Demo"],
-        ]),
+        ], "availability_status"),
         headerFilterFunc: (headerValue, rowValue) => {
           const vals = Array.isArray(headerValue) ? headerValue : (headerValue ? [headerValue] : []);
           if (!vals.length) return true;
@@ -430,7 +385,7 @@ function buildTable(games) {
           ["Interested",     "Interested"],
           ["Undecided",      "Undecided"],
           ["Not Interested", "Not Interested"],
-        ]),
+        ], "bgg_preview_priority"),
         headerFilterFunc: (headerValue, rowValue) => {
           const vals = Array.isArray(headerValue) ? headerValue : (headerValue ? [headerValue] : []);
           if (!vals.length) return true;
@@ -477,7 +432,7 @@ function buildTable(games) {
           ["Want to Play",     "Want to Play"],
           ["For Trade",        "For Trade"],
           ["Previously Owned", "Previously Owned"],
-        ]),
+        ], "bgg_status"),
         // Statuses can be combined ("Own, Want to Play") — match any selected token
         headerFilterFunc: (headerValue, rowValue) => {
           const vals = Array.isArray(headerValue) ? headerValue : (headerValue ? [headerValue] : []);
@@ -521,7 +476,7 @@ function buildTable(games) {
               cell.getRow().update({ interest_level: val });
               rowFormatter(cell.getRow());
               dbUpdateGame(id, { interest_level: val })
-                .then(() => { toast("Saved", "success"); recomputeRanks(table); })
+                .then(() => toast("Saved", "success"))
                 .catch(err => toast(err.message, "danger"));
             });
             pop.appendChild(item);
@@ -536,7 +491,7 @@ function buildTable(games) {
           ["Likely to Buy",  "Likely to Buy"],
           ["Check it Out",   "Check it Out"],
           ["Not Interested", "Not Interested"],
-        ]),
+        ], "interest_level"),
         headerFilterFunc: (headerValue, rowValue) => {
           const vals = Array.isArray(headerValue) ? headerValue : (headerValue ? [headerValue] : []);
           if (!vals.length) return true;
@@ -583,11 +538,10 @@ function buildTable(games) {
     ],
   });
 
-  // NOTE: table-level event callbacks (rowMoved, cellEdited) must be wired via
-  // table.on(...) after construction, not as constructor options — this build
-  // of Tabulator silently ignores them if passed in the options object above,
-  // which meant Rank edits and drag-reordering never actually saved.
-  table.on("rowMoved", () => recomputeRanks(table));
+  // NOTE: table-level event callbacks must be wired via table.on(...) after
+  // construction, not as constructor options — this build of Tabulator
+  // silently ignores them if passed in the options object above, which meant
+  // Rank edits never actually saved until this was found.
   table.on("cellEdited", cell => onCellEdited(cell, table));
 
   return table;
@@ -734,6 +688,28 @@ async function init() {
   document.getElementById("btn-clear-filters").addEventListener("click", () => {
     table.clearHeaderFilter();
     _filterResetFns.forEach(fn => fn());
+  });
+
+  // ---- Quick-filter preset buttons ----
+  const quickFiltersEl = document.getElementById("quick-filters");
+  QUICK_FILTERS.forEach(qf => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "btn btn-sm btn-outline-success";
+    btn.textContent = qf.label;
+    btn.addEventListener("click", () => {
+      table.clearHeaderFilter();
+      _filterResetFns.forEach(fn => fn());
+      Object.entries(qf.filters).forEach(([field, value]) => {
+        if (_filterSetFns[field]) {
+          _filterSetFns[field](value); // custom multi-select checkbox filter
+        } else {
+          table.setHeaderFilterValue(field, value); // native Tabulator header filter
+        }
+      });
+      if (qf.sort) table.setSort(qf.sort);
+    });
+    quickFiltersEl.appendChild(btn);
   });
 }
 

@@ -45,10 +45,6 @@ body { background: #1a1a2e; color: #e0e0e0; }
   padding: 1px 4px;
 }
 
-/* Drag handle */
-.tabulator-row .tabulator-row-handle { color: #555; cursor: grab; }
-.tabulator-row .tabulator-row-handle:hover { color: #aaa; }
-
 /* BGG status badges */
 .bgg-status-Own         { color: #6ee7b7; }
 .bgg-status-Want        { color: #93c5fd; }
