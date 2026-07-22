@@ -19,8 +19,9 @@ const ALL_TOGGLEABLE_FIELDS = [
   "bgg_preview_priority", "community_thumbs", "booth_thumbs",
   "bgg_wishlist_comment", "bgg_status", "interest_level", "hot_games_room", "notes",
 ];
-// Shown on phones when no quick filter is active (initial load, or after Clear).
-const DEFAULT_MOBILE_COLUMNS = ["rank", "name", "publisher", "booth", "interest_level"];
+// Shown on phones when no quick filter is active (initial load, or after Clear) —
+// everything, so the unfiltered view isn't missing anything the presets show.
+const DEFAULT_MOBILE_COLUMNS = ALL_TOGGLEABLE_FIELDS;
 
 // BGG Status values for "anything except Own and Preordered"
 const STATUS_NOT_OWNED_OR_PREORDERED =
@@ -60,6 +61,14 @@ const QUICK_FILTERS = [
     },
     sort: [{ column: "booth", dir: "asc" }],
     mobileColumns: ["name", "publisher", "booth", "availability_status", "interest_level", "notes"],
+  },
+  {
+    label: "Owned",
+    filters: {
+      bgg_status: ["Own", "Preordered"],
+    },
+    sort: [{ column: "name", dir: "asc" }],
+    mobileColumns: ALL_TOGGLEABLE_FIELDS,
   },
 ];
 

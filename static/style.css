@@ -65,16 +65,6 @@ body { background: #1a1a2e; color: #e0e0e0; }
 .game-link { color: #7eb8f7; text-decoration: none; }
 .game-link:hover { text-decoration: underline; color: #a8d4ff; }
 
-/* Responsive: collapse description column on small screens.
-   !important is required — Tabulator's own CSS sets .tabulator-col display
-   via a 3-class selector (.tabulator .tabulator-header .tabulator-col),
-   which beats our 1-class-plus-attribute selector on specificity regardless
-   of stylesheet load order. */
-@media (max-width: 900px) {
-  .tabulator-col[tabulator-field="bgg_wishlist_comment"],
-  .tabulator-cell[tabulator-field="bgg_wishlist_comment"] { display: none !important; }
-}
-
 /* Never wrap text inside a nav button — let the flex container wrap whole
    buttons onto new rows instead of each button growing tall internally. */
 .navbar .btn { white-space: nowrap; }
@@ -85,8 +75,9 @@ body { background: #1a1a2e; color: #e0e0e0; }
   #meta-info { font-size: 11px; }
 }
 
-/* Phone column visibility (Rank/Name/Publisher/Booth/My Interest by default,
-   plus per-quick-filter overrides) is now driven dynamically by JS via
-   Tabulator's own hideColumn/showColumn API — see applyMobileColumns() in
-   app.js. That sidesteps the CSS-specificity fight noted above entirely,
-   and lets the visible column set change per quick-filter button. */
+/* Phone column visibility (all columns by default, narrowed per quick-filter
+   button) is driven dynamically by JS via Tabulator's own hideColumn/
+   showColumn API — see applyMobileColumns() and DEFAULT_MOBILE_COLUMNS in
+   app.js. A CSS-based version of this hit a specificity fight against
+   Tabulator's own .tabulator-col display rule (needed !important to win);
+   the JS API sidesteps that entirely. */
