@@ -279,7 +279,11 @@ def _fetch_xml_collection() -> dict[str, dict]:
 # Main
 # ---------------------------------------------------------------------------
 
-def main():
+def fetch_collection_rows() -> list[dict]:
+    """Log into BGG, pull the native CSV export + the supplemental XML fields,
+    merge them, and return the combined rows (sorted by name). This is the
+    single source of truth for "what's in my BGG collection" — reused by both
+    the CSV export (below) and the Postgres sync pipeline."""
     native_rows = _download_native_csv()
     xml_data    = _fetch_xml_collection()
 
@@ -293,6 +297,11 @@ def main():
         rows.append(row)
 
     rows.sort(key=lambda r: r["name"].lower())
+    return rows
+
+
+def main():
+    rows = fetch_collection_rows()
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_FILE, "w", newline="", encoding="utf-8") as fh:
